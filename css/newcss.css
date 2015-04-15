@@ -1,0 +1,88 @@
+/* use navbar-wrapper to wrap navigation bar, the purpose is to overlay navigation bar above slider */
+        .flotar {
+		
+            position: absolute;
+           top: 50px;
+            left: 0;
+            width: 100%;
+            height: 51px;
+			
+        }
+        .navbar-wrapper {
+		background-color:#FFFFFF;
+            position: absolute;
+            
+            left: 0;
+            width: 100%;
+            height: 51px;
+			
+        }
+        .navbar-wrapper > .container {
+            padding: 0;
+        }
+
+        @media all and (max-width: 768px ){
+            .navbar-wrapper {
+                position: relative;
+                top: 0px;
+            }
+	
+
+
+        }
+        
+         /* jssor slider bullet navigator skin 21 css */
+                /*
+                .jssorb21 div           (normal)
+                .jssorb21 div:hover     (normal mouseover)
+                .jssorb21 .av           (active)
+                .jssorb21 .av:hover     (active mouseover)
+                .jssorb21 .dn           (mousedown)
+                */
+                .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+                    background: url(../img/b21.png) no-repeat;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+
+                .jssorb21 div {
+                    background-position: -5px -5px;
+                }
+
+                    .jssorb21 div:hover, .jssorb21 .av:hover {
+                        background-position: -35px -5px;
+                    }
+
+                .jssorb21 .av {
+                    background-position: -65px -5px;
+                }
+
+                .jssorb21 .dn, .jssorb21 .dn:hover {
+                    background-position: -95px -5px;
+                }
+
+                    .block {
+        height:auto;
+		 border: 3px solid;
+		 border-color:#E2E2E2;
+        background: #F9F9F9;
+        margin-bottom: 20px;
+    }
+       html, body, .banner, .container {
+        height:100%;
+        text-align: center;
+    }
+    
+    .menu {
+    background: #000000;
+    color: #000000;
+    z-index:1;
+    padding:.5em;
+    position:absolute;
+    //top:400px;
+    width:100%;
+}
+.fixed {
+    position:fixed;
+    top:0;
+}
