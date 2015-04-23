@@ -10512,3 +10512,1472 @@ Stack trace:
 REQUEST_URI=/sonaray-ensamble/js/css3-mediaquery.js
 HTTP_REFERER=http://dascomla.com/sonaray-ensamble/en/news/pressReleases
 ---
+2015/04/23 10:29:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'dascomla_test'@'localhost' (using password: YES)' in C:\xampp\htdocs\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1469): CActiveRecord->getCommandBuilder()
+#7 C:\xampp\htdocs\sonaray_responsive_new\protected\controllers\HomeController.php(12): CActiveRecord->findAll(Object(CDbCriteria))
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sonaray_responsive_new/en/home/index
+HTTP_REFERER=http://localhost/sonaray_responsive_new/
+---
+2015/04/23 10:30:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/home/index
+---
+2015/04/23 10:30:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/home/images/favicon.ico".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('en/home/images/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/en/home/images/favicon.ico
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/home/index
+---
+2015/04/23 10:30:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/home/images/favicon.ico".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('en/home/images/...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/en/home/images/favicon.ico
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/home/index
+---
+2015/04/23 10:30:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/aplication
+---
+2015/04/23 10:30:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3250/Descripcion pequeña_HB-3250 (1).jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-3250/Descripcion%20peque%C3%B1a_HB-3250%20(1).jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/aplication
+---
+2015/04/23 10:30:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3100/Descripcion pequeña FL-3100.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/FL-3100/Descripcion%20peque%C3%B1a%20FL-3100.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/aplication
+---
+2015/04/23 10:30:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/products/images/favicon.ico".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('en/products/ima...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/en/products/images/favicon.ico
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/aplication
+---
+2015/04/23 10:30:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/aplication
+---
+2015/04/23 10:30:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3250/Descripcion pequeña_HB-3250 (1).jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-3250/Descripcion%20peque%C3%B1a_HB-3250%20(1).jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/aplication
+---
+2015/04/23 10:30:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3100/Descripcion pequeña FL-3100.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/FL-3100/Descripcion%20peque%C3%B1a%20FL-3100.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/aplication
+---
+2015/04/23 10:30:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1018/Descripcion pequeña LB-1018.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LB-1018/Descripcion%20peque%C3%B1a%20LB-1018.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1044/Descripcion pequeña LB-1044.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LB-1044/Descripcion%20peque%C3%B1a%20LB-1044.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1010/Descripcion pequeña LB-1010.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LB-1010/Descripcion%20peque%C3%B1a%20LB-1010.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1022/Descripcion pequeña LB-1022.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LB-1022/Descripcion%20peque%C3%B1a%20LB-1022.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2045A/Descripcion pequeña_HB-2045A.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-2045A/Descripcion%20peque%C3%B1a_HB-2045A.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2085A/Descripcion pequeña_HB-2085A.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-2085A/Descripcion%20peque%C3%B1a_HB-2085A.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3100/Descripcion pequeña_HB-3100.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-3100/Descripcion%20peque%C3%B1a_HB-3100.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2065A/Descripcion pequeña_HB-2065A.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-2065A/Descripcion%20peque%C3%B1a_HB-2065A.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2100A/Descripcion pequeña_HB-2100.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-2100A/Descripcion%20peque%C3%B1a_HB-2100.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3250/Descripcion pequeña_HB-3250 (1).jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-3250/Descripcion%20peque%C3%B1a_HB-3250%20(1).jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3040/Descripcion pequeña FL-3040.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/FL-3040/Descripcion%20peque%C3%B1a%20FL-3040.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3180/Descripcion pequeña_HB-3180.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-3180/Descripcion%20peque%C3%B1a_HB-3180.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3030/Descripcion pequeña_FL-3030.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/FL-3030/Descripcion%20peque%C3%B1a_FL-3030.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3100/Descripcion pequeña FL-3100.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/FL-3100/Descripcion%20peque%C3%B1a%20FL-3100.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3520/Descripcion pequeña FL-3520.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/FL-3520/Descripcion%20peque%C3%B1a%20FL-3520.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/DL-3045/Descripcion pequeña DL-3045.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/DL-3045/Descripcion%20peque%C3%B1a%20DL-3045.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2010C/Descripcion pequeña T8-2010C.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/T8-2010C/Descripcion%20peque%C3%B1a%20T8-2010C.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2016C/Descripcion pequeña_T8-2016B.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/T8-2016C/Descripcion%20peque%C3%B1a_T8-2016B.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2021C/Descripcion pequeña T8-2021C.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/T8-2021C/Descripcion%20peque%C3%B1a%20T8-2021C.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1200.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1200.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:30:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1500.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1500.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1010/Descripcion pequeña LB-1010.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LB-1010/Descripcion%20peque%C3%B1a%20LB-1010.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1018/Descripcion pequeña LB-1018.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LB-1018/Descripcion%20peque%C3%B1a%20LB-1018.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2065A/Descripcion pequeña_HB-2065A.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-2065A/Descripcion%20peque%C3%B1a_HB-2065A.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2045A/Descripcion pequeña_HB-2045A.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-2045A/Descripcion%20peque%C3%B1a_HB-2045A.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1022/Descripcion pequeña LB-1022.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LB-1022/Descripcion%20peque%C3%B1a%20LB-1022.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1044/Descripcion pequeña LB-1044.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LB-1044/Descripcion%20peque%C3%B1a%20LB-1044.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2085A/Descripcion pequeña_HB-2085A.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-2085A/Descripcion%20peque%C3%B1a_HB-2085A.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2100A/Descripcion pequeña_HB-2100.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-2100A/Descripcion%20peque%C3%B1a_HB-2100.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2021C/Descripcion pequeña T8-2021C.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/T8-2021C/Descripcion%20peque%C3%B1a%20T8-2021C.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/DL-3045/Descripcion pequeña DL-3045.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/DL-3045/Descripcion%20peque%C3%B1a%20DL-3045.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1500.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1500.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1200.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1200.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2016C/Descripcion pequeña_T8-2016B.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/T8-2016C/Descripcion%20peque%C3%B1a_T8-2016B.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2010C/Descripcion pequeña T8-2010C.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/T8-2010C/Descripcion%20peque%C3%B1a%20T8-2010C.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3030/Descripcion pequeña_FL-3030.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/FL-3030/Descripcion%20peque%C3%B1a_FL-3030.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3040/Descripcion pequeña FL-3040.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/FL-3040/Descripcion%20peque%C3%B1a%20FL-3040.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3100/Descripcion pequeña FL-3100.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/FL-3100/Descripcion%20peque%C3%B1a%20FL-3100.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3520/Descripcion pequeña FL-3520.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/FL-3520/Descripcion%20peque%C3%B1a%20FL-3520.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3100/Descripcion pequeña_HB-3100.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-3100/Descripcion%20peque%C3%B1a_HB-3100.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3250/Descripcion pequeña_HB-3250 (1).jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-3250/Descripcion%20peque%C3%B1a_HB-3250%20(1).jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3180/Descripcion pequeña_HB-3180.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sonaray_responsive_new\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/images/productos/HB-3180/Descripcion%20peque%C3%B1a_HB-3180.jpg
+HTTP_REFERER=http://localhost/sonaray_responsive_new/en/products/index
+---
+2015/04/23 10:43:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/home/index
+---
+2015/04/23 10:43:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/home/images/favicon.ico".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('en/home/images/...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/en/home/images/favicon.ico
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/home/index
+---
+2015/04/23 10:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1018/Descripcion pequeña LB-1018.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1018/Descripcion%20peque%C3%B1a%20LB-1018.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1010/Descripcion pequeña LB-1010.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1010/Descripcion%20peque%C3%B1a%20LB-1010.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1044/Descripcion pequeña LB-1044.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1044/Descripcion%20peque%C3%B1a%20LB-1044.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2065A/Descripcion pequeña_HB-2065A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2065A/Descripcion%20peque%C3%B1a_HB-2065A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2085A/Descripcion pequeña_HB-2085A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2085A/Descripcion%20peque%C3%B1a_HB-2085A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2100A/Descripcion pequeña_HB-2100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2100A/Descripcion%20peque%C3%B1a_HB-2100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3100/Descripcion pequeña_HB-3100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3100/Descripcion%20peque%C3%B1a_HB-3100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3250/Descripcion pequeña_HB-3250 (1).jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3250/Descripcion%20peque%C3%B1a_HB-3250%20(1).jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3180/Descripcion pequeña_HB-3180.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3180/Descripcion%20peque%C3%B1a_HB-3180.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3030/Descripcion pequeña_FL-3030.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3030/Descripcion%20peque%C3%B1a_FL-3030.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3040/Descripcion pequeña FL-3040.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3040/Descripcion%20peque%C3%B1a%20FL-3040.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3100/Descripcion pequeña FL-3100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3100/Descripcion%20peque%C3%B1a%20FL-3100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3520/Descripcion pequeña FL-3520.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3520/Descripcion%20peque%C3%B1a%20FL-3520.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1022/Descripcion pequeña LB-1022.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1022/Descripcion%20peque%C3%B1a%20LB-1022.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2045A/Descripcion pequeña_HB-2045A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2045A/Descripcion%20peque%C3%B1a_HB-2045A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/DL-3045/Descripcion pequeña DL-3045.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/DL-3045/Descripcion%20peque%C3%B1a%20DL-3045.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2010C/Descripcion pequeña T8-2010C.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2010C/Descripcion%20peque%C3%B1a%20T8-2010C.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2016C/Descripcion pequeña_T8-2016B.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2016C/Descripcion%20peque%C3%B1a_T8-2016B.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2021C/Descripcion pequeña T8-2021C.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2021C/Descripcion%20peque%C3%B1a%20T8-2021C.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1200.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1200.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1500.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1500.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/products/images/favicon.ico".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('en/products/ima...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/en/products/images/favicon.ico
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1044/Descripcion pequeña LB-1044.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1044/Descripcion%20peque%C3%B1a%20LB-1044.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1018/Descripcion pequeña LB-1018.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1018/Descripcion%20peque%C3%B1a%20LB-1018.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1022/Descripcion pequeña LB-1022.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1022/Descripcion%20peque%C3%B1a%20LB-1022.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3180/Descripcion pequeña_HB-3180.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3180/Descripcion%20peque%C3%B1a_HB-3180.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3100/Descripcion pequeña_HB-3100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3100/Descripcion%20peque%C3%B1a_HB-3100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2085A/Descripcion pequeña_HB-2085A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2085A/Descripcion%20peque%C3%B1a_HB-2085A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2065A/Descripcion pequeña_HB-2065A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2065A/Descripcion%20peque%C3%B1a_HB-2065A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2100A/Descripcion pequeña_HB-2100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2100A/Descripcion%20peque%C3%B1a_HB-2100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3250/Descripcion pequeña_HB-3250 (1).jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3250/Descripcion%20peque%C3%B1a_HB-3250%20(1).jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2045A/Descripcion pequeña_HB-2045A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2045A/Descripcion%20peque%C3%B1a_HB-2045A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1010/Descripcion pequeña LB-1010.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1010/Descripcion%20peque%C3%B1a%20LB-1010.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3100/Descripcion pequeña FL-3100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3100/Descripcion%20peque%C3%B1a%20FL-3100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3030/Descripcion pequeña_FL-3030.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3030/Descripcion%20peque%C3%B1a_FL-3030.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3040/Descripcion pequeña FL-3040.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3040/Descripcion%20peque%C3%B1a%20FL-3040.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3520/Descripcion pequeña FL-3520.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3520/Descripcion%20peque%C3%B1a%20FL-3520.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/DL-3045/Descripcion pequeña DL-3045.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/DL-3045/Descripcion%20peque%C3%B1a%20DL-3045.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2010C/Descripcion pequeña T8-2010C.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2010C/Descripcion%20peque%C3%B1a%20T8-2010C.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2021C/Descripcion pequeña T8-2021C.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2021C/Descripcion%20peque%C3%B1a%20T8-2021C.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2016C/Descripcion pequeña_T8-2016B.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2016C/Descripcion%20peque%C3%B1a_T8-2016B.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1500.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1500.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1200.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1200.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:45:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/home/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1010/Descripcion pequeña LB-1010.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1010/Descripcion%20peque%C3%B1a%20LB-1010.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1022/Descripcion pequeña LB-1022.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1022/Descripcion%20peque%C3%B1a%20LB-1022.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2065A/Descripcion pequeña_HB-2065A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2065A/Descripcion%20peque%C3%B1a_HB-2065A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1018/Descripcion pequeña LB-1018.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1018/Descripcion%20peque%C3%B1a%20LB-1018.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2045A/Descripcion pequeña_HB-2045A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2045A/Descripcion%20peque%C3%B1a_HB-2045A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1044/Descripcion pequeña LB-1044.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1044/Descripcion%20peque%C3%B1a%20LB-1044.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2100A/Descripcion pequeña_HB-2100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2100A/Descripcion%20peque%C3%B1a_HB-2100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2085A/Descripcion pequeña_HB-2085A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2085A/Descripcion%20peque%C3%B1a_HB-2085A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3100/Descripcion pequeña_HB-3100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3100/Descripcion%20peque%C3%B1a_HB-3100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3180/Descripcion pequeña_HB-3180.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3180/Descripcion%20peque%C3%B1a_HB-3180.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3250/Descripcion pequeña_HB-3250 (1).jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3250/Descripcion%20peque%C3%B1a_HB-3250%20(1).jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3030/Descripcion pequeña_FL-3030.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3030/Descripcion%20peque%C3%B1a_FL-3030.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3040/Descripcion pequeña FL-3040.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3040/Descripcion%20peque%C3%B1a%20FL-3040.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3520/Descripcion pequeña FL-3520.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3520/Descripcion%20peque%C3%B1a%20FL-3520.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/DL-3045/Descripcion pequeña DL-3045.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/DL-3045/Descripcion%20peque%C3%B1a%20DL-3045.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3100/Descripcion pequeña FL-3100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3100/Descripcion%20peque%C3%B1a%20FL-3100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2010C/Descripcion pequeña T8-2010C.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2010C/Descripcion%20peque%C3%B1a%20T8-2010C.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2016C/Descripcion pequeña_T8-2016B.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2016C/Descripcion%20peque%C3%B1a_T8-2016B.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2021C/Descripcion pequeña T8-2021C.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2021C/Descripcion%20peque%C3%B1a%20T8-2021C.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1200.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1200.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1500.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1500.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/home/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2045A/Descripcion pequeña_HB-2045A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2045A/Descripcion%20peque%C3%B1a_HB-2045A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1044/Descripcion pequeña LB-1044.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1044/Descripcion%20peque%C3%B1a%20LB-1044.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2065A/Descripcion pequeña_HB-2065A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2065A/Descripcion%20peque%C3%B1a_HB-2065A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1022/Descripcion pequeña LB-1022.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1022/Descripcion%20peque%C3%B1a%20LB-1022.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1018/Descripcion pequeña LB-1018.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1018/Descripcion%20peque%C3%B1a%20LB-1018.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LB-1010/Descripcion pequeña LB-1010.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LB-1010/Descripcion%20peque%C3%B1a%20LB-1010.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2100A/Descripcion pequeña_HB-2100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2100A/Descripcion%20peque%C3%B1a_HB-2100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-2085A/Descripcion pequeña_HB-2085A.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-2085A/Descripcion%20peque%C3%B1a_HB-2085A.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3180/Descripcion pequeña_HB-3180.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3180/Descripcion%20peque%C3%B1a_HB-3180.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3100/Descripcion pequeña_HB-3100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3100/Descripcion%20peque%C3%B1a_HB-3100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/HB-3250/Descripcion pequeña_HB-3250 (1).jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/HB-3250/Descripcion%20peque%C3%B1a_HB-3250%20(1).jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3030/Descripcion pequeña_FL-3030.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3030/Descripcion%20peque%C3%B1a_FL-3030.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3040/Descripcion pequeña FL-3040.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3040/Descripcion%20peque%C3%B1a%20FL-3040.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3100/Descripcion pequeña FL-3100.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3100/Descripcion%20peque%C3%B1a%20FL-3100.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/DL-3045/Descripcion pequeña DL-3045.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/DL-3045/Descripcion%20peque%C3%B1a%20DL-3045.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/FL-3520/Descripcion pequeña FL-3520.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/FL-3520/Descripcion%20peque%C3%B1a%20FL-3520.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2010C/Descripcion pequeña T8-2010C.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2010C/Descripcion%20peque%C3%B1a%20T8-2010C.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2016C/Descripcion pequeña_T8-2016B.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2016C/Descripcion%20peque%C3%B1a_T8-2016B.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1500.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1500.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/LECKO E CLASSIC T8 RÖHRE/Carussel_class_T8_1200.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/LECKO%20E%20CLASSIC%20T8%20R%C3%96HRE/Carussel_class_T8_1200.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/productos/T8-2021C/Descripcion pequeña T8-2021C.jpg".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/producto...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/images/productos/T8-2021C/Descripcion%20peque%C3%B1a%20T8-2021C.jpg
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/products/index
+---
+2015/04/23 10:47:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/production/index
+---
+2015/04/23 10:48:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/whySonaray/index
+---
+2015/04/23 10:48:08 [error] [php] Undefined offset: 0 (/var/www/html/sonaray_responsive_new2/protected/views/wheretobuy/index.php:148)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(869): WheretobuyController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(782): WheretobuyController->renderPartial()
+#2 /var/www/html/sonaray_responsive_new2/protected/controllers/WheretobuyController.php(20): WheretobuyController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): WheretobuyController->actionIndex()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): WheretobuyController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): WheretobuyController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): WheretobuyController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/html/sonaray_responsive_new2/index.php(13): CWebApplication->run()
+REQUEST_URI=/sonaray_responsive_new2/en/wheretobuy/index
+in /var/www/html/sonaray_responsive_new2/protected/views/wheretobuy/index.php (148)
+in /var/www/html/sonaray_responsive_new2/protected/controllers/WheretobuyController.php (20)
+in /var/www/html/sonaray_responsive_new2/index.php (13)
+2015/04/23 10:48:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/wheretobuy/index
+---
+2015/04/23 10:48:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/wheretobuy/images/favicon.ico".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('en/wheretobuy/i...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/en/wheretobuy/images/favicon.ico
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/wheretobuy/index
+---
+2015/04/23 10:48:11 [error] [php] Undefined offset: 0 (/var/www/html/sonaray_responsive_new2/protected/views/dealear/index.php:148)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(869): DealearController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(782): DealearController->renderPartial()
+#2 /var/www/html/sonaray_responsive_new2/protected/controllers/DealearController.php(20): DealearController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): DealearController->actionIndex()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): DealearController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): DealearController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): DealearController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /var/www/html/sonaray_responsive_new2/index.php(13): CWebApplication->run()
+REQUEST_URI=/sonaray_responsive_new2/en/Dealear/index
+in /var/www/html/sonaray_responsive_new2/protected/views/dealear/index.php (148)
+in /var/www/html/sonaray_responsive_new2/protected/controllers/DealearController.php (20)
+in /var/www/html/sonaray_responsive_new2/index.php (13)
+2015/04/23 10:48:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/Dealear/index
+---
+2015/04/23 10:48:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/Dealear/images/favicon.ico".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('en/Dealear/imag...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/en/Dealear/images/favicon.ico
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/Dealear/index
+---
+2015/04/23 10:48:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/about/index
+---
+2015/04/23 10:48:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/about/images/favicon.ico".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('en/about/images...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/en/about/images/favicon.ico
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/about/index
+---
+2015/04/23 10:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/home/index
+---
+2015/04/23 11:11:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new2/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new2/en/home/index
+---
