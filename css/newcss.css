@@ -63,11 +63,12 @@
 
                     .block {
         height:auto;
-		 border: 3px solid;
+		 border: 1px solid;
 		 border-color:#E2E2E2;
         background: #F9F9F9;
         margin-bottom: 20px;
     }
+    
        html, body, .banner, .container {
         height:100%;
         text-align: center;
