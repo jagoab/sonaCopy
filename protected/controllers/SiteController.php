@@ -5,6 +5,7 @@ class SiteController extends Controller
 	/**
 	 * Declares class-based actions.
 	 */
+	 //$layout='layouts/main_home';
 	public function actions()
 	{
 		return array(
@@ -26,7 +27,7 @@ class SiteController extends Controller
          * Esta es la vista para seleccionar la lista de los paises
          */
         public function actionSelector(){
-            
+             
             $this->render('selector');
         }       
 
@@ -36,9 +37,9 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-            
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
+		
              include("geolocalizacion/geoiploc.php"); 
             if (empty($_POST['checkip']))
                 {
@@ -92,6 +93,7 @@ class SiteController extends Controller
              $this->actionflagUrl(strtolower($country));
             }else{
 		$this->render('selector');
+	
             }
 	}
 	

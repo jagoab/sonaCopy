@@ -26,7 +26,7 @@
 				<div class="container">
                                  <div style="clear:both;width: 75%; height: 270px; margin-left: 13%; margin-top: 20px; float: left">
                                      <h1 style="font-size: 15px; text-align: justify; line-height: 23px;font-family: Helvetica-Condensed-Light">
-						<?php  echo"banda"; echo ($valor->title);?>
+						<?php  echo ($valor->title);?>
 					</h1>
 					<h1 style="font-size: 15px; text-align: justify; line-height: 23px;font-family: Helvetica-Condensed-Light">
 						<?php echo ($valor->title);?>

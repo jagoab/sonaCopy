@@ -1,6 +1,6 @@
 <?php
 
-class WhySonarayController  extends Controller
+class WhySonarayController extends Controller
 {
 	public function actionIndex()
 	{
@@ -11,6 +11,8 @@ class WhySonarayController  extends Controller
 		$textos = Texts::model()->findAll($criterio);
 					
 				$parrafo[$i] = $textos;
+			
+			
 		}
 		
 		$criterio = new CDbCriteria();

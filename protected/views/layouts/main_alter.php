@@ -13,24 +13,7 @@
                         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
                         <![endif]-->
                         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
-                        <script>
-                                function cambiar (flag,img) {
-                                if (document.images) {
-                                if (document.images[img].permitirloaded) {
-                                if (flag==1) document.images[img].src = document.images[img].permitir.src
-                                else document.images[img].src = document.images[img].permitir.oldsrc
-                                }}}
-                                function preloadcambiar (img,adresse) {
-                                if (document.images) {
-                                    img.onload = null;
-                                    img.permitir = new Image ();
-                                    img.permitir.oldsrc = img.src;
-                                    img.permitir.src = adresse;
-                                    img.permitirloaded = true;
-                                    }
-                                }
-                        </script>    
-                        <div style="display:inline;">
+                            <div style="display:inline;">
                                 <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1001610015/?label=_sXQCLGl9gkQn7bN3QM&amp;guid=ON&amp;script=0"/>
                             </div>
                         
@@ -209,35 +192,100 @@
     </div>
                                     <?php echo $content; ?>
 
-                                    <div style="width:100%; height:400px; background-color: #003399;" >
-     <br/> <br/>
-      <br/> <br/>
- <span class="Estilo6 Estilo6" style="font-family: Impact;
-	font-size: 36px; color: #FFFFFF;" >Newsletter</span><br/><br/>
-        <a onMouseOver="cambiar(1,'IMG2');" onMouseOut="cambiar(0,'IMG2');" target="_blank"  href="http://www.facebook.com/">
-<img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/face.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/face_2.png');" name="IMG2"/></a>
-     
-       <a onMouseOver="cambiar(1,'IMG1');" onMouseOut="cambiar(0,'IMG1');" target="_blank" href="http://twitter.com/">
-<img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/tw.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/tw_2.png');" name="IMG1"/></a>
+                                    <div class="clear"></div>
 
-<a onMouseOver="cambiar(1,'IMG3');" onMouseOut="cambiar(0,'IMG3');" target="_blank"  href="http://www.youtube.com/">
-<img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/yt.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/yt_2.png');" name="IMG3"/></a>
+                                    <div id="footer">
+                                        <p style="font-size: 11px;font-family: Helvetica-Condensed-Light;color: #9c9aa0;width: 100%" class="text-center">
 
-<a onMouseOver="cambiar(1,'IMG4');" onMouseOut="cambiar(0,'IMG4');" target="_blank"  href="http://instagram.com/">
-<img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/in.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/in_2.png');" name="IMG4"/></a>
-      <br/>
-        <br/> 
-        <input name="" type="text" placeholder="Email"  size="40" height="6px" />
-         <br/>
-          <br/>
-           <input type="submit" name="Submit" value="sign up"/>
-          <br/>
-           <br/>
+                                            <?php if (@ strtolower(Yii::app()->session['flag']) != 'de') { ?>
+                                                © 2012-2014 DASCOM Americas SBI LLC
+                                                <?php
+                                                if (Yii::app()->language == 'en')
+                                                    echo utf8_decode("All rights reserved.");
+                                                if (Yii::app()->language == 'es')
+                                                    echo utf8_decode("Todos los derechos reservados.");
+                                                if (Yii::app()->language == 'po')
+                                                    echo utf8_decode("Todos os direitos reservados.");
+                                            }else {
+                                                // only for german  
+                                                ?>                          
 
-     <br/>
-     
-     <p style="color: #ffffff;">Sonarayled © 2015 | Privacy Policy<p>
-    </div>
+                                                <div style="color: #999; padding: 10px; border-top: solid 1px #ccc;border-bottom: solid 1px #ccc; margin-bottom: 15px; ">
+                                                    <span style="padding: 10px; cursor: pointer;" id="impressum"> Impressum </span>  |                                          
+                                                    <?php
+                                                    foreach ($menus as $menu) {
+                                                        if ($menu['parent'] == 0) {
+                                                            $total_sub = count($menu['menu']);
+                                                            //para saber si tiene hijos
+                                                            ?>
+                                                            <span style="padding: 10px;"><?php echo CHtml::link(ucfirst($menu['name']), array($menu['url']), array('role' => "menuitem", "style" => "color:#999")); ?></span> |
+                                                            <?php
+                                                        }
+                                                    }
+                                                    ?>
+                                                    <div style="display: none;">
+                                                        <?php
+                                                        /* ventana modal para impressum (solo para aleman) */
+                                                        $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
+                                                            'id' => 'Impressumdialog',
+                                                            // additional javascript options for the dialog plugin
+                                                            'options' => array(
+                                                                'position' => 'center',
+                                                                'title' => 'Impressum',
+                                                                'autoOpen' => false,
+                                                                'minWidth' => 600,
+                                                                'modal' => true,
+                                                            ),
+                                                        ));
+                                                        ?>
+
+
+                                                        <div class="text-left" style="font-size: 12px; padding-left: 30px; line-height: 18px;">
+
+                                                            DASCOM Europe GmbH<br/>
+                                                            Heuweg 3<br/>
+                                                            89079 Ulm<br/><br/>
+
+                                                            Telefon: +49 (0) 731 - 20 75 - 0<br/>
+                                                            Telefax: +49 (0) 731 - 20 75 - 100<br/>
+                                                            email: info.de@dascom.com<br/>
+                                                            Diese E-Mail-Adresse ist gegen Spambots geschützt! Sie müssen JavaScript aktivieren, damit Sie sie sehen können.<br/>
+                                                            Internet: <a href="http://www.dascom.com">www.dascom.com</a> <br/><br/>
+
+                                                            <b>Geschäftsführer:</b><br/>
+                                                            Holger Benke<br/><br/>
+
+                                                            Registergericht: Amtsgericht Ulm<br/>
+                                                            Registernummer: HRB 723920<br/>
+                                                            USt.-IdNr.: DE264947359<br/>
+                                                            WEEE-Reg-Nr.: DE 39196009<br/><br/><br/>
+
+                                                            <b>Haftungshinweis:</b><br/>
+                                                            Trotz sorgfältiger inhaltlicher Kontrolle übernimmt DASCOM keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+                                                            <br/><br/>
+                                                        </div>
+                                                        <?php
+                                                        $this->endWidget('zii.widgets.jui.CJuiDialog');
+                                                        ?>
+                                                    </div>
+                                                    <span style="padding: 10px;"> <a style="color:#999;" target="_blank" href="<?php echo Yii::app()->baseUrl ?>/downloads/AGB_Deutsch_2013-07.pdf"> AGB </a> </span>
+                                                    <br/> </div>
+                                                <div style="font-size: 11px;font-family: Helvetica-Condensed-Light;color: #9c9aa0;width: 100%" class="text-center">
+
+                                                    Copyright © 2014 DASCOM Europe GmbH <br/> 
+
+                                                    Alle Firmen- und Produktnamen sind Marken der jeweiligen Eigentümer. 
+                                                </div>
+
+                                                <?php
+                                            }
+                                            ?>
+                                        </p>
+                                    </div>
+
+                                    <!-- footer -->
+
+                                </div>
                                 <!-- page -->
 
                                 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>

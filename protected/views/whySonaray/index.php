@@ -132,7 +132,7 @@
 <br/> <br/> <br/> <br/> <br/>  <br/> 
     
      <div class="container">
-          <img src="http://dascomla.com/sonaray-ensamble/images/whySonaray/en/head.png" width="1081" height="82" /><br/><br/>
+          <img src="http://dascomla.com/sonaray-ensamble/images/img/advantages.png" width="1081" height="82" /><br/><br/>
          <img src="http://dascomla.com/sonaray-ensamble/images/head.png" width="1081" height="254" /><br/><br/><br/>
     <?php $i = 0; ?>
     <?php foreach ($parrafos as $valor):?>

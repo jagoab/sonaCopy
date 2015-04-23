@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 class SiteController extends Controller
 {
@@ -39,6 +39,7 @@ class SiteController extends Controller
             
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
+		
              include("geolocalizacion/geoiploc.php"); 
             if (empty($_POST['checkip']))
                 {
@@ -96,9 +97,12 @@ class SiteController extends Controller
 	}
 	
 	public function actionflagUrl($flag='us', $lang='en'){		
+		
             Yii::app()->session['flag'] = $flag;
             Yii::app()->language=$lang;
-	    $this->redirect(Yii::app()->request->baseUrl.'/'.$lang.'/home/index');
+		//echo"salida 22"; exit();	
+	   $this->redirect(Yii::app()->request->baseUrl.'/'.$lang.'/home/index');
+		//$this->render('selector');
 	}
 
 	/**
@@ -115,16 +119,8 @@ class SiteController extends Controller
 		}
 	}
         
-       public function actionParnert()
-	{
-				$this->render('Parnert');
-		
-	}
-        public function actionFaq()
-	{
-				$this->render('Faq');
-		
-	}
+       
+
 	/**Y
 	 * Displays the contact page
 	 */

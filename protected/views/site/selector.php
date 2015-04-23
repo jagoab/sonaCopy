@@ -1,6 +1,10 @@
-    <center>
-<img src="http://www.dascomla.com/sonaray-ensamble/images/img/map.png" width="926" height="514"  alt=""/>
+	<center>    
+<table width="925" height="518" border="0" background="http://www.dascomla.com/sonaray-ensamble/images/img/map.png" >
+  <tr>
+    <td width="635" height="512">
+ <center>
 <div class="panel panel-default">
+
   <div class="panel-heading"><?php echo Yii::t('forms','Asia Pacific'); ?></div>
   <div class="panel-body">
       <div class="flag">
@@ -47,6 +51,13 @@
       </div>
     
   </div>
-</div>
-<br/>
+</div><br/>
 </center>
+</td>
+ 
+  </tr>
+
+</table>
+
+</center>
+<?php exit(); ?>

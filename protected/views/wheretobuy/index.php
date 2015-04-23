@@ -132,12 +132,8 @@
 <br/> <br/> <br/> <br/> <br/>  <br/> 
     
      <div class="container">
-          <img src="http://dascomla.com/sonaray-ensamble/images/wheretobuy/en/head.png" width="1081" height="82" /><br/><br/>
+          <img src="http://dascomla.com/sonaray-ensamble/images/img/where_to_buy.png" width="1081" height="82" /><br/><br/>
          <img src="http://dascomla.com/sonaray-ensamble/images/head.png" width="1081" height="254" /><br/><br/><br/>
-         <br/>
-        
-          <br/>
-         <div class='block' data-move-y='200px' data-move-x='-200px' style="border: 0; background: #ffffff;"> <h1 style="color:#999999">Dascom Americas</h1> <br/> <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d402415.63939265406!2d-78.6298855441525!3d38.00344171893598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!1i0!3e6!4m0!4m5!1s0x89b363a6a7566d47%3A0xca39e68b9bc09a55!2sDascom+Americas%2C+421+W+Main+St%2C+Waynesboro%2C+VA+22980!3m2!1d38.068889999999996!2d-78.889206!5e0!3m2!1ses!2sus!4v1427376716848" width="500" height="450" frameborder="0" style="border:0"></iframe> </div>
     <?php $i = 0; ?>
     <?php foreach ($parrafos as $valor):?>
 
@@ -145,50 +141,15 @@
           
               echo"<div class='block' data-move-y='200px' data-move-x='100px'>";
          } 
-        if ($bucler == 2){
-      
-         
-         echo"<div class='block' data-move-y='200px' data-move-x='-200px'>";
-         
-          }  
-          if ($bucler == 3){
-       
-       //  echo"<div class='block'  data-rotate-y='180deg' data-move-z='-200px' data-move-x='-300px'>";
-          echo"<div class='block' data-move-y='200px' data-move-x='100px'>";
-          }  
-             if ($bucler > 3){
-       
-           echo"<div class='block' data-move-x='-500px' data-rotate='90deg'>";
-      
-         
-        
-          } 
+
        ?>
              
         <br/><br/>
     <div style="font-size: 40px; color: #999;" ><?php  echo $valor[0]->text; ?></div>
     
-<hr color="#CCCCCC" size=3 width="80%" align="center">
+
 <center>
-<div style="">
-<div style='width: 18%;'>
-<img src="<?php echo Yii::app()->request->baseUrl.$imagenesAboutUs[$i]->path; ?>" style="width: 100%; " />
-</div> 
- 
-<div style='width: 60%; border: 0px solid green; text-align: justify; font-family: Arial; font-size: 14px;'> 
-
-<strong><?php echo $valor[1]->text; ?></strong><br/><br/>
-
-<span style="text-align: justify; margin-left: 14px; margin-top: 5%;font-size: 13pt;  color:#999 "> 
-<?php echo $valor[2]->text; ?>
-</span> </div>
-</div>  
-   </div>
-           
-<br/>
-<br/> <br/> <br/>
- 
-
+ </div>      
 </center>
     <?php $i++;?>  
         <?php if ($bucler == true){ 

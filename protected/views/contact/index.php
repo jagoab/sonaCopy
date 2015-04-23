@@ -177,7 +177,7 @@
                                                               
                                                                 ?>
                                                                     <?php if ($contador ==1) { ?>
-                                                                        <li  style="font-weight: bold; background:#FFFFFF;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
+                                                                        <li  style="font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
                                                                     <?php 
                                                                     $contador++;
                                                                     }else{ ?> 

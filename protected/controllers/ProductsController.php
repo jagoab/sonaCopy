@@ -27,7 +27,7 @@ class ProductsController extends Controller {
     }
 
        public function actionAplication() {
-      
+        
         /*textos de las pestañas*/
         $sql1 = "SELECT * FROM aplication_type AplicationType WHERE AplicationType.visible = 1";
         $SqlAplicationTypes = Yii::app()->db->createCommand($sql1)->queryAll();
@@ -62,8 +62,6 @@ class ProductsController extends Controller {
 
 
     public function actionIndex() {
-        
-          
         $idclick=null;  
         if(isset($_GET['idclick']))$idclick=$_GET['idclick'];
         /* id click es para cuando sea llamado el producto destacado*/

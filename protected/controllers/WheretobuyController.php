@@ -7,20 +7,16 @@ class WheretobuyController  extends Controller
 		
 		$criterio = new CDbCriteria();
 		for($i = 1;$i <=4;$i++){
-		$criterio -> condition = 'language = \''.Yii::app()->language.'\' and category in (18,19,20) and parent = '.$i;
+		$criterio -> condition = 'language = \''.Yii::app()->language.'\' and category in (42) and parent = '.$i;
 		$textos = Texts::model()->findAll($criterio);
 					
 				$parrafo[$i] = $textos;
 		}
 		
-		$criterio = new CDbCriteria();
-		$criterio -> condition = 'language = \''.Yii::app()->language.'\' and category = 21';
 		
-		$imagenesAboutUs = Files::model()->findAll($criterio);
 		
 		$this->render('index',array(
-				'parrafos'=>$parrafo,
-				'imagenesAboutUs' => $imagenesAboutUs,
+				'parrafos'=>$parrafo
 		));
 		
 		
