@@ -27,44 +27,44 @@ class CarrerController extends Controller {
         if (isset($_POST['ContactForm'])) {
             $model->attributes = $_POST['ContactForm'];
             if ($model->validate()) {
-			 // $mailer->AddAddress('druiz@thefactoryhka.com');
-                            $mailer->AddAddress('jramirez@thefactoryhka.com');
-			    $mailer->AddAddress('thefactoryhka@gmail.com');
-			    $mailer->AddAddress('horaciopinto2@gmail.com');		                                 
-                            $mailer->AddAddress('John.Vidaurrazaga@dascom.com');
-                            $mailer->AddAddress('EFerreira@dascom.com');
-                            $mailer->AddAddress('Sarrieta@dascom.com');
-                            $mailer->AddAddress('Gmedina@dascom.com');
-                            $mailer->AddAddress('albertoacostac@yahoo.com');
-			    $mailer->AddAddress('mmejia@thefactoryhka.com');
-		            $mailer->AddAddress('mmejia.hka@gmail.com');
+			  $mailer->AddAddress('rmartinez@thefactoryhka.com');
+//                            $mailer->AddAddress('jramirez@thefactoryhka.com');
+//			    $mailer->AddAddress('thefactoryhka@gmail.com');
+//			    $mailer->AddAddress('horaciopinto2@gmail.com');		                                 
+//                            $mailer->AddAddress('John.Vidaurrazaga@dascom.com');
+//                            $mailer->AddAddress('EFerreira@dascom.com');
+//                            $mailer->AddAddress('Sarrieta@dascom.com');
+//                            $mailer->AddAddress('Gmedina@dascom.com');
+//                            $mailer->AddAddress('albertoacostac@yahoo.com');
+//			    $mailer->AddAddress('mmejia@thefactoryhka.com');
+//		            $mailer->AddAddress('mmejia.hka@gmail.com');
 /*Australia*/
                 if (Yii::app()->session['flag'] == 'au') {
-                    $mailer->AddAddress('alex@sonaray.com.au');
+                   // $mailer->AddAddress('alex@sonaray.com.au');
                 }
 /*China*/
                 if (Yii::app()->session['flag'] == 'cn' || Yii::app()->session['flag'] == 'hk') {
-                    $mailer->AddAddress('joewong@sonarayled.com');
+                   // $mailer->AddAddress('joewong@sonarayled.com');
                 }
 /*Singapur*/
                 if (Yii::app()->session['flag'] == 'sg') {
-                    $mailer->AddAddress('petertan@dascom.com.sg');
+                   // $mailer->AddAddress('petertan@dascom.com.sg');
                 }
 /*Alemania*/
                 if (Yii::app()->session['flag'] == 'de') {
-                    $mailer->AddAddress('MJoksch@dascom.com');
+                  //  $mailer->AddAddress('MJoksch@dascom.com');
                 }
 /*Venezuela*/
                 if (Yii::app()->session['flag'] == 've') {
                 
-			 $mailer->AddAddress('ralmillategui@dascom.com');
+			// $mailer->AddAddress('ralmillategui@dascom.com');
 
                 }
 /*Colombia*/
                 if (Yii::app()->session['flag'] == 'co') {
-                    $mailer->AddAddress(' pvelez@thefactoryhka.com');
+                    //$mailer->AddAddress(' pvelez@thefactoryhka.com');
 			
-			 $mailer->AddAddress('ralmillategui@dascom.com');
+			// $mailer->AddAddress('ralmillategui@dascom.com');
                 }
 /*Brasil*/
                 if (Yii::app()->session['flag'] == 'br') {
@@ -74,32 +74,32 @@ class CarrerController extends Controller {
                 }
 /*Mexico*/
                 if (Yii::app()->session['flag'] == 'mx') {
-                    $mailer->AddAddress('abroswilliamson@dascom.com');
-                    $mailer->AddAddress('jaflores@dascom.com');	
-		    $mailer->AddAddress('jaflorez@thefactoryhka.com');		
-		    $mailer->AddAddress('juanalejandroflorez@gmail.com');
+//                    $mailer->AddAddress('abroswilliamson@dascom.com');
+//                    $mailer->AddAddress('jaflores@dascom.com');	
+//		    $mailer->AddAddress('jaflorez@thefactoryhka.com');		
+//		    $mailer->AddAddress('juanalejandroflorez@gmail.com');
                 }
 /*Peru*/
                 if (Yii::app()->session['flag'] == 'pe') {
-                    $mailer->AddAddress('achuquizuta@thefactoryhka.com; ');
-                    $mailer->AddAddress('atorres@thefactoryhka.com');
- 			$mailer->AddAddress('ralmillategui@dascom.com');
+//                    $mailer->AddAddress('achuquizuta@thefactoryhka.com; ');
+//                    $mailer->AddAddress('atorres@thefactoryhka.com');
+// 			$mailer->AddAddress('ralmillategui@dascom.com');
                 }
 /*Panama*/
                 if (Yii::app()->session['flag'] == 'pa') {
-                    $mailer->AddAddress('JDiaz@dascom.com');
-                    $mailer->AddAddress('ralmillategui@dascom.com');
+//                    $mailer->AddAddress('JDiaz@dascom.com');
+//                    $mailer->AddAddress('ralmillategui@dascom.com');
 		   
                 }
 /*Chile*/
                 if (Yii::app()->session['flag'] == 'cl') {
                 
-		    $mailer->AddAddress('ralmillategui@dascom.com');
+//		    $mailer->AddAddress('ralmillategui@dascom.com');
 
                 }
 /*Usa*/
                 if (Yii::app()->session['flag'] == 'us') {
-                    $mailer->AddAddress('racorn@dascom.com');
+//                    $mailer->AddAddress('racorn@dascom.com');
                 }
 
 

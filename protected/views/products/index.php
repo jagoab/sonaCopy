@@ -116,7 +116,7 @@
  
        
  idclick=023190283109283091283;
-	 activarCarosel = function(idContent, idCarousel, valorLista, pestana, idType) {
+	activarCarosel = function(idContent, idCarousel, valorLista, pestana, idType) {
 
         $("#contenedorDetalle").hide();
         $("#accordion1 ul li div").css('width', '100%');
@@ -138,8 +138,6 @@
             }
 
         })
-
-
         $('#' + idCarousel).carouFredSel({
             circular: false,
             infinite: false,
@@ -152,8 +150,6 @@
                 key: "right"},
             pagination: "#foo2_pag",
         });
-
-       
         $('span').css('width', '');
 
         /*var valores = $('.'+valorLista+'> span').each(function(key,value){
@@ -163,13 +159,7 @@
          
          });*/
         $('.lista span').css({'width': ''});
-
-
         return;
-
-
-
-
     };
 
 
@@ -443,7 +433,10 @@ if($(this).attr('id_2')!=idclick){
                                                                             if ($total_sub <= 0) {
                                                                                 ?>
                                                                                                          <!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
-                                                                                <li style="font-size:15px;" class=""><?php echo CHtml::link($menu2['name'], array($menu2['url'])); ?></li>
+                                                                                <li style="font-size:15px;" class="">
+                                                                                    <a href="<?php echo $menu2['url']; ?>"><?php echo $menu2['name'];?></a>
+                                                                                    <?php 
+                                                                                //echo CHtml::link($menu2['name'], array($menu2['url'])); ?></li>
 
                                                                                 <?php
                                                                             } else {
@@ -489,12 +482,21 @@ if($(this).attr('id_2')!=idclick){
 //            $ruta1 = Yii::app()->baseUrl . $ruta1;
 //            $ruta2 = Yii::app()->baseUrl . $ruta2;
             $categorias=array();
+             $pag=1;
         foreach ($pt as $pt1): 
 
 if (@ (strtolower(Yii::app()->session['flag']) == 'us' && $pt1['id']!=8 && $pt1['id']!=4) || strtolower(Yii::app()->session['flag']) != 'us') { 
            if (@ (strtolower(Yii::app()->session['flag']) == 'al' && $pt1['id']!=8 && $pt1['id']!=4 && $pt1['id']!=3) || strtolower(Yii::app()->session['flag']) != 'al') {
-                 $categorias[]=$pt1['id'];?>
-
+                 $categorias[]=$pt1['id'];
+                 
+                 if (isset($_GET['id_cat'])){
+                     
+                     if ($_GET['id_cat']==$pt1['id']){
+                         $pag=$i+1;
+                     } 
+                 }
+                 ?>
+                 
             <li class="pestaLed" id="pestana<?php echo $i ?>" onclick="activarCarosel('<?php echo $pt1['id']; ?>','foo<?php echo $pt1['id']; ?>','lista<?php echo $i; ?>','pestana<?php echo $i ?>',<?php echo $pt1['id']; ?>)" >
                 <h1 id="pestana<?php echo $i ?>"><?php echo $pt1["name"]; ?></h1>
                 <div class="lista<?php echo $i; ?>">
@@ -519,7 +521,6 @@ if (@ (strtolower(Yii::app()->session['flag']) == 'us' && $pt1['id']!=8 && $pt1[
             </li>
             <?php $i++;
             $j++;
-            
             }
             } ?>
 <?php  endforeach; ?>
@@ -625,14 +626,14 @@ $(document).ready(function(){
 			 	  key     : "right"},
 				  pagination  : "#foo2_pag",
   			})
-$("#accordion1").awsAccordion({
+                    $("#accordion1").awsAccordion({
         type: "horizontal",
         cssAttrsHor: {
             ulWidth: "responsive",
             liHeight: 480,
             liWidth: 30
         },
-        startSlide: 1,
+        startSlide: <?php echo $pag; ?>,
         openCloseHelper: {
             openIcon: "plus",
             closeIcon: "minus"
@@ -642,10 +643,12 @@ $("#accordion1").awsAccordion({
         slideOn: "click",
         autoPlay: false,
 //      autoPlaySpeed:2
-    })
-}
+    });
+    }
+                            
 );
 
+ 
 </script>
 
 

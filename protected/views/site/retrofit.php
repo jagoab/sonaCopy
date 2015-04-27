@@ -196,7 +196,7 @@
                                                                             if ($total_sub <= 0) {
                                                                                 ?>
                                                                                                          <!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
-                                                                                <li style="font-size:15px;" class=""><?php echo CHtml::link($menu2['name'], array($menu2['url'])); ?></li>
+                                                                                <li style="font-size:15px;" class=""><a href="<?php echo $menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
 
                                                                                 <?php
                                                                             } else {
@@ -314,52 +314,7 @@ $(document).ready(function(){
     }
     </style>
     <br/> <br/> <br/> <br/> <br/>
-  <div class="container">
-    <h2>in construction about</h2>
-    <div class="row">
-      <div class="col-md-6"><div class="block"></div></div>
-      <div class="col-md-6"><div class="block"></div></div>
-    </div>
-    <h2>to the world of the  sonaray</h2>
-    <div class="row">
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="-200px"></div></div>
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="-100px"></div></div>
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="100px"></div></div>
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="200px"></div></div>
-    </div>
-    <h2>...in construction about</h2>
-    <div class="row">
-      <div class="col-md-3"><div class="block" data-move-x="-500px" data-rotate="90deg"></div></div>
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="-200px" data-rotate="45deg"></div></div>
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="200px" data-rotate="-45deg"></div></div>
-      <div class="col-md-3"><div class="block" data-move-x="500px" data-rotate="-90deg"></div></div>
-    </div>
-   
-    <h2>to the world of the  sonaray</h2>
-    <div class="row">
-      <div class="col-md-4"><div class="block" data-rotate-x="90deg" data-move-z="-500px" data-move-y="200px"></div></div>
-      <div class="col-md-4"><div class="block" data-rotate-x="90deg" data-move-z="-500px" data-move-y="200px"></div></div>
-      <div class="col-md-4"><div class="block" data-rotate-x="90deg" data-move-z="-500px" data-move-y="200px"></div></div>
-    </div>
-    <div class="row">
-      <div class="col-md-3"><div class="block" data-rotate-y="180deg" data-move-z="-200px" data-move-x="-300px"></div></div>
-      <div class="col-md-3"><div class="block" data-rotate-x="180deg" data-rotate-y="180deg" data-move-z="-700px"></div></div>
-      <div class="col-md-3"><div class="block" data-rotate-x="180deg" data-rotate-y="45deg" data-move-z="-500px"></div></div>
-      <div class="col-md-3"><div class="block" data-rotate-y="180deg" data-move-z="-100px" data-move-x="500px"></div></div>
-    </div>
-    <div class="row">
-      <div class="col-md-6"><div class="block" data-rotate-y="270deg" data-move-x="-150%"></div></div>
-      <div class="col-md-6"><div class="block" data-rotate-y="270deg" data-move-x="150%"></div></div>
-    </div>
-    <h2>in construction about...</h2>
-    <div class="row">
-      <div class="col-md-6"><div class="block" data-scale="5" ></div></div>
-      <div class="col-md-6"><div class="block" data-scale="0.2" data-skew="90deg,90deg"></div></div>
-    </div>
-    
-    <h2>to the world of the  sonaray
-</h2>
-  </div>
+  
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script src="bootstrap.min.js"></script>
     <script src="../dist/jquery.smoove.js"></script>

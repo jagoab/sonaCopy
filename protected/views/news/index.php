@@ -120,7 +120,7 @@
                                                                             if ($total_sub <= 0) {
                                                                                 ?>
                                                                                                          <!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
-                                                                                <li style="font-size:15px;" class=""><?php echo CHtml::link($menu2['name'], array($menu2['url'])); ?></li>
+                                                                                <li style="font-size:15px;" class=""><li style="font-size:15px;" class=""><a href="<?php echo $menu2['url']; ?>"><?php echo $menu2['name'];?></a></li></li>
 
                                                                                 <?php
                                                                             } else {

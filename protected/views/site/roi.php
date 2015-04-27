@@ -111,6 +111,13 @@
     position:fixed;
     top:0;
 }
+
+.head_title {
+	color: #999999;
+	font-size: 36px;
+	font-family:Arial, Helvetica, sans-serif;
+        margin-left: 20px;
+}
 </style>
 
 </head>
@@ -196,7 +203,7 @@
                                                                             if ($total_sub <= 0) {
                                                                                 ?>
                                                                                                          <!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
-                                                                                <li style="font-size:15px;" class=""><?php echo CHtml::link($menu2['name'], array($menu2['url'])); ?></li>
+                                                                                <li style="font-size:15px;" class=""><a href="<?php echo $menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
 
                                                                                 <?php
                                                                             } else {
@@ -524,6 +531,11 @@ function page_load() {
     }
 }
 </script>
+        <div style="background:#F9F9F9; width:90%; height:20%">
+            <br />
+  <h2 align="left" class="head_title">ROI Calculator</h2>
+  <br />
+</div>
       <table bgcolor="#ffffff" border="0" width="960" align="center" cellpadding="0" cellspacing="0">
 	<tbody><tr>
 		<td align="center" class="main">
@@ -541,8 +553,7 @@ function page_load() {
 		
 		</tr>
 	</tbody></table>
-		<h2>
-		<font face="Arial">ROI Calculator</font></h2>
+
 			<font face="Arial">
 			<small>An Estimating Tool to Compare Payback of LED Lighting</small></font><p>
 		<font face="Arial" size="1"><span style="font-weight: 400"><strong>Please read:</strong> This program requires Javascript on your computer. This calculator gives payback time, the annual and life-time power, CO<sub>2</sub> AND maintenance savings when you upgrade your lighting to LEDs.&nbsp; 
@@ -858,10 +869,7 @@ UpdateChanges();
 						    </tr>
 						</tbody></table>
 						<br><table align="center" border="0" cellpadding="0" cellspacing="0">
-		<tbody><tr class="main"><td align="center">
-				<sup><strong>*</strong></sup><small>US national average CO<sub>2</sub> emissions caused by various power generation capabilities, value provided by the US EPA. </small>
-		</td></tr>
-		</tbody></table><br>
+		</table><br>
 		<br>
 	  <!-- Start of StatCounter Code -->
 <script type="text/javascript">                                                             
@@ -951,56 +959,7 @@ $(document).ready(function(){
     }
     </style>
     <br/> <br/> <br/> <br/> <br/>
-  <div class="container">
-    <h2>in construction about</h2>
-    <div class="row">
-      <div class="col-md-6"><div class="block"></div></div>
-      <div class="col-md-6"><div class="block"></div></div>
-    </div>
-    <h2>to the world of the  sonaray</h2>
-    <div class="row">
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="-200px"></div></div>
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="-100px"></div></div>
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="100px"></div></div>
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="200px"></div></div>
-    </div>
-    <h2>...in construction about</h2>
-    <div class="row">
-      <div class="col-md-3"><div class="block" data-move-x="-500px" data-rotate="90deg"></div></div>
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="-200px" data-rotate="45deg"></div></div>
-      <div class="col-md-3"><div class="block" data-move-y="200px" data-move-x="200px" data-rotate="-45deg"></div></div>
-      <div class="col-md-3"><div class="block" data-move-x="500px" data-rotate="-90deg"></div></div>
-    </div>
-   
-    <h2>to the world of the  sonaray</h2>
-    <div class="row">
-      <div class="col-md-4"><div class="block" data-rotate-x="90deg" data-move-z="-500px" data-move-y="200px"></div></div>
-      <div class="col-md-4"><div class="block" data-rotate-x="90deg" data-move-z="-500px" data-move-y="200px"></div></div>
-      <div class="col-md-4"><div class="block" data-rotate-x="90deg" data-move-z="-500px" data-move-y="200px"></div></div>
-    </div>
-    <div class="row">
-      <div class="col-md-3"><div class="block" data-rotate-y="180deg" data-move-z="-200px" data-move-x="-300px"></div></div>
-      <div class="col-md-3"><div class="block" data-rotate-x="180deg" data-rotate-y="180deg" data-move-z="-700px"></div></div>
-      <div class="col-md-3"><div class="block" data-rotate-x="180deg" data-rotate-y="45deg" data-move-z="-500px"></div></div>
-      <div class="col-md-3"><div class="block" data-rotate-y="180deg" data-move-z="-100px" data-move-x="500px"></div></div>
-    </div>
-    <div class="row">
-      <div class="col-md-6"><div class="block" data-rotate-y="270deg" data-move-x="-150%"></div></div>
-      <div class="col-md-6"><div class="block" data-rotate-y="270deg" data-move-x="150%"></div></div>
-    </div>
-    <h2>in construction about...</h2>
-    <div class="row">
-      <div class="col-md-6"><div class="block" data-scale="5" ></div></div>
-      <div class="col-md-6"><div class="block" data-scale="0.2" data-skew="90deg,90deg"></div></div>
-    </div>
-    
-    <h2>to the world of the  sonaray
-</h2>
-  </div>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script src="bootstrap.min.js"></script>
-    <script src="../dist/jquery.smoove.js"></script>
-    <script>$('.block').smoove({offset:'40%'});</script>
+  
 
    
     <!-- Bootstrap core JavaScript
