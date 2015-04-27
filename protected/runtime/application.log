@@ -29,3 +29,156 @@ Stack trace:
 REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
 HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
 ---
+2015/04/27 10:44:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---
+2015/04/27 10:48:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---
+2015/04/27 10:50:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---
+2015/04/27 10:56:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---
+2015/04/27 11:00:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---
+2015/04/27 11:02:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---
+2015/04/27 11:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---
+2015/04/27 11:23:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---
+2015/04/27 11:23:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/home/products/index".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('en/home/product...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/en/home/products/index
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---
+2015/04/27 11:23:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/products/index
+---
+2015/04/27 11:23:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/home/products/images/favicon.ico".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('en/home/product...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/en/home/products/images/favicon.ico
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/products/index
+---
+2015/04/27 11:23:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/home/products/index".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('en/home/product...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/en/home/products/index
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---
+2015/04/27 11:23:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/products/index
+---
+2015/04/27 11:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/home/logistic/index".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('en/home/logisti...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/en/home/logistic/index
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---
+2015/04/27 11:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/logistic/index
+---
+2015/04/27 11:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "en/home/logistic/images/favicon.ico".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('en/home/logisti...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/en/home/logistic/images/favicon.ico
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/logistic/index
+---
+2015/04/27 11:30:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/css3-mediaquery.js".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/css3-mediaqu...')
+#1 /var/www/html/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /var/www/html/sonaray_responsive_new/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sonaray_responsive_new/js/css3-mediaquery.js
+HTTP_REFERER=http://thefactoryhka.loc.com/sonaray_responsive_new/en/home/index
+---

@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
+    <title>SONARAY</title>
         <link rel="shortcut icon" href="images/favicon.ico"/>
         <link rel="icon" type="image/png" href="images/favicon.ico" /> 
         <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico"/>
