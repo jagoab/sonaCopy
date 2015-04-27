@@ -428,13 +428,13 @@ if($(this).attr('id_2')!=idclick){
                                                                     <ul class="dropdown-menu" role="menu">
                                                                         <?php
                                                                         foreach ($menu['menu'] as $menu2) {
-                                                                            $total_sub = count($menu2['menu']);
+                                                                        	$total_sub = count($menu2['menu']);
                                                                             // echo $total_sub;
                                                                             if ($total_sub <= 0) {
                                                                                 ?>
                                                                                                          <!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
                                                                                 <li style="font-size:15px;" class="">
-                                                                                    <a href="<?php echo $menu2['url']; ?>"><?php echo $menu2['name'];?></a>
+                                                                                    <a href="<?php echo Yii::app()->request->baseUrl . '/' . $menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
                                                                                     <?php 
                                                                                 //echo CHtml::link($menu2['name'], array($menu2['url'])); ?></li>
 

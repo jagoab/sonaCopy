@@ -260,7 +260,8 @@ foreach ($menu['menu'] as $menu2)
 	{
 ?>
 <!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
-<li style="font-size:15px;" class=""><a href="<?php echo $menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
+<li style="font-size:15px;" class="">
+<a href="<?php echo Yii::app()->request->baseUrl . '/' . $menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
 <?php
 }
 else
@@ -293,8 +294,27 @@ else
 <h2>in Sonaray we want you to be well, live well and enjoy life. By understanding their aspirations and needs you become what inspires us.</h2>
 <br/>
 <div class="row">
-	<div class="col-md-6" ><div class="block" data-move-x="-600px" style="border: 6;" ><strong><p style="font-size: 28px; color: #003399; " align='left'> About us</p> </strong><p style="font-size: 28x; " align='left'>________________</p><p align="justify" style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #666666;">DASCOM&rsquo;s LED Lighting business is at the forefront of lighting the world of tomorrow. With our Sonaray&trade; brand of LED lighting solutions, our mission is to provide the absolute best in energy efficient lighting. With a broad array of research, development, test and production capabilities and facilities, our experienced team is dedicated to producing only the highest quality LED lights.</p><p style="font-size: 28x; " align='right'>VER MAS</p></div></div>
-	<div class="col-md-6"><div class="block" data-move-x="600px" ><iframe width="560" height="315" src="//www.youtube.com/embed/eSjuBM268Yo" frameborder="0" allowfullscreen></iframe></div></div>
+	<div class="col-md-6" >
+		<div class="block" data-move-x="-600px" style="border: 6; height: 315px" >
+			<strong>
+				<p style="font-size: 28px; color: #003399; " align='left'>
+				About us
+				</p>
+			</strong>
+			<p style="font-size: 28x; " align='left'>________________</p>
+			<p align="justify" style=" font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; color: #666666;">
+			<?php echo $textoAbout;?>
+			</p>
+			<p style="font-size: 28x; " align='right'>
+				<a href="<?php echo Yii::app()->request->baseUrl . '/about/index'; ?>">VER MAS</a>
+			</p>
+		</div>
+	</div>
+	<div class="col-md-6">
+	<div class="block" data-move-x="600px" >
+		<iframe width="560" height="315" src="//www.youtube.com/embed/eSjuBM268Yo" frameborder="0" allowfullscreen></iframe>
+	</div>
+	</div>
 </div>
 <h2>You can also move objects across the screen...</h2>
 <div class="row">
