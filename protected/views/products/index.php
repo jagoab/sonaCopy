@@ -611,8 +611,21 @@ if (@ (strtolower(Yii::app()->session['flag']) == 'us' && $pt1['id']!=8 && $pt1[
 
 </div>
 
-<script>
-    $("#accordion1").awsAccordion({
+<script type="text/javascript">
+$(document).ready(function(){
+ $('#foo0').carouFredSel({
+			circular: false,
+			infinite: false,
+        		auto    : false,
+			width   : "100%",
+			align   : "left",
+			prev    : { button  : "#foo2_prev",
+	   			  key     : "left"},
+			next    : { button  : "#foo2_next",
+			 	  key     : "right"},
+				  pagination  : "#foo2_pag",
+  			})
+$("#accordion1").awsAccordion({
         type: "horizontal",
         cssAttrsHor: {
             ulWidth: "responsive",
@@ -630,22 +643,7 @@ if (@ (strtolower(Yii::app()->session['flag']) == 'us' && $pt1['id']!=8 && $pt1[
         autoPlay: false,
 //      autoPlaySpeed:2
     })
- </script>
-
-<script type="text/javascript">
-$(document).ready(function(){
- $('#foo0').carouFredSel({
-			circular: false,
-			infinite: false,
-        		auto    : false,
-			width   : "100%",
-			align   : "left",
-			prev    : { button  : "#foo2_prev",
-	   			  key     : "left"},
-			next    : { button  : "#foo2_next",
-			 	  key     : "right"},
-				  pagination  : "#foo2_pag",
-  			})}
+}
 );
 
 </script>
