@@ -3,7 +3,8 @@
  * PHPMailer language file.  
  * Polish Version
  */
-$PHPMAILER_LANG = array ();
+
+$PHPMAILER_LANG = array();
 
 $PHPMAILER_LANG["provide_address"] = 'Należy podać prawidłowy adres email Odbiorcy.';
 $PHPMAILER_LANG["mailer_not_supported"] = 'Wybrana metoda wysyłki wiadomości nie jest obsługiwana.';

@@ -4,7 +4,8 @@
  * Japanese Version
  * By Mitsuhiro Yoshida - http://mitstek.com/
  */
-$PHPMAILER_LANG = array ();
+
+$PHPMAILER_LANG = array();
 
 $PHPMAILER_LANG['provide_address'] = '少なくとも1つメールアドレスを 指定する必要があります。';
 $PHPMAILER_LANG['mailer_not_supported'] = ' メーラーがサポートされていません。';

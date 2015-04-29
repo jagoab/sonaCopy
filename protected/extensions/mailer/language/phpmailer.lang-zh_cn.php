@@ -4,7 +4,8 @@
  * Simplified Chinese Version
  * @author liqwei <liqwei@liqwei.com>
  */
-$PHPMAILER_LANG = array ();
+
+$PHPMAILER_LANG = array();
 
 $PHPMAILER_LANG["provide_address"] = '必须提供至少一个收件人地址。';
 $PHPMAILER_LANG["mailer_not_supported"] = '发信客户端不被支持。';

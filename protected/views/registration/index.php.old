@@ -1,0 +1,302 @@
+<?php
+$this->pageTitle = Yii::app()->name . ' - Contáctanos';
+$this->breadcrumbs = array('Contáctanos');
+?>
+
+<!-- Google Code for TFHKA-PE Conversion Page -->
+
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 989228242;
+    var google_conversion_language = "en";
+    var google_conversion_format = "2";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "kcDyCK7j1AcQ0tnZ1wM";
+    var google_conversion_value = 0;
+    var google_remarketing_only = false;
+    /* ]]> */
+</script>
+<script>
+    function soloLetras(e) {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toLowerCase();
+        letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+        especiales = [8, 37, 39, 46];
+
+        tecla_especial = false
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+            return false;
+        }
+    }
+    var nav4 = window.Event ? true : false;
+    function acceptNum(evt) {
+        // NOTE: Backspace = 8, Enter = 13, '0' = 48, '9' = 57  
+        var key = nav4 ? evt.which : evt.keyCode;
+        return (key <= 13 || (key >= 48 && key <= 57 || key == 40 || key == 41 || key == 32));
+    }
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script><noscript>
+<!--<div>-->
+<div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/989228242/?value=0&amp;label=kcDyCK7j1AcQ0tnZ1wM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+<div class="row" >
+    <!-- MAPA GOOGLE MAPS -->
+    <div class="panel panel-default col-md-11" style="margin-left: 30px; padding: 0;">
+        <div class="panel-heading" style="background-color: #EAEAEA;">
+            <h3 class="panel-title-default"><span class="glyphicon glyphicon-globe" style="position: relative; left: -5px;"></span> <b>Dirección</b></h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-12">
+                <a href="https://www.google.com/maps?ll=-12.087436,-76.971481&spn=0.011981,0.021136&t=m&z=16" target="_blank">
+                    <img src="<?php echo Yii::app()->request->baseUrl ?>/images/mapa2.png" style="max-width: 100%;">
+                </a>
+            </div>
+            <div class="clear"><hr/></div>
+
+            <div class="col-md-8 col-md-push-2">
+              
+                    <div id="texto-contactos">Oficina Agricultura No. 88 Piso 2 Co l. Escandón, Del Miguel Hidalgo, México, D.F<br/>
+                    
+                    Tel.:+52 55 6553 2839 / 6280 0362 / 6280 0350<br/>
+                    <br/>
+                Página web: <a target="_blank" href="http://thefactoryhka.com/mx/">www.thefactory.com/mx</a></div>                 
+      
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6" >
+        <!-- panama -->
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #EAEAEA;">
+                <h3 class="panel-title-default"><span class="glyphicon glyphicon-map-marker" style="position: relative; left: -5px;"></span><b>Panama</b>: THE FACTORY HKA PANAMA</h3>
+            </div>
+            <div class="panel-body">
+                Aquilino de la Guardia y Calle 47, Bella Vista. Edificio Ocean Business. Piso 23. Ofc. 23-10. Panamá. <br/>
+                Teléfonos: 507) 390.19.29 / 390.07.37<br/>
+                Página web: <a target="_blank" href="http://www.thefactory.com.pa/portal/index.php">www.thefactory.com.pa</a>
+            </div>
+        </div><!--fin de panama--> 
+        <!-- MEXICO -->
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #EAEAEA;">
+                <h3 class="panel-title-default"><span class="glyphicon glyphicon-map-marker" style="position: relative; left: -5px;"></span><b>Perú</b>: THE FACTORY HKA PERÚ</h3>
+            </div>
+            <div class="panel-body">
+                Av. Manuel Olguín, Edificio Link Tower 335, Piso 7, Oficina 705, Santiago de Surco, Lima.<br />
+
+                Teléfonos:<br />
+                + 51 1 6375218<br />
+                + 51 1 6376205
+                 <br />
+                Página web: <a target="_blank" href="http://www.thefactoryhka.com/pe">www.thefactoryhka.com/pe</a>
+            </div>
+        </div><!--fin de MEIXCO--> 
+        <!-------------COLOMBI------------------------------------------------------>
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #EAEAEA;">
+                <h3 class="panel-title-default"><span class="glyphicon glyphicon-map-marker" style="position: relative; left: -5px;"></span><b>Colombia</b>: THE FACTORY HKA COLOMBIA</h3>
+            </div>
+            <div class="panel-body">
+                Calle 80, No. 69-70. Bodega 20. Bogotá – Colombia. <br/>               
+                Teléfono: +571-311.30.63<br/>
+                Página web: <a target="_blank" href="http://www.thefactoryhka.com/co">www.thefactoryhka.com/co</a>
+            </div>
+        </div>
+        <!-- Venezuela -->
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #EAEAEA;">
+                <h3 class="panel-title-default"><span class="glyphicon glyphicon-map-marker" style="position: relative; left: -5px;"></span><b>Venezuela</b>: THE FACTORY HKA, C.A.</h3>
+            </div>
+            <div class="panel-body">
+                Calle Callejón Gutiérrez, Edf. Riva, Local 2-1. Planta Baja. La california Norte. Caracas – Venezuela.<br/>
+                Teléfonos (+58 0212)
+            202.08.11 / 237.50.10 / 237.41.12/ 237.52.53 / 237.43.68/ 237.51.32<br/>
+                Fax: 58-212-239.81.76 <br />
+                Código Postal: 1070 <br />
+                Página web: <a target="_blank" href="http://www.thefactory.com.ve/">www.thefactory.com.ve</a>
+                <br /><br />
+            </div>
+        </div>
+        <!-- Republica Dominicana -->
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #EAEAEA;">
+                <h3 class="panel-title-default"><span class="glyphicon glyphicon-map-marker" style="position: relative; left: -5px;"></span><b>República Dominicana</b>: THE FACTORY HKA DOMINICA SRL</h3>
+            </div>
+            <div class="panel-body">
+                Centro Comercial Diamond Mall, Primer Piso, Locales 90 – A y 91-A. Santo Domingo – Republica Dominicana.<br />
+                Teléfonos: (001) 809-567.19.33 / 563.57.22 / 567.29.70<br/>
+                Página web: <a target="_blank" href="http://www.thefactoryhka.com/rd">www.thefactoryhka.com/rd</a>
+
+            </div>
+        </div>            
+        <!-- MIAMI -->
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #EAEAEA;">
+                <h3 class="panel-title-default"><span class="glyphicon glyphicon-map-marker" style="position: relative; left: -5px;"></span><b>EE.UU</b>: THE FACTORY HKA  MIAMI</h3>
+            </div>
+            <div class="panel-body">
+               1819 SE, St. Ft. Lauderdate, Florida – USA. Código Postal: 33316.<br/>
+                Teléfonos:  +1 954-644.87.10  <br/>
+                Página web: <a target="_blank" href="http://www.thefactoryhka.com/usa/">www.thefactoryhka.com/usa</a>
+                <br /><br />
+            </div>
+        </div>
+    </div><!--fin del col-md-6 -->
+
+    <div class="col-md-6" style="position: relative; left: -22px;">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #EAEAEA;">
+                <h3 class="panel-title-default">
+                    <span class="glyphicon glyphicon-envelope" style="position: relative; left: -5px;"></span><b>Contactenos</b></h3>
+            </div>
+            <div class="panel-body">
+
+                <?php if (Yii::app()->user->hasFlash('contact')): ?>
+
+                    <div class="flash-success">
+                        <?php echo Yii::app()->user->getFlash('contact'); ?>
+                    </div>
+
+                <?php endif; ?>
+
+                <p>
+                    Si tiene consultas comerciales u otras preguntas, por favor, rellene el siguiente formulario para contactar con nosotros. Gracias.
+                </p>
+                 <div class="form" style="position: relative; right: 22px;">
+
+                <?php
+                $form = $this->beginWidget('CActiveForm', array(
+                    'id' => 'registration-form',
+                    'enableClientValidation' => true,
+                    'clientOptions' => array(
+                        'validateOnSubmit' => true,
+                    ),
+                ));
+                ?>
+                <p class="note">Los campos que lleven  <span class="required">*</span> son obligatorios..</p>
+                <?php echo $form->errorSummary($model); ?>
+
+                <div class="row">
+                    <?php echo $form->labelEx($model, Yii::t('forms', 'name')); ?>
+                    <?php echo $form->textField($model, 'name', 
+					array(
+					"class" => 'form-control', 
+					'placeholder' => Yii::t('forms', 'Tu Nombre Completo'),
+					'onkeypress'=>'return soloLetras(event)'
+					)); ?>
+                    <?php echo $form->error($model, 'name'); ?>
+                </div>
+                <br/>
+                <div class="row">
+                    <?php echo $form->labelEx($model, Yii::t('forms', 'email')); ?>
+                    <?php echo $form->textField($model, 'email', array("class" => 'form-control', 'placeholder' => Yii::t('forms', 'Email / Correo'))); ?>
+                    <?php echo $form->error($model, 'email'); ?>
+                </div>
+                <br/>
+                <div class="row">
+		<?php echo $form->labelEx($model,'id_level_country'); ?>
+		<?php echo $form->dropDownlist($model,'id_level_country', 
+                        CHtml::listData(LevelCountry::model()->findAll(),'id_level_country','name'),
+                          array(
+                            'class' => 'form-control',
+                            'ajax'=>array(
+                              
+                              'type'=>'POST',
+                              'url'=>CController::createUrl('Registration/Selectcity'),
+                              'update'=>'#'.CHtml::activeId($model,'id_level_city'),
+                              'beforeSend' => 'function(){
+                               $("#Registro_id_level_city").find("option").remove();
+                               }',  
+                                            ),'prompt'=>'Seleccione'
+                                )      
+                        )
+                        ?>
+		<?php echo $form->error($model,'id_level_country'); ?>
+                    </div>
+                    <br/>
+                    <div class="row">
+                    <?php
+                    if ($a =='MEX') {
+                        $lista = LevelCity::model()->findAll('id_level_country = :id_level_country', array(':id_level_country' => $a));
+                        $listasCity = CHtml::listData($lista, 'id_level_city', 'name_city');
+                        } else {
+                        $listasCity = array();
+                        }
+                    ?> 
+                    <?php echo $form->labelEx($model,'id_level_city'); ?>
+                    <?php echo $form->dropDownlist($model,'id_level_city',$listasCity,array("class" => 'form-control','prompt'=>'Seleccione') ); ?>
+                    <?php echo $form->error($model,'id_level_city'); ?>
+                </div>
+               
+                <br/>
+
+                <div class="row">
+        <?php echo $form->labelEx($model, 'phone'); ?>
+                    <?php
+                    $this->widget('CMaskedTextField', array(
+                        'model' => $model,
+                    'attribute' => 'phone',
+                        'mask' => '+52-___-_______',
+                     'charMap' => array('_' => '[0-9]', ',' => '[,]'),
+                    'htmlOptions' => array('size' => 20, "class" => 'form-control'))
+                    );
+                    ?>
+
+                    <?php echo $form->error($model, 'telefono'); ?>
+                    </div>
+                    <br/>
+
+                <div class="row">
+                    <?php echo $form->labelEx($model, Yii::t('forms', 'subject')); ?>
+                    <?php echo $form->textField($model, 'subject', array("class" => 'form-control', 'placeholder' => Yii::t('forms', 'Asunto '))); ?>
+                    <?php echo $form->error($model, 'subject'); ?>
+                </div>
+                <br/>
+                <div class="row">
+                    <?php echo $form->labelEx($model, Yii::t('forms', 'message')); ?>
+                    <?php echo $form->textArea($model, 'message', array('rows' => 6, 'cols' => 50, 'style' => 'resize:none;', "class" => 'form-control', 'placeholder' => Yii::t('forms', 'Mensaje'))); ?>
+                    <?php echo $form->error($model, 'body'); ?>
+                </div>
+                <br/>
+                 </div>
+                <?php if (CCaptcha::checkRequirements()): ?>
+                    <div class="row">
+
+                        <?php 
+                         
+                        echo $form->labelEx($model, 'verifyCode'); 
+                        
+                        ?>
+                        <div style="position: relative; left: 10px;">
+                            <?php $this->widget('CCaptcha'); 
+                                   
+                            ?>
+                        </div>
+                        <?php echo $form->textField($model, 'verifyCode'); ?>
+                        <?php echo $form->error($model, 'verifyCode'); ?>
+                    </div>
+                <?php endif; ?>
+                <div class="btn-group" style="position: relative; left: 35%;">
+                    <?php echo CHtml::Button(Yii::t('pages', 'Regresar'), array('class' => 'btn btn-primary', 'onclick' => 'history.back(-1)')); ?>    
+                    <?php echo CHtml::submitButton(Yii::t('pages', 'Enviar'), array('class' => 'btn btn-primary')); ?>
+                </div>
+
+
+                <?php $this->endWidget(); ?>
+            </div><!-- form -->
+            </div>
+        </div>
+    </div>

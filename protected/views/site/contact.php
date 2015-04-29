@@ -2,8 +2,11 @@
 /* @var $this SiteController */
 /* @var $model ContactForm */
 /* @var $form CActiveForm */
-$this->pageTitle = Yii::app()->name . ' - Contact Us';
-$this->breadcrumbs = array ('Contact' );
+
+$this->pageTitle=Yii::app()->name . ' - Contact Us';
+$this->breadcrumbs=array(
+	'Contact',
+);
 ?>
 
 <h1>Contact Us</h1>
@@ -16,19 +19,21 @@ $this->breadcrumbs = array ('Contact' );
 
 <?php else: ?>
 
-<p>If you have business inquiries or other questions, please fill out
-	the following form to contact us. Thank you.</p>
+<p>
+If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
+</p>
 
 <div class="form">
 
-<?php
-	
-	$form = $this->beginWidget('CActiveForm', array ('id' => 'contact-form','enableClientValidation' => true,'clientOptions' => array ('validateOnSubmit' => true ) ));
-	?>
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'contact-form',
+	'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+	),
+)); ?>
 
-	<p class="note">
-		Fields with <span class="required">*</span> are required.
-	</p>
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -63,10 +68,8 @@ $this->breadcrumbs = array ('Contact' );
 		<?php $this->widget('CCaptcha'); ?>
 		<?php echo $form->textField($model,'verifyCode'); ?>
 		</div>
-		<div class="hint">
-			Please enter the letters as they are shown in the image above. <br />Letters
-			are not case-sensitive.
-		</div>
+		<div class="hint">Please enter the letters as they are shown in the image above.
+		<br/>Letters are not case-sensitive.</div>
 		<?php echo $form->error($model,'verifyCode'); ?>
 	</div>
 	<?php endif; ?>
@@ -77,7 +80,6 @@ $this->breadcrumbs = array ('Contact' );
 
 <?php $this->endWidget(); ?>
 
-</div>
-<!-- form -->
+</div><!-- form -->
 
 <?php endif; ?>

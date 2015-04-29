@@ -8,110 +8,111 @@
 </script>
 
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> 
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css"> -->
 <!--    <link href="bootstrap.min.css" rel="stylesheet" />-->
-
-<title>SONARAY</title>
-<link rel="icon" type="image/png"
-	href="http://dascomla.com/toolbox/images/favicon.ico" />
-<link rel="stylesheet" type="text/css"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
+    
+     <title>SONARAY</title>
+    <link rel="icon" type="image/png" href="http://dascomla.com/toolbox/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
 <style>
+    
 
-/* use navbar-wrapper to wrap navigation bar, the purpose is to overlay navigation bar above slider */
-.flotar {
-	position: absolute;
-	top: 50px;
-	left: 0;
-	width: 100%;
-	height: 51px;
+ /* use navbar-wrapper to wrap navigation bar, the purpose is to overlay navigation bar above slider */
+
+        .flotar {
+		
+            position: absolute;
+           top: 50px;
+            left: 0;
+            width: 100%;
+            height: 51px;
+			
+        }
+        .navbar-wrapper {
+		background-color:#FFFFFF;
+            position: absolute;
+            
+            left: 0;
+            width: 100%;
+            height: 51px;
+			
+        }
+        .navbar-wrapper > .container {
+            padding: 0;
+        }
+
+        @media all and (max-width: 768px ){
+            .navbar-wrapper {
+                position: relative;
+                top: 0px;
+            }
+	
+
+
+        }
+                .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+                    background: url(../img/b21.png) no-repeat;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+
+                .jssorb21 div {
+                    background-position: -5px -5px;
+                }
+
+                    .jssorb21 div:hover, .jssorb21 .av:hover {
+                        background-position: -35px -5px;
+                    }
+
+                .jssorb21 .av {
+                    background-position: -65px -5px;
+                }
+
+                .jssorb21 .dn, .jssorb21 .dn:hover {
+                    background-position: -95px -5px;
+                }
+
+                    .block {
+        height:300px;
+        background: #666666;
+        margin-bottom: 20px;
+    }
+    
+     html, body, .banner, .container {
+        height:100%;
+        text-align: center;
+    }
+    
+    .menu {
+    background: #000000;
+    color: #000000;
+    z-index:1;
+    padding:.5em;
+    position:absolute;
+    //top:400px;
+    width:100%;
 }
-
-.navbar-wrapper {
-	background-color: #FFFFFF;
-	position: absolute;
-	left: 0;
-	width: 100%;
-	height: 51px;
-}
-
-.navbar-wrapper>.container {
-	padding: 0;
-}
-
-@media all and (max-width: 768px ) {
-	.navbar-wrapper {
-		position: relative;
-		top: 0px;
-	}
-}
-
-.jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
-	background: url(../img/b21.png) no-repeat;
-	overflow: hidden;
-	cursor: pointer;
-}
-
-.jssorb21 div {
-	background-position: -5px -5px;
-}
-
-.jssorb21 div:hover, .jssorb21 .av:hover {
-	background-position: -35px -5px;
-}
-
-.jssorb21 .av {
-	background-position: -65px -5px;
-}
-
-.jssorb21 .dn, .jssorb21 .dn:hover {
-	background-position: -95px -5px;
-}
-
-.block {
-	height: 300px;
-	background: #666666;
-	margin-bottom: 20px;
-}
-
-html, body, .banner, .container {
-	height: 100%;
-	text-align: center;
-}
-
-.menu {
-	background: #000000;
-	color: #000000;
-	z-index: 1;
-	padding: .5em;
-	position: absolute; //
-	top: 400px;
-	width: 100%;
-}
-
 .fixed {
-	position: fixed;
-	top: 0;
+    position:fixed;
+    top:0;
 }
 </style>
 
 </head>
 
-<link rel="stylesheet" type="text/css"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/css/estiloscarrusel.css" />
-<link rel="stylesheet" type="text/css"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery.accordion.css" />
-<script type="text/javascript"
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.accordion.js"></script>
-<script type="text/javascript"
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/carrousel/jquery.carouFredSel-6.2.1-packed.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/estiloscarrusel.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery.accordion.css" />
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.accordion.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/carrousel/jquery.carouFredSel-6.2.1-packed.js"></script>
 <style>
+
+
 </style>
 <script type="text/javascript">
     $(function() {
@@ -337,296 +338,240 @@ html, body, .banner, .container {
     }
 </script>
 
-                    <?php
-																				if (isset($_GET['id_cat']))
-																				{
-																					$pag = $_GET['id_cat'];
-																					// echo "entro"; exit();
-																				}
-																				else
-																				{
-																					$pag = 1;
-																					// echo "salio"; exit();
-																				}
-																				?>
-<div class="menu" style="background: #CCCCCC;">
-	<table width="100%" height="100%" border="0">
-		<tr>
-			<td valign="middle">
-
-				<div class="container">
-					<nav role="navigation" class="navbar navbar-inverse">
-						<div class="navbar-header">
-
-							<button type="button" data-target="#navbarCollapse"
-								data-toggle="collapse" class="navbar-toggle">
-								<span class="sr-only">Toggle navigation</span> <span
-									class="icon-bar"></span> <span class="icon-bar"></span> <span
-									class="icon-bar"></span>
-							</button>
-
-							<a href="#" class="navbar-brand"
-								style="font-family: Arial, Helvetica, sans-serif; font-size: 1px;">
-								<img
-								src="<?php echo Yii::app()->request->baseUrl; ?>/images/sonaray_small.png" />
-							</a>
-						</div>
+                    <?php             
+                    if (isset($_GET['id_cat'])){
+                         $pag=$_GET['id_cat'];
+                        // echo "entro"; exit();
+                    }else{
+                        $pag=1;
+                        //echo "salio"; exit();
+                    }
+                    ?>
+<div class="menu" style="background: #CCCCCC; ">
+    <table width="100%" height="100%" border="0" >
+    <tr>
+        <td  valign="middle">
+	
+        <div class="container">
+    <nav role="navigation" class="navbar navbar-inverse">
+        <div class="navbar-header" >
+            
+    		 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+           
+            <a href="#" class="navbar-brand" style=" font-family: Arial, Helvetica, sans-serif; font-size: 1px; "> <img
+                    src="<?php echo Yii::app()->request->baseUrl; ?>/images/sonaray_small.png"/></a>
+        </div>
 	
         <?php
-								$sql = "SELECT * FROM mainmenu Mainmenu WHERE Mainmenu.active = 1 AND Mainmenu.language =  '" . Yii::app()->language . "' ORDER BY Mainmenu.weight ASC";
-								$MenuPadres = Yii::app()->db->createCommand($sql)->queryAll();
-								
-								$menus = array ();
-								$i = 0;
-								foreach ($MenuPadres as $MenuPadre)
-								{ // mostrar y comparar menu de primer nivel
-									$MenuPadre['menu'] = array ();
-									$idpadre = $MenuPadre['id'];
-									if ($MenuPadre['parent'] == 0)
-									{
-										foreach ($MenuPadres as $MenuPadre2)
-										{ // mostrar y comparar menu de segundo nivel
-											$MenuPadre2['menu'] = array ();
-											if ($MenuPadre2['parent'] == $idpadre)
-											{
-												foreach ($MenuPadres as $MenuPadre3)
-												{ // mostrar y comparar menu de tercer nivel
-													if ($MenuPadre3['parent'] == $MenuPadre2['id'])
-													{
-														$MenuPadre2['menu'][] = $MenuPadre3;
-													}
-												}
-												$MenuPadre['menu'][] = $MenuPadre2;
-											}
-										}
-										$i++ ;
-									}
-									// var_dump($MenuPadre); echo '<br/><br/><br/><br/>';
-									$menus[] = $MenuPadre;
-								}
-								$total = $i;
-								?>
+                                $sql = "SELECT * FROM mainmenu Mainmenu WHERE Mainmenu.active = 1 AND Mainmenu.language =  '" . Yii::app()->language . "' ORDER BY Mainmenu.weight ASC";
+                                $MenuPadres = Yii::app()->db->createCommand($sql)->queryAll();
+
+                                $menus = array();
+                                $i = 0;
+                                foreach ($MenuPadres as $MenuPadre) {//mostrar y comparar menu de primer nivel
+                                    $MenuPadre['menu'] = array();
+                                    $idpadre = $MenuPadre['id'];
+                                    if ($MenuPadre['parent'] == 0) {
+                                        foreach ($MenuPadres as $MenuPadre2) {//mostrar y comparar menu de segundo nivel
+                                            $MenuPadre2['menu'] = array();
+                                            if ($MenuPadre2['parent'] == $idpadre) {
+                                                foreach ($MenuPadres as $MenuPadre3) {//mostrar y comparar menu de tercer nivel
+                                                    if ($MenuPadre3['parent'] == $MenuPadre2['id']) {
+                                                        $MenuPadre2['menu'][] = $MenuPadre3;
+                                                    }
+                                                }
+                                                $MenuPadre['menu'][] = $MenuPadre2;
+                                            }
+                                        }
+                                        $i++;
+                                    }
+                                    //  var_dump($MenuPadre); echo '<br/><br/><br/><br/>';
+                                    $menus[] = $MenuPadre;
+                                }
+                                $total = $i;
+                                ?>
         
         
         <div id="navbarCollapse" class="collapse navbar-collapse">
-							<ul class="nav navbar-nav">
+            <ul class="nav navbar-nav">
                                                     <?php
-																																																				$contador = 1;
-																																																				foreach ($menus as $menu)
-																																																				{
-																																																					if ($menu['parent'] == 0)
-																																																					{
-																																																						$total_sub = count($menu['menu']);
-																																																						if ($total_sub <= 0)
-																																																						{ // para saber si tiene hijos
-																																																							
-																																																							?>
+                                                    $contador=1;
+                                                    foreach ($menus as $menu) {
+                                                        if ($menu['parent'] == 0) {
+                                                            $total_sub = count($menu['menu']);
+                                                            if ($total_sub <= 0) { //para saber si tiene hijos
+                                                              
+                                                                ?>
                                                                     <?php if ($contador ==1) { ?>
-                                                                        <li
-									style="font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
-                                                                    <?php
-																																																								$contador++ ;
-																																																							}
-																																																							else
-																																																							{
-																																																								?> 
-                                                                        <li
-									style="font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
+                                                                        <li  style="font-weight: bold; "><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
+                                                                    <?php 
+                                                                    $contador++;
+                                                                    }else{ ?> 
+                                                                        <li style=" font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
                                                                      <?php  } ?> 
                                                             <?php } else { ?>
-                                                                <li
-									class="dropdown" style="color: #000000; font-weight: bold;"><a
-									style="font-size: 15px;" href="#" class="dropdown-toggle"
-									data-toggle="dropdown"><?php echo $menu['name'] ?> <b
-										class="caret"></b> </a>
+                                                                <li class="dropdown" style="color: #000000; font-weight: bold;">
+                                                                    <a style="font-size:15px;"  href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $menu['name'] ?> <b class="caret"></b>
+                                                                    </a>
 
-									<ul class="dropdown-menu" role="menu">
+                                                                    <ul class="dropdown-menu" role="menu">
                                                                         <?php
-																																																							foreach ($menu['menu'] as $menu2)
-																																																							{
-																																																								$total_sub = count($menu2['menu']);
-																																																								// echo $total_sub;
-																																																								if ($total_sub <= 0)
-																																																								{
-																																																									?>
+                                                                        foreach ($menu['menu'] as $menu2) {
+                                                                            $total_sub = count($menu2['menu']);
+                                                                            // echo $total_sub;
+                                                                            if ($total_sub <= 0) {
+                                                                                ?>
                                                                                                          <!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
-										<li style="font-size: 15px;" class=""><a
-											href="<?php echo $menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
+                                                                                 <li style="font-size:15px;" class=""><a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language .'/'.$menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
 
                                                                                 <?php
-																																																								}
-																																																								else
-																																																								{
-																																																									?>
-                                                                                <li
-											class="dropdown"><a href="#"><?php echo $menu2['name']; ?></a>
+                                                                            } else {
+                                                                                ?>
+                                                                                <li class="dropdown">
+                                                                                    <a href="#"><?php echo $menu2['name']; ?></a>                                                             
 
-										</li>                                                                 
+                                                                                </li>                                                                 
                                                                                 <?php
-																																																								} // if
-																																																							} // foreach
-																																																							?>
+                                                                            }//if 
+                                                                        }//foreach
+                                                                        ?>
                                                                     </ul>
-								</li>
+                                                                </li>
                                                                 <?php
-																																																						} // fin del if
-																																																					}
-																																																				}
-																																																				?>    
+                                                            }// fin del if
+                                                        }
+                                                    }
+                                                    ?>    
                                                 </ul>
-
-						</div>
-					</nav>
-					<div>
-			
-			</td>
-		</tr>
-	</table>
-</div>
-<style>
+        
+        </div>
+    </nav>
+	<div>
+</td>
+  </tr>
+</table>
+    </div>
+            <style>
 .container {
 	padding-right: 0px !important;
 	padding-left: 0px !important;
 }
 </style>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<div id="accordion1">
-	<ul>
+<br/><br/><br/><br/>  
+  <br/><br/><br/><br/>  
+<div  id="accordion1">
+    <ul>
         <?php
-								$i = 0;
-								$categorias = array ();
-								foreach ($SqlAplicationTypes as $SqlAplicationType)
-								:
-									$categorias[] = $SqlAplicationType['id'];
-									?>       
-            <li class="pestaLed" id="pestana<?php echo $i ?>"
-			onclick="activarCarosel('<?php echo $SqlAplicationType['id']; ?>', 'foo<?php echo $SqlAplicationType['id']; ?>', 'lista<?php echo $i; ?>', 'pestana<?php echo $i ?>', 'aa')">
+        $i = 0;
+        $categorias = array();
+        foreach ($SqlAplicationTypes as $SqlAplicationType):
+            $categorias[] = $SqlAplicationType['id'];
+            ?>       
+            <li class="pestaLed" id="pestana<?php echo $i ?>" onclick="activarCarosel('<?php echo $SqlAplicationType['id']; ?>', 'foo<?php echo $SqlAplicationType['id']; ?>', 'lista<?php echo $i; ?>', 'pestana<?php echo $i ?>', 'aa')" >
 
-			<h1><?php echo $SqlAplicationType['name']; ?></h1>
-			<div>
+                <h1><?php echo $SqlAplicationType['name']; ?></h1>           
+                <div>
                     <?php foreach ($SqlApplicationImages as $SqlApplicationImage): ?>   
                         <?php if ($SqlApplicationImage['aplication_type_id'] == $SqlAplicationType['id']): ?>
 
                             <?php if (strlen($SqlAplicationType['filepath']) > 0 || $SqlAplicationType['filepath'] != NULL) { ?>
-                                <a
-					href="<?php echo Yii::app()->request->baseUrl .$SqlAplicationType['filepath']; ?>">
+                                <a href="<?php echo Yii::app()->request->baseUrl .$SqlAplicationType['filepath']; ?>">
                             <?php } ?>
 
 
                             <span> <?php echo CHtml::image(Yii::app()->request->baseUrl . "/images/applicationSonaray/en/" . $SqlApplicationImage['path'], " ", array('width' => '80%', 'class' => 'img')); ?>
                                   <?php if (strlen($SqlAplicationType['filepath'])>0 || $SqlAplicationType['filepath']!=NULL){ ?>
-                    <span class="text-center"
-						style="padding: 1px; padding-right: 25px; padding-left: 25px; background-color: rgba(150, 150, 150, 0.2); position: absolute; top: 93%; right: 47%;"><span
-							style="font-size: 20px; color: #666"
-							class="glyphicon glyphicon-floppy-save"></span> </span>
-				
-				</a>
+                    <span class="text-center" style="padding: 1px; padding-right: 25px; padding-left: 25px; background-color: rgba(150,150,150,0.2); position: absolute; top: 93%; right: 47%;"><span style="  font-size: 20px; color: #666" class="glyphicon glyphicon-floppy-save"></span> </span >
+                                
+                                </a>
                     <?php } ?>
                             </span>                
                         <?php endif; ?>                
                     <?php endforeach; ?>
                 </div>
-		</li>      
+            </li>      
             <?php
-									$i++ ;
-								endforeach
-								;
-								?>
+            $i++;
+        endforeach;
+        ?>
     </ul>
 
 </div>
 <!--imagenes pequeñas-->
 <?php foreach ($categorias as $cat) { ?>
-    <div class="contenedores" id="carouselContent<?php echo $cat; ?>"
-	aplicacion="<?php echo $cat; ?>"
-	style="clear: both; float: left; width: 100%; margin-top: 1%; margin-left: 0.5%;">
-	<div class="image_carousel<?php echo $cat; ?>">
-		<div id="foo<?php echo $cat; ?>" class="col-md-12">
+    <div class="contenedores"  id="carouselContent<?php echo $cat; ?>" aplicacion="<?php echo $cat; ?>" style="clear:both;float:left; width: 100%;  margin-top:1%;margin-left:0.5%;">
+        <div class="image_carousel<?php echo $cat; ?>">
+            <div id="foo<?php echo $cat; ?>" class="col-md-12" >
                 <?php
-	$i = 0;
-	foreach ($SqlProductosPorAplicaciones as $SqlProductosPorAplicacion)
-	:
-		// var_dump($SqlProductosPorAplicacion);
-		if ($SqlProductosPorAplicacion['application_type_id'] == $cat)
-		{
-			?>    
-                        <img class="img_producto imagenIndividual"
-				aplicacion="<?php echo $SqlProductosPorAplicacion['application_type_id'] ?>"
-				id_2='<?php echo $SqlProductosPorAplicacion['id_producto'] ?>'
-				id="<?php echo 'prod' . $SqlProductosPorAplicacion['id_producto']; ?>"
-				width="121" height="84" id=""
-				src="<?php echo Yii::app()->request->baseUrl . $SqlProductosPorAplicacion['path']; ?>" />		  	               	  		    
+                $i = 0;
+                foreach ($SqlProductosPorAplicaciones as $SqlProductosPorAplicacion):
+                    // var_dump($SqlProductosPorAplicacion);
+                    if ($SqlProductosPorAplicacion['application_type_id'] == $cat) {
+                        ?>    
+                        <img class="img_producto imagenIndividual" aplicacion="<?php echo $SqlProductosPorAplicacion['application_type_id'] ?>"id_2='<?php echo $SqlProductosPorAplicacion['id_producto'] ?>' id="<?php echo 'prod' . $SqlProductosPorAplicacion['id_producto']; ?>"   width="121" height="84" id="" src="<?php echo Yii::app()->request->baseUrl . $SqlProductosPorAplicacion['path']; ?>" />		  	               	  		    
                         <?php
-		}
-		$i++ ;
-	endforeach
-	;
-	?>
+                    }
+                    $i++;
+                endforeach;
+                ?>
             </div>
-	</div>
-</div>
+        </div>
+    </div>
 <?php } ?>
 
-<div style="clear: both; float: left; width: 100%; position: relative;">
-	<div style="float: left">
-		<a class="prev" style="float: left" id="foo2_prev" href="#"><span>prev</span></a>
-	</div>
-	<div style="width: 88%; float: left">
-		<div class="pagination" id="foo2_pag"></div>
-	</div>
-	<div style="float: left">
-		<a class="next" style="float: right" id="foo2_next" href="#"><span>next</span></a>
-	</div>
+<div style="clear:both;float:left;width: 100%;position:relative;">
+    <div style="float:left">
+        <a class="prev" style="float: left" id="foo2_prev" href="#"><span>prev</span></a>
+    </div>
+    <div style="width: 88%;float:left">
+        <div class="pagination" id="foo2_pag"></div>
+    </div>
+    <div style="float:left">
+        <a class="next" style="float: right" id="foo2_next" href="#"><span>next</span></a>
+    </div>
 
 </div>
 
 
 <div id="contenedorDetalle">
 
-	<div class="tituloProducto"></div>
+    <div class="tituloProducto"></div>
 
-	<div class="border-superior">
+    <div class="border-superior">
 
-		<div class="contenedor-superior">
-			<div class="imagenesMedianas"></div>
-			<div class="textoTitulo"></div>
-		</div>
+        <div class="contenedor-superior">
+            <div class="imagenesMedianas"></div>
+            <div class="textoTitulo"></div>						
+        </div>				
 
-		<div style="float: left; width: 50%; margin-left: 2%">
-			<h2 id="resumenProducto" class="helvetica_neueregular"></h2>
-		</div>
+        <div style="float:left;width: 50%;margin-left: 2%">
+            <h2 id="resumenProducto" class="helvetica_neueregular"></h2>
+        </div>
 
-		<div id="barraTab">
-			<nav class="navbar navbar-default" role="navigation"
-				style="background-color: #e6e6e6; margin-bottom: 0">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target=".botonDetalle"
-						style="float: left; margin: 2%; width: 99%; background-color: grey">
-						<span class="fuentes"><?php echo Yii::t('forms', 'Product details'); ?></span>
-					</button>
-				</div>
-				<div
-					class="collapse navbar-collapse navbar-ex3-collapse botonDetalle"
-					style="width: 100%; height: auto; background-color: #e6e6e6; float: left; padding: 0">
-					<ul id="menuDetalle" class="nav navbar-nav">
+        <div id="barraTab">
+            <nav class="navbar navbar-default" role="navigation" style="background-color: #e6e6e6;margin-bottom: 0">     
+                <div class="navbar-header">
+                    <button  type="button" class="navbar-toggle" data-toggle="collapse" data-target=".botonDetalle" style="float:left;margin: 2%;width: 99%;background-color: grey">
+                        <span class="fuentes"><?php echo Yii::t('forms', 'Product details'); ?></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex3-collapse botonDetalle" style="width: 100%; height: auto; background-color: #e6e6e6; float: left;padding: 0">
+                    <ul id="menuDetalle" class="nav navbar-nav">
 
-					</ul>
+                    </ul>
 
-				</div>
-			</nav>
-		</div>
+                </div>
+            </nav>
+        </div>
 
-		<div id="contieneDetallesMenu"></div>
+        <div id="contieneDetallesMenu"></div>
 
-	</div>
+    </div>
 
 </div>
 

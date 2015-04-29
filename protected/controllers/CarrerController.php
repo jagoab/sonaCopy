@@ -1,206 +1,341 @@
 <?php
 
 class CarrerController extends Controller
-{
+{ 
+  
+	/**
+	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
+	 * using two-column layout. See 'protected/views/layouts/column2.php'.
+	 */
+	public $layout='//layouts/column2';
+	/**
+	 * @return array action filters
+	 */
+	public function filters()
+	{ 
+		return array(
+			'accessControl', // perform access control for CRUD operations
+			'postOnly + delete', // we only allow deletion via POST request
+		);
+	}
 
 	/**
-	 * Declares class-based actions.
+	 * Specifies the access control rules.
+	 * This method is used by the 'accessControl' filter.
+	 * @return array access control rules
 	 */
-	public function actions()
-	{
-		return array (
-				// captcha action renders the CAPTCHA image displayed on the contact page
-				'captcha' => array ('class' => 'CCaptchaAction','backColor' => 0xFFFFFF ),
-				// page action renders "static" pages stored under 'protected/views/site/pages'
-				// They can be accessed via: index.php?r=site/page&view=FileName
-				'page' => array ('class' => 'CViewAction' ) );
+	public function accessRules()
+	{ 
+	return array(
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('create','update','admin','delete','updateActive'),
+				'users'=>array('*'),
+			),
+		);
 	}
 
+        
+
+	/**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 */
+	public function actionCreate()
+	{
+//         if(Yii::app()->authManager->checkAccess('crearBanner', Yii::app()->user->getState("rolId"))) {
+		$model=new Carrer;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+                
+		if(isset($_POST['Banners']))
+		{
+                    //var_dump($_FILES); //exit();
+                    
+			$model->attributes=$_POST['Banners'];
+                       // $model->language = $_POST['Idioma'];
+                   //var_dump($_POST['Banners']);exit();
+			if(CUploadedFile::getInstance($model,'ruta'))
+                        {
+                           
+                            $archivo = CUploadedFile::getInstance($model,'ruta');
+                            $extension = end(explode(".",$archivo->name));
+                            $name = substr(md5(uniqid(rand())),0,3);
+                            $name = $name.".".$extension;
+                            $ruta= '../dascom-test/images/slider'.'/img'.$name;
+                          //  $ruta= '../dascom-test/images/slider'.'/img'.$name;
+                          
+                            $model->ruta ='/images/slider'.'/img'.$name;   
+                           if($model->save())
+                            {
+                                if($archivo !== null)
+                                    $archivo->saveAs($ruta);
+                                
+                                $log = new Logs();
+                                $log->description = "Modulo: <b>Banner</b>. <br/>
+                                                     Accion: <b>Crear</b>.<br/>
+                                                     ID: <b>".$model->id."</b>.";
+                                $log->ip = $_SERVER['REMOTE_ADDR'];
+                                $log->date = date('d/m/Y h:i:s a');
+                                $log->user = Yii::app()->user->getState("id");
+                                $log->language = "es";
+                                $log->save();
+                                $this->redirect(array('admin','id'=>$model->id));
+                              
+                            }
+                        }
+		}
+		$this->render('create',array(
+			'model'=>$model,
+		));
+      //   } else {
+
+//            $log = new Logs();
+//            $log->description = "Usuario ha tratado de accesar a un lugar restringido<br/>
+//                                     Modulo: <b>Banner</b>. <br/>
+//                                     Accion: <b>Crear</b>.";
+//            $log->ip = $_SERVER['REMOTE_ADDR'];
+//            $log->date = date('d/m/Y h:i:s a');
+//            $log->user = Yii::app()->user->getState("id");
+//            $log->language = "es";
+//            $log->save();
+
+//            throw new CHttpException(403, 'Su usuario no tiene los privilegios necesarios para acceder a esta seccion, 
+//                    porfavor si cree que esto es un error, consulte al administrador del sistema.<br/>
+//                    Este evento ha sido registrado.');
+        }
+	
+
+	/**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
+        public function actionUpdate($id)
+	{
+            if(Yii::app()->authManager->checkAccess('editarBanner', Yii::app()->user->getState("rolId")))
+            {
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+                
+		if(isset($_POST['Banners']))
+		{
+                    $model->attributes=$_POST['Banners'];
+                  //      var_dump($_POST['Banners']['ruta']); exit();
+                   // echo strlen($_POST['Banners']['ruta']); exit();
+//                   echo $_POST['Banners']['order']; exit();
+                    if(CUploadedFile::getInstance($model,'ruta'))
+                    {
+                       /* CODIGO ORIGIANL DE JESUS. NO SE ESTABA SUBIENDO EL ARCHIVO DE NUEVO CUANDO SE IBA A MODIFICAR LA IMAGEN 
+                        *  $archivo = CUploadedFile::getInstance($model,'ruta');
+                        $extension = end(explode(".",$archivo->name));
+                        $name = substr(md5(uniqid(rand())),0,25);
+                        $name = $name.".".$extension;
+                        $model->ruta = Yii::app()->params['folder'].'images/sliders/'.$_POST['Idioma'].'/'.$name;
+                        $ruta = Yii::app()->params['serverRoot'].Yii::app()->params['folder'].'images/sliders/'.$_POST['Idioma'].'/'.$name;
+						*/
+						
+			/*CODIGO MODIFICADO POR GUILLERMO. SI FUNCIONA*/
+                            $archivo = CUploadedFile::getInstance($model,'ruta');
+                            $extension = end(explode(".",$archivo->name));
+                            $name = substr(md5(uniqid(rand())),0,25);
+                            $name = $name.".".$extension;
+                            //$ruta= '../toolbox/images/slider/'.$_POST['Banners']['language'].'/img'.$name;
+                            $ruta= '../dascom-test/images/slider'.'/img'.$name;
+                       
+                             $model->ruta ='/images/slider'.'/img'.$name;
+                            if($model->save())
+                            {
+                                if($archivo !== null)
+                                    $archivo->saveAs($ruta);
+
+
+                            }
+                    }
+                    else
+                    {
+                        $banner = Banners::model()->findByPk($model->id);
+                        $model->ruta = $banner->ruta;
+                       // $extension = end(explode(".",$banner->ruta));
+                        //$name = substr(md5(uniqid(rand())),0,25);
+                        //$name = $name.".".$extension;
+                        
+                       // $model->ruta = '/images/sliders/'.$_POST['Banners']['language'].'/'.$name;
+                       //rename(Yii::app()->params['serverRoot'].Yii::app()->params['folder'].$banner->ruta , Yii::app()->params['serverRoot'].Yii::app()->params['folder'].'/images/slider/'.$_POST['Banners']['language'].'/'.$name);
+                        $model->save();
+                        
+
+                    }
+                    $log = new Logs();
+                    $log->description = "Modulo: <b>Banner</b>. <br/>
+                                         Accion: <b>Actualizar</b>.<br/>
+                                         ID: <b>".$model->id."</b>.";
+                    $log->ip = $_SERVER['REMOTE_ADDR'];
+                    $log->date = date('d/m/Y h:i:s a');
+                    $log->user = Yii::app()->user->getState("id");
+                    $log->language = "es";
+                    $log->save();
+
+                    //$this->redirect(array('admin','id'=>$model->id));
+                    $this->redirect(array('banners/admin'));
+		}
+
+		$this->render('update',array(
+			'model'=>$model,
+		));
+            }
+            else{
+                
+                $log = new Logs();
+                $log->description = "Usuario ha tratado de accesar a un lugar restringido<br/>
+                                     Modulo: <b>Banner</b>. <br/>
+                                     Accion: <b>Actualizar</b>.";
+                $log->ip = $_SERVER['REMOTE_ADDR'];
+                $log->date = date('d/m/Y h:i:s a');
+                $log->user = Yii::app()->user->getState("id");
+                $log->language = "es";
+                $log->save();
+                
+                throw new CHttpException(403,'Su usuario no tiene los privilegios necesarios para acceder a esta seccion, 
+                    porfavor si cree que esto es un error, consulte al administrador del sistema.<br/>
+                    Este evento ha sido registrado.');
+            }
+	}
+
+
+	/**
+	 * Deletes a particular model.
+	 * If deletion is successful, the browser will be redirected to the 'admin' page.
+	 * @param integer $id the ID of the model to be deleted
+	 */
+	public function actionDelete($id)
+	{
+		$this->loadModel($id)->delete();
+
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if(!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+	}
+
+	/**
+	 * Lists all models.
+	 */
 	public function actionIndex()
 	{
-		$mailer = Yii::createComponent('application.extensions.mailer.phpmailer', true);
-		$model = new ContactForm();
-		if (isset($_POST['ContactForm']))
-		{
-			$model->attributes = $_POST['ContactForm'];
-			if ($model->validate())
-			{
-				$mailer->AddAddress('rmartinez@thefactoryhka.com');
-				// $mailer->AddAddress('jramirez@thefactoryhka.com');
-				// $mailer->AddAddress('thefactoryhka@gmail.com');
-				// $mailer->AddAddress('horaciopinto2@gmail.com');
-				// $mailer->AddAddress('John.Vidaurrazaga@dascom.com');
-				// $mailer->AddAddress('EFerreira@dascom.com');
-				// $mailer->AddAddress('Sarrieta@dascom.com');
-				// $mailer->AddAddress('Gmedina@dascom.com');
-				// $mailer->AddAddress('albertoacostac@yahoo.com');
-				// $mailer->AddAddress('mmejia@thefactoryhka.com');
-				// $mailer->AddAddress('mmejia.hka@gmail.com');
-				/* Australia */
-				if (Yii::app()->session['flag'] == 'au')
-				{
-					// $mailer->AddAddress('alex@sonaray.com.au');
-				}
-				/* China */
-				if (Yii::app()->session['flag'] == 'cn' || Yii::app()->session['flag'] == 'hk')
-				{
-					// $mailer->AddAddress('joewong@sonarayled.com');
-				}
-				/* Singapur */
-				if (Yii::app()->session['flag'] == 'sg')
-				{
-					// $mailer->AddAddress('petertan@dascom.com.sg');
-				}
-				/* Alemania */
-				if (Yii::app()->session['flag'] == 'de')
-				{
-					// $mailer->AddAddress('MJoksch@dascom.com');
-				}
-				/* Venezuela */
-				if (Yii::app()->session['flag'] == 've')
-				{
-					
-					// $mailer->AddAddress('ralmillategui@dascom.com');
-				}
-				/* Colombia */
-				if (Yii::app()->session['flag'] == 'co')
-				{
-					// $mailer->AddAddress(' pvelez@thefactoryhka.com');
-					
-					// $mailer->AddAddress('ralmillategui@dascom.com');
-				}
-				/* Brasil */
-				if (Yii::app()->session['flag'] == 'br')
-				{
-					$mailer->AddAddress('MGranado@dascom.com');
-					$mailer->AddAddress('MAsche@dascom.com');
-					$mailer->AddAddress('ralmillategui@dascom.com');
-				}
-				/* Mexico */
-				if (Yii::app()->session['flag'] == 'mx')
-				{
-					// $mailer->AddAddress('abroswilliamson@dascom.com');
-					// $mailer->AddAddress('jaflores@dascom.com');
-					// $mailer->AddAddress('jaflorez@thefactoryhka.com');
-					// $mailer->AddAddress('juanalejandroflorez@gmail.com');
-				}
-				/* Peru */
-				if (Yii::app()->session['flag'] == 'pe')
-				{
-					// $mailer->AddAddress('achuquizuta@thefactoryhka.com; ');
-					// $mailer->AddAddress('atorres@thefactoryhka.com');
-					// $mailer->AddAddress('ralmillategui@dascom.com');
-				}
-				/* Panama */
-				if (Yii::app()->session['flag'] == 'pa')
-				{
-					// $mailer->AddAddress('JDiaz@dascom.com');
-					// $mailer->AddAddress('ralmillategui@dascom.com');
-				}
-				/* Chile */
-				if (Yii::app()->session['flag'] == 'cl')
-				{
-					
-					// $mailer->AddAddress('ralmillategui@dascom.com');
-				}
-				/* Usa */
-				if (Yii::app()->session['flag'] == 'us')
-				{
-					// $mailer->AddAddress('racorn@dascom.com');
-				}
-				
-				$mailer->From = 'noreply@dascomla.com'; // Mail de origen
-				
-				$mailer->FromName = 'SonarayLed.com'; // Nombre del que envia
-				
-				$mailer->WordWrap = 50; // Largo de las lineas
-				
-				$mailer->IsHTML(true); // Podemos incluir tags html
-				
-				$mailer->Subject = "Contact from sonaray web page";
-				
-				$mailer->Body = '<div style="text-align: left;  padding: 30px;">
-                                <div style="font-size: 25px; font-weight: bold; margin-bottom: 30px;">Contact information</div>
-                                <div style="background-color: #f6f6f6; text-align: left; padding: 30px;line-height: 35px;">
-                                <b>NAME </b>: <span style="text-transform: capitalize;">' . $model->name . '</span> <br/>
-                                <b>CITY </b>:<span style="text-transform: capitalize;"> ' . $model->city . '</span><br/>
-                                <b>EMAIL </b>: ' . $model->email . '<br/>
-                                <b>PHONE </b> : ' . $model->phone . '<br/>
-                                </div>
-                                <div style="font-size: 25px; font-weight: bold; margin-bottom: 30px; margin-top: 30px;">Message</div>
-
-                                <div style="background-color: #f6f6f6; text-align: left; padding: 30px; margin-bottom: 20px;">' . $model->body . '</div>
-
-
-                                <div style="font-size: 18px; font-weight: bold;">DO NOT REPLY TO THIS EMAIL</div>
-
-                                <div style="text-align: center; color: #0210b8; background-color: #eff0fd; margin-top: 30px;  "><a href="http://sonarayled.com" style="font-size: 25px;">Sonaray</a></div>
-                                </div>';
-				
-				$mailer->IsSMTP(); // vamos a conectarnos a un servidor SMTP
-				
-				$mailer->SMTPAuth = true; // usaremos autenticacion
-				
-				$mailer->Username = "noreply@dascomla.com"; // usuario
-				
-				$mailer->Password = "123.noreply.123"; // contraseña
-				
-				$mailer->Mailer = "smtp";
-				
-				$mailer->Host = "ssl://mail.dascomla.com";
-				
-				$mailer->Port = 465;
-				
-				$mailer->SMTPAuth = true;
-				
-				if ($mailer->send())
-				{
-					Yii::app()->user->setFlash('contact', '<div class="alert alert-success">thanks for contacting us we will get in touch with you shortly.</div>');
-				}
-				else
-				{
-					
-					Yii::app()->user->setFlash('contact', '<div class="alert alert-danger">Sorry ! an error occurred on sending the email .</div>');
-				}
-				$model = new ContactForm();
-			}
-		}
-		
-		// $this->render('contact',array('model'=>$model));
-		
-		$sql = "SELECT * FROM texts Text WHERE Text.active = 1 AND Text.section = 'contact' AND Text.language = '" . YII::app()->language . "'";
-		$contactos = Yii::app()->db->createCommand($sql)->queryAll();
-		
-		$sql2 = "SELECT * FROM texts Text WHERE Text.active = 1 AND Text.section = 'carrer' ORDER BY Text.parent DESC ";
-		$contactos_list = Yii::app()->db->createCommand($sql2)->queryAll();
-		
-		$this->render('index', array ('model' => $model,'contactos' => $contactos,'contactos_list' => $contactos_list ));
+		$dataProvider=new CActiveDataProvider('Banners');
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
 	}
-	
-	// Uncomment the following methods and override them if needed
-	/*
-	 * public function filters()
-	 * {
-	 * // return the filter configuration for this controller, e.g.:
-	 * return array(
-	 * 'inlineFilterName',
-	 * array(
-	 * 'class'=>'path.to.FilterClass',
-	 * 'propertyName'=>'propertyValue',
-	 * ),
-	 * );
-	 * }
-	 *
-	 * public function actions()
-	 * {
-	 * // return external action classes, e.g.:
-	 * return array(
-	 * 'action1'=>'path.to.ActionClass',
-	 * 'action2'=>array(
-	 * 'class'=>'path.to.AnotherActionClass',
-	 * 'propertyName'=>'propertyValue',
-	 * ),
-	 * );
-	 * }
+
+	/**
+	 * Manages all models.
 	 */
+	public function actionAdmin()
+	{
+           // echo"probar bandera mensaje";
+            if(Yii::app()->authManager->checkAccess('verBanner', Yii::app()->user->getState("rolId")))
+            {
+		$model=new Banners('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Banners']))
+			$model->attributes=$_GET['Banners'];
+
+		$this->render('admin',array(
+			'model'=>$model,
+		));
+            }
+            else{
+                
+                $log = new Logs();
+                $log->description = "Usuario ha tratado de accesar a un lugar restringido<br/>
+                                     Modulo: <b>Banner</b>. <br/>
+                                     Accion: <b>Administrar</b>.";
+                $log->ip = $_SERVER['REMOTE_ADDR'];
+                $log->date = date('d/m/Y h:i:s a');
+                $log->user = Yii::app()->user->getState("id");
+                $log->language = "es";
+                $log->save();
+                
+                throw new CHttpException(403,'Su usuario no tiene los privilegios necesarios para acceder a esta seccion, 
+                    porfavor si cree que esto es un error, consulte al administrador del sistema.<br/>
+                    Este evento ha sido registrado.');
+            }
+	}
+
+	/**
+	 * Returns the data model based on the primary key given in the GET variable.
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer $id the ID of the model to be loaded
+	 * @return Banners the loaded model
+	 * @throws CHttpException
+	 */
+	public function loadModel($id)
+	{
+		$model=Banners::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+	/**
+	 * Performs the AJAX validation.
+	 * @param Banners $model the model to be validated
+	 */
+	protected function performAjaxValidation($model)
+	{
+		if(isset($_POST['ajax']) && $_POST['ajax']==='banners-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+	}
+       
+       public function actionUpdateActive()
+        {
+            if(Yii::app()->authManager->checkAccess('editarBanner', Yii::app()->user->getState("rolId")))
+            {
+                $value = $_POST['active'];
+                $id = $_POST['id'];
+
+                if($value == "true")
+                    $activo = 1;
+                else
+                    $activo = 0;
+
+                $banner = $this->loadModel($id);
+                $banner->active = $activo;
+                $banner->save();
+                
+                $log = new Logs();
+                $log->description = "Modulo: <b>Banner</b>. <br/>
+                                     Accion: <b>Activar</b>.<br/>
+                                     ID: <b>".$id."</b>.";
+                $log->ip = $_SERVER['REMOTE_ADDR'];
+                $log->date = date('d/m/Y h:i:s a');
+                $log->user = Yii::app()->user->getState("id");
+                $log->language = "es";
+                $log->save();
+                
+                exit();
+            }
+            else{
+                
+                $log = new Logs();
+                $log->description = "Usuario ha tratado de accesar a un lugar restringido<br/>
+                                     Modulo: <b>Banner</b>. <br/>
+                                     Accion: <b>Activar</b>.";
+                $log->ip = $_SERVER['REMOTE_ADDR'];
+                $log->date = date('d/m/Y h:i:s a');
+                $log->user = Yii::app()->user->getState("id");
+                $log->language = "es";
+                $log->save();
+                
+                throw new CHttpException(403,'Su usuario no tiene los privilegios necesarios para acceder a esta seccion, 
+                    porfavor si cree que esto es un error, consulte al administrador del sistema.<br/>
+                    Este evento ha sido registrado.');
+            }
+        }
 }
