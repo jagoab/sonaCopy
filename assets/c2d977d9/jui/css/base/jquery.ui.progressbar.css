@@ -2,4 +2,13 @@
 * http://jqueryui.com
 * Includes: jquery.ui.progressbar.css
 * Copyright 2012 jQuery Foundation and other contributors; Licensed MIT */
-.ui-progressbar{height:2em;text-align:left;overflow:hidden}.ui-progressbar .ui-progressbar-value{margin:-1px;height:100%}
+.ui-progressbar {
+	height: 2em;
+	text-align: left;
+	overflow: hidden
+}
+
+.ui-progressbar .ui-progressbar-value {
+	margin: -1px;
+	height: 100%
+}

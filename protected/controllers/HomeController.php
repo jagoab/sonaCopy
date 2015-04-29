@@ -5,6 +5,8 @@ class HomeController extends Controller
 
 	public function actionIndex()
 	{
+		$sql = "SELECT * FROM mainmenu Mainmenu WHERE Mainmenu.active = 1 AND Mainmenu.language =  '" . Yii::app()->language . "' ORDER BY Mainmenu.weight ASC";
+		$menus = Yii::app()->db->createCommand($sql)->queryAll();
 		// $this->layout = '//layouts/main';
 		$criterio = new CDbCriteria();
 		$criterio->condition = 'category = 11 ';
@@ -26,15 +28,17 @@ class HomeController extends Controller
 		$criterio->condition = 'category = 13 and active = 1 and language = \'' . Yii::app()->language . '\'';
 		$criterio->order = "category ASC";
 		$destacados = Texts::model()->findAll($criterio);
-		$sql = "SELECT Product.id, Product.name, ProductImage.path FROM products Product INNER JOIN products_images ProductImage ON (ProductImage.product = Product.id ) WHERE Product.featured_product = '1' AND ProductImage.category = '2' AND ProductImage.language = 'en'";
+		// Consulta los productos destacados
+		$sql = "SELECT Product.id, Product.name productName, ProductImage.path, ProductsTexts.text, ProductsTexts.name, ProductsType.product_type categoria FROM products Product INNER JOIN products_images ProductImage ON (ProductImage.product = Product.id ) INNER JOIN products_texts ProductsTexts ON (ProductsTexts.product = Product.id) INNER JOIN products_products_type ProductsType ON (ProductsType.product = Product.id) WHERE Product.featured_product = '1' AND ProductImage.category = '2' AND ProductImage.language = '" . Yii::app()->language . "' AND ProductsTexts.name = 'Description' AND ProductsTexts.language = '" . Yii::app()->language . "' ORDER BY score DESC;";
 		$featured_product = Yii::app()->db->createCommand($sql)->queryAll();
+		// Consulta las imagenes del slider
 		$condition = "active = 1 and language = '" . Yii::app()->language . "' order by orden asc";
 		$imagenesSlider = Banners::model()->findAll($condition);
+		// Consulta para traer texto de about us
 		$criterioAbout = new CDbCriteria();
-		$criterioAbout -> condition = 'language = \''.Yii::app()->language.'\' and category = 17';
-		$textos = Texts::model()->findAll($criterioAbout);
-		$textoAbout = substr($textos[0]->text, 0, 940);
-		$this->render('index', array ('imagenesCasos' => $imagenesCasos,'imagenesDescargas' => $imagenesDescargas,'casos' => $casos,"descargas" => $descargas,'destacados' => $destacados,'imagenesSlider' => $imagenesSlider,'featured_product' => $featured_product, 'textoAbout'=>$textoAbout ));
+		$criterioAbout->condition = 'language = \'' . Yii::app()->language . '\' and category = 17';
+		$textoAbout = Texts::model()->findAll($criterioAbout);		
+		$this->render('index', array ('imagenesCasos' => $imagenesCasos,'imagenesDescargas' => $imagenesDescargas,'casos' => $casos,"descargas" => $descargas,'destacados' => $destacados,'imagenesSlider' => $imagenesSlider,'featured_product' => $featured_product,'textoAbout' => $textoAbout,'menus' => $menus ));
 	}
 
 	public function actionIndex_prueba()

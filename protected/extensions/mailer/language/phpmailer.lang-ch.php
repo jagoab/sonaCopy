@@ -4,8 +4,7 @@
  * Chinese Version
  * By LiuXin: www.80x86.cn/blog/
  */
-
-$PHPMAILER_LANG = array();
+$PHPMAILER_LANG = array ();
 
 $PHPMAILER_LANG['provide_address'] = '您必须提供至少一个 收信人的email地址。';
 $PHPMAILER_LANG['mailer_not_supported'] = ' 您所选择的发送邮件的方法并不支持。';

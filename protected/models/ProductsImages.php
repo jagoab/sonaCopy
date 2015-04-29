@@ -16,17 +16,21 @@
  */
 class ProductsImages extends CActiveRecord
 {
+
 	/**
 	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
+	 *
+	 * @param string $className
+	 *        	active record class name.
 	 * @return ProductsImages the static model class
 	 */
-	public static function model($className=__CLASS__)
+	public static function model($className = __CLASS__)
 	{
 		return parent::model($className);
 	}
 
 	/**
+	 *
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -35,72 +39,57 @@ class ProductsImages extends CActiveRecord
 	}
 
 	/**
+	 *
 	 * @return array validation rules for model attributes.
 	 */
 	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
-		return array(
-			array('path, product, language, category', 'required'),
-			array('name', 'length', 'max'=>64),
-			array('path', 'length', 'max'=>256),
-			array('product, category', 'length', 'max'=>10),
-			array('language', 'length', 'max'=>2),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id, name, path, product, language, category', 'safe', 'on'=>'search'),
-		);
+		return array (array ('path, product, language, category','required' ),array ('name','length','max' => 64 ),array ('path','length','max' => 256 ),array ('product, category','length','max' => 10 ),array ('language','length','max' => 2 ),
+				// The following rule is used by search().
+				// Please remove those attributes that should not be searched.
+				array ('id, name, path, product, language, category','safe','on' => 'search' ) );
 	}
 
 	/**
+	 *
 	 * @return array relational rules.
 	 */
 	public function relations()
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
-		return array(
-			'product0' => array(self::BELONGS_TO, 'Products', 'product'),
-                        'product_country'=>array(self::HAS_MANY,'ProductsCountries','product_id')
-		);
+		return array ('product0' => array (self::BELONGS_TO,'Products','product' ),'product_country' => array (self::HAS_MANY,'ProductsCountries','product_id' ) );
 	}
 
 	/**
+	 *
 	 * @return array customized attribute labels (name=>label)
 	 */
 	public function attributeLabels()
 	{
-		return array(
-			'id' => 'ID',
-			'name' => 'Name',
-			'path' => 'Path',
-			'product' => 'Product',
-			'language' => 'Language',
-			'category' => 'Category',
-		);
+		return array ('id' => 'ID','name' => 'Name','path' => 'Path','product' => 'Product','language' => 'Language','category' => 'Category' );
 	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
+	 *
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function search()
 	{
 		// Warning: Please modify the following code to remove attributes that
 		// should not be searched.
-
-		$criteria=new CDbCriteria;
-
-		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('path',$this->path,true);
-		$criteria->compare('product',$this->product,true);
-		$criteria->compare('language',$this->language,true);
-		$criteria->compare('category',$this->category,true);
-
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
+		$criteria = new CDbCriteria();
+		
+		$criteria->compare('id', $this->id);
+		$criteria->compare('name', $this->name, true);
+		$criteria->compare('path', $this->path, true);
+		$criteria->compare('product', $this->product, true);
+		$criteria->compare('language', $this->language, true);
+		$criteria->compare('category', $this->category, true);
+		
+		return new CActiveDataProvider($this, array ('criteria' => $criteria ));
 	}
 }

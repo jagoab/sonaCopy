@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SONARAY</title>
-     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
-     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/newcss.css" />
-    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SONARAY</title>
+<link rel="stylesheet" type="text/css"
+	href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="<?php echo Yii::app()->request->baseUrl; ?>/css/newcss.css" />
+
 </head>
-<body style="padding:0px; margin:0px; font-family:Arial, Verdana;background-color:#fff;">
-    <!-- it works the same with all jquery version from 1.x to 2.x -->
-    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.9.1.min.js"></script>
-    <!-- use jssor.slider.mini.js (40KB) instead for release -->
-    <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
-    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jssor.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jssor.slider.js"></script>
-    <script>
+<body
+	style="padding: 0px; margin: 0px; font-family: Arial, Verdana; background-color: #fff;">
+	<!-- it works the same with all jquery version from 1.x to 2.x -->
+	<script type="text/javascript"
+		src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.9.1.min.js"></script>
+	<!-- use jssor.slider.mini.js (40KB) instead for release -->
+	<!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
+	<script type="text/javascript"
+		src="<?php echo Yii::app()->request->baseUrl; ?>/js/jssor.js"></script>
+	<script type="text/javascript"
+		src="<?php echo Yii::app()->request->baseUrl; ?>/js/jssor.slider.js"></script>
+	<script>
         jQuery(document).ready(function ($) {
 
             var _CaptionTransitions = [];
@@ -95,72 +101,88 @@
             //responsive code end
         });
     </script>
-    <!-- Jssor Slider Begin -->
-    <!-- You can move inline styles to css file or css block. -->
-    <div id="slider1_container" style="position: relative; margin: 0 auto;
-        top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
-        <!-- Loading Screen -->
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
-                top: 0px; left: 0px; width: 100%; height: 100%;">
-            </div>
-            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
-                top: 0px; left: 0px; width: 100%; height: 100%;">
-            </div>
-        </div>
-        <!-- Slides Container -->
+	<!-- Jssor Slider Begin -->
+	<!-- You can move inline styles to css file or css block. -->
+	<div id="slider1_container"
+		style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+		<!-- Loading Screen -->
+		<div u="loading" style="position: absolute; top: 0px; left: 0px;">
+			<div
+				style="filter: alpha(opacity = 70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;">
+			</div>
+			<div
+				style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
+			</div>
+		</div>
+		<!-- Slides Container -->
           <?php
-               $j = 1;
-            $i=0;
-            $cantidad = count($imagenesSlider);
-                    ?>
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
-            height: 500px; overflow: hidden;">  Loading ...
+										$j = 1;
+										$i = 0;
+										$cantidad = count($imagenesSlider);
+										?>
+        <div u="slides"
+			style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">  Loading ...
               <?php
-            
-              foreach ($imagenesSlider as $banner) {
-                    ?>
+														
+														foreach ($imagenesSlider as $banner)
+														{
+															?>
                     <div>
-                    <img u="image" src2="<?php echo Yii::app()->request->baseUrl.$banner->ruta;?>" />
-                </div>
-             <?php 
-    }
-    ?>  
+				<img u="image"
+					src2="<?php echo Yii::app()->request->baseUrl.$banner->ruta;?>" />
+			</div>
+             <?php
+														}
+														?>  
             
         </div>
-                 
-        <!-- Bullet Navigator Skin Begin -->
-        <style>
-            /* jssor slider bullet navigator skin 21 css */
-            /*
+
+		<!-- Bullet Navigator Skin Begin -->
+		<style>
+/* jssor slider bullet navigator skin 21 css */
+/*
             .jssorb21 div           (normal)
             .jssorb21 div:hover     (normal mouseover)
             .jssorb21 .av           (active)
             .jssorb21 .av:hover     (active mouseover)
             .jssorb21 .dn           (mousedown)
             */
-            .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av
-            {
-                background: url(<?php echo Yii::app()->request->baseUrl; ?>/images/home/b21.png) no-repeat;
-                overflow:hidden;
-                cursor: pointer;
-            }
-            .jssorb21 div { background-position: -5px -5px; }
-            .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
-            .jssorb21 .av { background-position: -65px -5px; }
-            .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
-        </style>
-        <!-- bullet navigator container -->
-        <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
-            <!-- bullet navigator item prototype -->
-            <div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
-        </div>
-        <!-- Bullet Navigator Skin End -->
+.jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+	background: url(<? php echo Yii :: app()->request->baseUrl; ?>/ images
+	/home/b21.png) no-repeat;
+	overflow: hidden;
+	cursor: pointer;
+}
 
-        <!-- Arrow Navigator Skin Begin -->
-        <style>
-            /* jssor slider arrow navigator skin 21 css */
-            /*
+.jssorb21 div {
+	background-position: -5px -5px;
+}
+
+.jssorb21 div:hover, .jssorb21 .av:hover {
+	background-position: -35px -5px;
+}
+
+.jssorb21 .av {
+	background-position: -65px -5px;
+}
+
+.jssorb21 .dn, .jssorb21 .dn:hover {
+	background-position: -95px -5px;
+}
+</style>
+		<!-- bullet navigator container -->
+		<div u="navigator" class="jssorb21"
+			style="position: absolute; bottom: 26px; left: 6px;">
+			<!-- bullet navigator item prototype -->
+			<div u="prototype"
+				style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align: center; line-height: 19px; color: White; font-size: 12px;"></div>
+		</div>
+		<!-- Bullet Navigator Skin End -->
+
+		<!-- Arrow Navigator Skin Begin -->
+		<style>
+/* jssor slider arrow navigator skin 21 css */
+/*
             .jssora21l              (normal)
             .jssora21r              (normal)
             .jssora21l:hover        (normal mouseover)
@@ -168,142 +190,185 @@
             .jssora21ldn            (mousedown)
             .jssora21rdn            (mousedown)
             */
-            .jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn
-            {
-            	position: absolute;
-            	cursor: pointer;
-            	display: block;
-                background: url(<?php echo Yii::app()->request->baseUrl; ?>/images/home/a21.png) center center no-repeat;
-                overflow: hidden;
-            }
-            .jssora21l { background-position: -3px -33px; }
-            .jssora21r { background-position: -63px -33px; }
-            .jssora21l:hover { background-position: -123px -33px; }
-            .jssora21r:hover { background-position: -183px -33px; }
-            .jssora21ldn { background-position: -243px -33px; }
-            .jssora21rdn { background-position: -303px -33px; }
-        </style>
-        
-        <!-- Arrow Left -->
-        <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
-        </span>
-        <!-- Arrow Right -->
-        <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px">
-        </span>
-        <!-- Arrow Navigator Skin End -->
-        <a style="display: none" href="http://www.jssor.com">jQuery Carousel</a>
-    </div>
-    <!-- Jssor Slider End -->
-    
-    <div class="menu" style="background: #CCCCCC; ">
-    <table width="100%" height="100%" border="0" >
-    <tr>
-        <td  valign="middle">
-	
-        <div class="container">
-    <nav role="navigation" class="navbar navbar-inverse">
-        <div class="navbar-header" >
-            
-    		 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-           
-            <a href="#" class="navbar-brand" style=" font-family: Arial, Helvetica, sans-serif; font-size: 1px; "> <img
-                    src="<?php echo Yii::app()->request->baseUrl; ?>/images/sonaray_small.png"/></a>
-        </div>
+.jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn {
+	position: absolute;
+	cursor: pointer;
+	display: block;
+	background: url(<? php echo Yii :: app()->request->baseUrl; ?>/ images
+	/home/a21.png) center center no-repeat;
+	overflow: hidden;
+}
+
+.jssora21l {
+	background-position: -3px -33px;
+}
+
+.jssora21r {
+	background-position: -63px -33px;
+}
+
+.jssora21l:hover {
+	background-position: -123px -33px;
+}
+
+.jssora21r:hover {
+	background-position: -183px -33px;
+}
+
+.jssora21ldn {
+	background-position: -243px -33px;
+}
+
+.jssora21rdn {
+	background-position: -303px -33px;
+}
+</style>
+
+		<!-- Arrow Left -->
+		<span u="arrowleft" class="jssora21l"
+			style="width: 55px; height: 55px; top: 123px; left: 8px;"> </span>
+		<!-- Arrow Right -->
+		<span u="arrowright" class="jssora21r"
+			style="width: 55px; height: 55px; top: 123px; right: 8px"> </span>
+		<!-- Arrow Navigator Skin End -->
+		<a style="display: none" href="http://www.jssor.com">jQuery Carousel</a>
+	</div>
+	<!-- Jssor Slider End -->
+
+	<div class="menu" style="background: #CCCCCC;">
+		<table width="100%" height="100%" border="0">
+			<tr>
+				<td valign="middle">
+
+					<div class="container">
+						<nav role="navigation" class="navbar navbar-inverse">
+							<div class="navbar-header">
+
+								<button type="button" data-target="#navbarCollapse"
+									data-toggle="collapse" class="navbar-toggle">
+									<span class="sr-only">Toggle navigation</span> <span
+										class="icon-bar"></span> <span class="icon-bar"></span> <span
+										class="icon-bar"></span>
+								</button>
+
+								<a href="#" class="navbar-brand"
+									style="font-family: Arial, Helvetica, sans-serif; font-size: 1px;">
+									<img
+									src="<?php echo Yii::app()->request->baseUrl; ?>/images/sonaray_small.png" />
+								</a>
+							</div>
 	
         <?php
-                                $sql = "SELECT * FROM mainmenu Mainmenu WHERE Mainmenu.active = 1 AND Mainmenu.language =  '" . Yii::app()->language . "' ORDER BY Mainmenu.weight ASC";
-                                $MenuPadres = Yii::app()->db->createCommand($sql)->queryAll();
-
-                                $menus = array();
-                                $i = 0;
-                                foreach ($MenuPadres as $MenuPadre) {//mostrar y comparar menu de primer nivel
-                                    $MenuPadre['menu'] = array();
-                                    $idpadre = $MenuPadre['id'];
-                                    if ($MenuPadre['parent'] == 0) {
-                                        foreach ($MenuPadres as $MenuPadre2) {//mostrar y comparar menu de segundo nivel
-                                            $MenuPadre2['menu'] = array();
-                                            if ($MenuPadre2['parent'] == $idpadre) {
-                                                foreach ($MenuPadres as $MenuPadre3) {//mostrar y comparar menu de tercer nivel
-                                                    if ($MenuPadre3['parent'] == $MenuPadre2['id']) {
-                                                        $MenuPadre2['menu'][] = $MenuPadre3;
-                                                    }
-                                                }
-                                                $MenuPadre['menu'][] = $MenuPadre2;
-                                            }
-                                        }
-                                        $i++;
-                                    }
-                                    //  var_dump($MenuPadre); echo '<br/><br/><br/><br/>';
-                                    $menus[] = $MenuPadre;
-                                }
-                                $total = $i;
-                                ?>
+								$sql = "SELECT * FROM mainmenu Mainmenu WHERE Mainmenu.active = 1 AND Mainmenu.language =  '" . Yii::app()->language . "' ORDER BY Mainmenu.weight ASC";
+								$MenuPadres = Yii::app()->db->createCommand($sql)->queryAll();
+								
+								$menus = array ();
+								$i = 0;
+								foreach ($MenuPadres as $MenuPadre)
+								{ // mostrar y comparar menu de primer nivel
+									$MenuPadre['menu'] = array ();
+									$idpadre = $MenuPadre['id'];
+									if ($MenuPadre['parent'] == 0)
+									{
+										foreach ($MenuPadres as $MenuPadre2)
+										{ // mostrar y comparar menu de segundo nivel
+											$MenuPadre2['menu'] = array ();
+											if ($MenuPadre2['parent'] == $idpadre)
+											{
+												foreach ($MenuPadres as $MenuPadre3)
+												{ // mostrar y comparar menu de tercer nivel
+													if ($MenuPadre3['parent'] == $MenuPadre2['id'])
+													{
+														$MenuPadre2['menu'][] = $MenuPadre3;
+													}
+												}
+												$MenuPadre['menu'][] = $MenuPadre2;
+											}
+										}
+										$i++ ;
+									}
+									// var_dump($MenuPadre); echo '<br/><br/><br/><br/>';
+									$menus[] = $MenuPadre;
+								}
+								$total = $i;
+								?>
         
         
         <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+								<ul class="nav navbar-nav">
                                                     <?php
-                                                    $contador=1;
-                                                    foreach ($menus as $menu) {
-                                                        if ($menu['parent'] == 0) {
-                                                            $total_sub = count($menu['menu']);
-                                                            if ($total_sub <= 0) { //para saber si tiene hijos
-                                                              
-                                                                ?>
+																																																				$contador = 1;
+																																																				foreach ($menus as $menu)
+																																																				{
+																																																					if ($menu['parent'] == 0)
+																																																					{
+																																																						$total_sub = count($menu['menu']);
+																																																						if ($total_sub <= 0)
+																																																						{ // para saber si tiene hijos
+																																																							
+																																																							?>
                                                                     <?php if ($contador ==1) { ?>
-                                                                        <li  style="font-weight: bold; background:#FFFFFF;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
-                                                                    <?php 
-                                                                    $contador++;
-                                                                    }else{ ?> 
-                                                                        <li style=" font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
+                                                                        <li
+										style="font-weight: bold; background: #FFFFFF;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
+                                                                    <?php
+																																																								$contador++ ;
+																																																							}
+																																																							else
+																																																							{
+																																																								?> 
+                                                                        <li
+										style="font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
                                                                      <?php  } ?> 
                                                             <?php } else { ?>
-                                                                <li class="dropdown" style="color: #000000; font-weight: bold;">
-                                                                    <a style="font-size:15px;"  href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $menu['name'] ?> <b class="caret"></b>
-                                                                    </a>
+                                                                <li
+										class="dropdown" style="color: #000000; font-weight: bold;"><a
+										style="font-size: 15px;" href="#" class="dropdown-toggle"
+										data-toggle="dropdown"><?php echo $menu['name'] ?> <b
+											class="caret"></b> </a>
 
-                                                                    <ul class="dropdown-menu" role="menu">
+										<ul class="dropdown-menu" role="menu">
                                                                         <?php
-                                                                        foreach ($menu['menu'] as $menu2) {
-                                                                            $total_sub = count($menu2['menu']);
-                                                                            // echo $total_sub;
-                                                                            if ($total_sub <= 0) {
-                                                                                ?>
+																																																							foreach ($menu['menu'] as $menu2)
+																																																							{
+																																																								$total_sub = count($menu2['menu']);
+																																																								// echo $total_sub;
+																																																								if ($total_sub <= 0)
+																																																								{
+																																																									?>
                                                                                                          <!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
-                                                                                <li style="font-size:15px;" class=""><?php echo CHtml::link($menu2['name'], array($menu2['url'])); ?></li>
+											<li style="font-size: 15px;" class=""><?php echo CHtml::link($menu2['name'], array($menu2['url'])); ?></li>
 
                                                                                 <?php
-                                                                            } else {
-                                                                                ?>
-                                                                                <li class="dropdown">
-                                                                                    <a href="#"><?php echo $menu2['name']; ?></a>                                                             
+																																																								}
+																																																								else
+																																																								{
+																																																									?>
+                                                                                <li
+												class="dropdown"><a href="#"><?php echo $menu2['name']; ?></a>
 
-                                                                                </li>                                                                 
+											</li>                                                                 
                                                                                 <?php
-                                                                            }//if 
-                                                                        }//foreach
-                                                                        ?>
+																																																								} // if
+																																																							} // foreach
+																																																							?>
                                                                     </ul>
-                                                                </li>
+									</li>
                                                                 <?php
-                                                            }// fin del if
-                                                        }
-                                                    }
-                                                    ?>    
+																																																						} // fin del if
+																																																					}
+																																																				}
+																																																				?>    
                                                 </ul>
-        
-        </div>
-    </nav>
-	<div>
-</td>
-  </tr>
-</table>
-    </div>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
+
+							</div>
+						</nav>
+						<div>
+				
+				</td>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript"
+		src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
 </body>
 </html>
