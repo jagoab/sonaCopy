@@ -1,4 +1,4 @@
-﻿<?php
+﻿﻿<?php
 $sql = "SELECT * FROM mainmenu Mainmenu WHERE Mainmenu.active = 1 AND Mainmenu.language =  '" . Yii::app()->language . "' ORDER BY Mainmenu.weight ASC";
 $MenuPadres = Yii::app()->db->createCommand($sql)->queryAll();
 $menus = array ();
