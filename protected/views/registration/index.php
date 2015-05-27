@@ -38,17 +38,7 @@ $this->breadcrumbs = array('Contáctanos');
 </script>
 <head>
     
-      <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> 
-    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css"> -->
-<!--    <link href="bootstrap.min.css" rel="stylesheet" />-->
  
-<title>SONARAY</title>
-    <link rel="icon" type="image/png" href="http://dascomla.com/toolbox/images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/newcss.css" />
 <style>
 .head_title {
@@ -76,23 +66,15 @@ $this->breadcrumbs = array('Contáctanos');
                 ?>
                 
              <?php if ($bucler_head==1){ ?>
-             <div style="background:#F9F9F9; width:80%; height:20%">
+            <div class="container">
+             <div style="background:#F9F9F9; width:100%; height:20%">
                 <br />
-                <h3 align="left" class="head_title">&nbsp<?php  echo "Newsletter / Boletín de Noticias"; ?></h3>
+                <h2 align="left" class="head_title" style="margin-left: 2%" >&nbsp<?php Yii::app()->language != 'es' ? print 'Newsletter' : print 'Boletín de Noticias' ;?></h2>
                 <br/>
             </div><br/>
-            <br/>
-                <div style=" width:80%; height:20%" align='right'>
-                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/head_newsletter.jpg"  class="img-responsive"/>
-            </div>
-            <br/>
-             <br/>
-              <br/>
-             
-             <br/>
-              <br/>
-               <br/>
-                <br/>
+                <div style="width:100%;clear:both; float:left; margin-top: 0%;margin-bottom: 5%">
+    </div>
+            </div>  
         </center>
          <?php
          

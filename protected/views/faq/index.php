@@ -26,115 +26,7 @@
 }
 </style>
 </head>
-<body>    
-<div class="menu" style="background: #CCCCCC; ">
-    <table width="100%" height="100%" border="0" >
-    <tr>
-        <td  valign="middle">
-	
-        <div class="container">
-    <nav role="navigation" class="navbar navbar-inverse">
-        <div class="navbar-header" >
-            
-    		 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-           
-            <a href="#" class="navbar-brand" style=" font-family: Arial, Helvetica, sans-serif; font-size: 1px; "> <img
-                    src="<?php echo Yii::app()->request->baseUrl; ?>/images/sonaray_small.png"/></a>
-        </div>
-	
-        <?php
-                                $sql = "SELECT * FROM mainmenu Mainmenu WHERE Mainmenu.active = 1 AND Mainmenu.language =  '" . Yii::app()->language . "' ORDER BY Mainmenu.weight ASC";
-                                $MenuPadres = Yii::app()->db->createCommand($sql)->queryAll();
-
-                                $menus = array();
-                                $i = 0;
-                                foreach ($MenuPadres as $MenuPadre) {//mostrar y comparar menu de primer nivel
-                                    $MenuPadre['menu'] = array();
-                                    $idpadre = $MenuPadre['id'];
-                                    if ($MenuPadre['parent'] == 0) {
-                                        foreach ($MenuPadres as $MenuPadre2) {//mostrar y comparar menu de segundo nivel
-                                            $MenuPadre2['menu'] = array();
-                                            if ($MenuPadre2['parent'] == $idpadre) {
-                                                foreach ($MenuPadres as $MenuPadre3) {//mostrar y comparar menu de tercer nivel
-                                                    if ($MenuPadre3['parent'] == $MenuPadre2['id']) {
-                                                        $MenuPadre2['menu'][] = $MenuPadre3;
-                                                    }
-                                                }
-                                                $MenuPadre['menu'][] = $MenuPadre2;
-                                            }
-                                        }
-                                        $i++;
-                                    }
-                                    //  var_dump($MenuPadre); echo '<br/><br/><br/><br/>';
-                                    $menus[] = $MenuPadre;
-                                }
-                                $total = $i;
-                                ?>
-        
-        <div id="navbarCollapse" class="collapse navbar-collapse"  class="block" data-move-x="-500px" data-rotate="90deg">
-            <ul class="nav navbar-nav">
-                                                    <?php
-                                                    $contador=1;
-                                                    foreach ($menus as $menu) {
-                                                        if ($menu['parent'] == 0) {
-                                                            $total_sub = count($menu['menu']);
-                                                            if ($total_sub <= 0) { //para saber si tiene hijos
-                                                              
-                                                                ?>
-                                                                    <?php if ($contador ==1) { ?>
-                                                                        <li  style="font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
-                                                                    <?php 
-                                                                    $contador++;
-                                                                    }else{ ?> 
-                                                                        <li style=" font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
-                                                                     <?php  } ?> 
-                                                            <?php } else { ?>
-                                                                <li class="dropdown" style="color: #000000; font-weight: bold;">
-                                                                    <a style="font-size:15px;"  href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $menu['name'] ?> <b class="caret"></b>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu" role="menu">
-                                                                        <?php
-                                                                        foreach ($menu['menu'] as $menu2) {
-                                                                            $total_sub = count($menu2['menu']);
-                                                                            // echo $total_sub;
-                                                                            if ($total_sub <= 0) {
-                                                                                ?>
-                                                                                                         <!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
-                                                                                <li style="font-size:15px;" class=""><a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language .'/'.$menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
-
-                                                                                <?php
-                                                                            } else {
-                                                                                ?>
-                                                                                <li class="dropdown">
-                                                                                    <a href="#"><?php echo $menu2['name']; ?></a>                                                             
-
-                                                                                </li>                                                                 
-                                                                                <?php
-                                                                            }//if 
-                                                                        }//foreach
-                                                                        ?>
-                                                                    </ul>
-                                                                </li>
-                                                                <?php
-                                                            }// fin del if
-                                                        }
-                                                    }
-                                                    ?>    
-                                                </ul>
-        
-        </div>
-    </nav>
-	<div>
-</td>
-  </tr>
-</table>
-    </div>          
+<body>           
         <br/><br/> <br/> <br/> <br/> <br/>  <br/> 
      <div class="container">
          
@@ -187,9 +79,9 @@
 <center>
 <div style="">
  
-<div style='width: 60%; border: 0px solid green; text-align: justify; font-family: Arial; font-size: 14px;'> 
+<div style='width: 60%; border: 0px solid green; text-align: justify; font-family: Arial; font-size: 13px; color: #999'> 
 
-<strong><?php echo $valor[1]->text; ?></strong><br/><br/>
+<?php echo $valor[1]->text; ?><br/><br/>
 
 <span style="text-align: justify; margin-left: 14px; margin-top: 5%;font-size: 13pt;  color:#999 "> 
 <?php //echo $valor[2]->text; ?>

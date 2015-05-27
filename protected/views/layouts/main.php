@@ -40,8 +40,8 @@ $total = $i;
 <link rel="icon" type="image/png" href="images/favicon.ico" />
 <link rel="icon" type="image/png" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico" />
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
-<meta NAME="AUTHOR" CONTENT="Guillermo Enrique,Daniel Ruiz">
-<meta NAME="REPLY-TO" CONTENT="gsanchez1687@gmail.com, Daruizg@gmail.com">
+<meta NAME="AUTHOR" CONTENT="Ricober Martinez, Guillermo Enrique,Daniel Ruiz">
+<meta NAME="REPLY-TO" CONTENT="ricoberweb@gmail.com, gsanchez1687@gmail.com, Daruizg@gmail.com">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 <meta name="language" content="en" />

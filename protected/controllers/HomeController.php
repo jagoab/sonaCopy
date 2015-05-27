@@ -42,7 +42,11 @@ class HomeController extends Controller
 		//Cosulta Casos de estudio
 		$sql1 = "SELECT * FROM casestudies CaseStudies WHERE CaseStudies.active = 1 and language='" . Yii::app()->language . "' ORDER BY CaseStudies.order ASC ";
 		$caseStudies= Yii::app()->db->createCommand($sql1)->queryAll();
-		$this->render('index', array ('imagenesCasos' => $imagenesCasos,'imagenesDescargas' => $imagenesDescargas,'casos' => $casos,"descargas" => $descargas,'destacados' => $destacados,'imagenesSlider' => $imagenesSlider,'featured_product' => $featured_product,'textoAbout' => $textoAbout,'menus' => $menus, 'caseStudies' => $caseStudies ));
+                //Cosulta  de noticias
+                $sql2 = "SELECT * FROM news News WHERE language='" . Yii::app()->language . "' ORDER BY News.order ASC ";
+                
+                $News= Yii::app()->db->createCommand($sql2)->queryAll();
+		$this->render('index', array ('imagenesCasos' => $imagenesCasos,'imagenesDescargas' => $imagenesDescargas,'casos' => $casos,"descargas" => $descargas,'destacados' => $destacados,'imagenesSlider' => $imagenesSlider,'featured_product' => $featured_product,'textoAbout' => $textoAbout,'menus' => $menus, 'caseStudies' => $caseStudies, 'News' => $News ));
 	}
 
 	public function actionIndex_prueba()

@@ -25,8 +25,7 @@
 <div style="background:#F9F9F9 !important; width:100%;clear:both;float:left;">
 <h2 align="left" class="head_title">&nbsp<?php  echo $valor[0]->name; ?></h2>
 </div>
-<div style="width:100%;clear:both;float:left;margin-top: 1%;margin-bottom: 10%">
-<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/head.png" class="img-responsive" />
+<div style="width:100%;clear:both;float:left;margin-top: 1%;margin-bottom: 2%">
 </div>
          <?php
          $bucler_head=$bucler_head+1;

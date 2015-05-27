@@ -14,9 +14,7 @@
 				       margin-top: 0px; 
 				       background-color: #fff">
 				       
-			<?php
-                        
-                        foreach ($textos as $key => $valor):?>
+			<?php foreach ($textos as $key => $valor):?>
 				 
 				<?php if($key == 0):?>
 				<img class="img-responsive" src="<?php echo (Yii::app()->request->baseUrl.$imagenesAboutUs[$key]->path);?>"

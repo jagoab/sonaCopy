@@ -9,11 +9,12 @@ class ContactForm extends CFormModel
 {
 	public $name;
 	public $email;
-        public $city;
-        public $phone;	
+    public $city;
+    public $phone;	
 	public $body;
 	public $verifyCode;
-
+	public $uploaded_file;
+	public $Carrer;
 	/**
 	 * Declares the validation rules.
 	 */
@@ -21,7 +22,7 @@ class ContactForm extends CFormModel
 	{
 		return array(
 			// name, email, subject and body are required
-			array('name, email,city,phone,body', 'required'),
+			array('name, email,Carrer,phone,body', 'required'),
                         array('name','length','min'=>6, 'max'=>40),
                         array('email','length','min'=>5, 'max'=>40),
                         array('city','length','min'=>5, 'max'=>40),

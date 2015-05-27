@@ -177,6 +177,7 @@ $(window).bind("orientationchange", ScaleSlider);
 $j = 1;
 $i = 0;
 $cantidad = count($imagenesSlider);
+$contuer = 1;
 ?>
 <div u="slides"
 		style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">  
@@ -269,9 +270,11 @@ $cantidad = count($imagenesSlider);
 				</div>
 			</div>
 		</div>
+                
+                
+                
+              
                 <br/><br/>
-                <a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo Yii::app()->language;?>/products/index">
-                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/destacado.png" class="img-responsive" /></a>
 		<h2 style="color: #003399; margin-top: 10%" class="block">
 			<strong><?php Yii::app()->language != 'es' ? print 'Featured product' : print 'Producto destacado ' ;?></strong>
 		</h2>
@@ -295,24 +298,68 @@ $cantidad = count($imagenesSlider);
 			</div>
 		<?php }?>
 		</div>
-		
+                <h2 style="color: #003399; margin-top: 10%" class="block">
+		<strong><?php Yii::app()->language != 'es' ? print 'News' : print 'Noticias' ;?></strong>
+		</h2>
+                <div class="row">
+                <?php 
+                foreach($News as $news) {   ?>
+              <div class="col-md-3">
+				<div class="block" data-rotate-x="90deg" data-move-z="-500px"
+					data-move-y="200px">
+					<center>
+                                                <br/>
+                                                 <p style="font-size: 18px; text-align: justify;">
+                                                 <a href="<?php echo Yii::app()->request->baseUrl; ?>/news/cases?id=<?php echo $news['id']; ?>" > <?php  echo $news['date_publication'];?></a>
+
+                                                 </p>
+                                                <p style="font-size: 14px; text-align: justify;">
+                                                <?php echo $news['description'];?>
+                                                </p>
+                                                  <p style="font-size: 24px; text-align: justify;">
+                                               <a href="<?php echo Yii::app()->request->baseUrl; ?>/news/cases?id=<?php echo $news['id']; ?>" >
+                                                +</a>
+                                                </p>
+                                               
+                                        </center>
+				</div>
+			</div>
+                <?php } ?>
+                </div>
 		<h2 style="color: #003399;margin-top: 10%" class="block">
 			<strong><?php Yii::app()->language != 'es' ? print 'Case Studies' : print 'Caso de estudios' ;?></strong>
 		</h2>
-		<br />
 		<div class="row">
 		<?php foreach($caseStudies as $case)
 		{
 		?>
-			<div class="col-md-4">
+		<?php if ($contuer < 4) {?>
+                       <div class="col-md-4">
 				<div class="block" data-rotate-x="90deg" data-move-z="-500px"
 					data-move-y="200px">
 					<center>
+                                               
 						<a target="_blank" download="<?php $case['subPath']?>" href="<?php echo Yii::app()->request->baseUrl . $case['subPath']; ?>"><img src="<?php echo Yii::app()->request->baseUrl . $case['path']; ?>" class="img-responsive" /></a>
-					</center>
+                                                 <br/>
+                                                 <p style="font-size: 14px; text-align: justify;">
+                                                 <?php echo $case['title'];?>
+                                                 </p>
+                                                   <br/>
+                                                   
+                                                <p style="font-size: 14px; text-align: justify;">
+                                                <?php Yii::app()->language != 'es' ? print 'LOCATION:' : print 'UBICACION:' ;?>
+                                               <?php echo $case['country'];?>
+                                                </p>
+                                                <a target="_blank" download="<?php $case['subPath']?>" href="<?php echo Yii::app()->request->baseUrl . $case['subPath']; ?>">
+                                                <p style="font-size: 14px; text-align: justify;">
+                                                  <?php Yii::app()->language != 'es' ? print 'DOWNLOAD' : print 'DESCARGAR' ;?>
+                                                </p>
+                                                </a>
+                                        </center>
 					<p align="justify" style="font-size: 14px; color: #666666;"></p>
 				</div>
 			</div>
+                <?php $contuer++; }?>
 		<?php }?>
 		</div>
 		<br /> <br /> <br /> <br /> <br />
