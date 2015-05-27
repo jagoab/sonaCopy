@@ -60,114 +60,6 @@ $this->breadcrumbs = array('Contáctanos');
 </style>
   
   </head>
-<div class="menu" style="background: #CCCCCC; ">
-    <table width="100%" height="100%" border="0" >
-    <tr>
-        <td  valign="middle">
-	
-        <div class="container">
-    <nav role="navigation" class="navbar navbar-inverse">
-        <div class="navbar-header" >
-            
-    		 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-           
-            <a href="#" class="navbar-brand" style=" font-family: Arial, Helvetica, sans-serif; font-size: 1px; "> <img
-                    src="<?php echo Yii::app()->request->baseUrl; ?>/images/sonaray_small.png"/></a>
-        </div>
-	
-        <?php
-                                $sql = "SELECT * FROM mainmenu Mainmenu WHERE Mainmenu.active = 1 AND Mainmenu.language =  '" . Yii::app()->language . "' ORDER BY Mainmenu.weight ASC";
-                                $MenuPadres = Yii::app()->db->createCommand($sql)->queryAll();
-
-                                $menus = array();
-                                $i = 0;
-                                foreach ($MenuPadres as $MenuPadre) {//mostrar y comparar menu de primer nivel
-                                    $MenuPadre['menu'] = array();
-                                    $idpadre = $MenuPadre['id'];
-                                    if ($MenuPadre['parent'] == 0) {
-                                        foreach ($MenuPadres as $MenuPadre2) {//mostrar y comparar menu de segundo nivel
-                                            $MenuPadre2['menu'] = array();
-                                            if ($MenuPadre2['parent'] == $idpadre) {
-                                                foreach ($MenuPadres as $MenuPadre3) {//mostrar y comparar menu de tercer nivel
-                                                    if ($MenuPadre3['parent'] == $MenuPadre2['id']) {
-                                                        $MenuPadre2['menu'][] = $MenuPadre3;
-                                                    }
-                                                }
-                                                $MenuPadre['menu'][] = $MenuPadre2;
-                                            }
-                                        }
-                                        $i++;
-                                    }
-                                    //  var_dump($MenuPadre); echo '<br/><br/><br/><br/>';
-                                    $menus[] = $MenuPadre;
-                                }
-                                $total = $i;
-                                ?>
-        
-        <div id="navbarCollapse" class="collapse navbar-collapse"  class="block" data-move-x="-500px" data-rotate="90deg">
-            <ul class="nav navbar-nav">
-                                                    <?php
-                                                    $contador=1;
-                                                    foreach ($menus as $menu) {
-                                                        if ($menu['parent'] == 0) {
-                                                            $total_sub = count($menu['menu']);
-                                                            if ($total_sub <= 0) { //para saber si tiene hijos
-                                                              
-                                                                ?>
-                                                                    <?php if ($contador ==1) { ?>
-                                                                        <li  style="font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
-                                                                    <?php 
-                                                                    $contador++;
-                                                                    }else{ ?> 
-                                                                        <li style=" font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
-                                                                     <?php  } ?> 
-                                                            <?php } else { ?>
-                                                                <li class="dropdown" style="color: #000000; font-weight: bold;">
-                                                                    <a style="font-size:15px;"  href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $menu['name'] ?> <b class="caret"></b>
-                                                                    </a>
-
-                                                                    <ul class="dropdown-menu" role="menu">
-                                                                        <?php
-                                                                        foreach ($menu['menu'] as $menu2) {
-                                                                            $total_sub = count($menu2['menu']);
-                                                                            // echo $total_sub;
-                                                                            if ($total_sub <= 0) {
-                                                                                ?>
-                                                                                                         <!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
-                                                                               <li style="font-size:15px;" class=""><a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language .'/'.$menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
-
-                                                                                <?php
-                                                                            } else {
-                                                                                ?>
-                                                                                <li class="dropdown">
-                                                                                    <a href="#"><?php echo $menu2['name']; ?></a>                                                             
-
-                                                                                </li>                                                                 
-                                                                                <?php
-                                                                            }//if 
-                                                                        }//foreach
-                                                                        ?>
-                                                                    </ul>
-                                                                </li>
-                                                                <?php
-                                                            }// fin del if
-                                                        }
-                                                    }
-                                                    ?>    
-                                                </ul>
-        
-        </div>
-    </nav>
-	<div>
-</td>
-  </tr>
-</table>
-    </div>
                 <center>
                  <br />
                 <br />
@@ -186,9 +78,21 @@ $this->breadcrumbs = array('Contáctanos');
              <?php if ($bucler_head==1){ ?>
              <div style="background:#F9F9F9; width:80%; height:20%">
                 <br />
-                <h2 align="left" class="head_title">&nbsp<?php  echo "Newsletter"; ?></h2>
-                <br />
+                <h3 align="left" class="head_title">&nbsp<?php  echo "Newsletter / Boletín de Noticias"; ?></h3>
+                <br/>
+            </div><br/>
+            <br/>
+                <div style=" width:80%; height:20%" align='right'>
+                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/head_newsletter.jpg"  class="img-responsive"/>
             </div>
+            <br/>
+             <br/>
+              <br/>
+             
+             <br/>
+              <br/>
+               <br/>
+                <br/>
         </center>
          <?php
          
@@ -218,12 +122,15 @@ $this->breadcrumbs = array('Contáctanos');
 		    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1001610015/?label=_sXQCLGl9gkQn7bN3QM&amp;guid=ON&amp;script=0"/>
 		    </div>
 		    </noscript>
-
-       <div class="flash-success">
+                    
+                    <div class="flash-success">
                         <?php echo Yii::app()->user->getFlash('contact'); ?>
                     </div>
-                 <div class="form" style="right: 22px; width: 80%">
+                    
+                 <div class="form" style="right: 22px; width: 80% ">
+                    
                 <?php endif; ?>
+                     
                     <br/>
           
 
@@ -236,21 +143,21 @@ $this->breadcrumbs = array('Contáctanos');
                     ),
                 ));
                 ?>
-                <p class="note">Los campos que lleven  <span class="required">*</span> son obligatorios..</p>
                 <?php echo $form->errorSummary($model); ?>
 
-                <div class="row">
-                    <?php echo $form->labelEx($model, Yii::t('forms', 'name')); ?>
+                <div class="row" align="left">
+                    
+                    <?php echo $form->labelEx($model, Yii::t('forms', 'Name*')); ?>
                     <?php echo $form->textField($model, 'name', 
 					array(
 					"class" => 'form-control', 
-					'placeholder' => Yii::t('forms', 'Tu Nombre Completo'),
+					'placeholder' => Yii::t('forms', 'Name / Nombre'),
 					'onkeypress'=>'return soloLetras(event)'
 					)); ?>
                     <?php echo $form->error($model, 'name'); ?>
                 </div>
                 <br/>
-                <div class="row">
+                <div class="row" align="left">
                     <?php echo $form->labelEx($model, Yii::t('forms', 'email')); ?>
                     <?php echo $form->textField($model, 'email', array("class" => 'form-control', 'placeholder' => Yii::t('forms', 'Email / Correo'))); ?>
                     <?php echo $form->error($model, 'email'); ?>

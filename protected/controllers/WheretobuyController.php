@@ -4,22 +4,17 @@ class WheretobuyController  extends Controller
 {
 	public function actionIndex()
 	{
-		
 		$criterio = new CDbCriteria();
 		for($i = 1;$i <=4;$i++){
 		$criterio -> condition = 'language = \''.Yii::app()->language.'\' and category in (42) and parent = '.$i;
 		$textos = Texts::model()->findAll($criterio);
-					
-				$parrafo[$i] = $textos;
+		if(sizeof($textos) > 0)
+		{
+			$parrafo[$i]['name'] = $textos[0]->name;
+			$parrafo[$i]['text'] = $textos[0]->text;
 		}
-		
-		
-		
-		$this->render('index',array(
-				'parrafos'=>$parrafo
-		));
-		
-		
+		}
+		$this->render('index',array('parrafos'=>$parrafo));
 	}
 
 	// Uncomment the following methods and override them if needed

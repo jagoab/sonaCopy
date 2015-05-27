@@ -5,6 +5,7 @@ class HomeController extends Controller
 
 	public function actionIndex()
 	{
+		$this->layout = '//layouts/main';
 		$sql = "SELECT * FROM mainmenu Mainmenu WHERE Mainmenu.active = 1 AND Mainmenu.language =  '" . Yii::app()->language . "' ORDER BY Mainmenu.weight ASC";
 		$menus = Yii::app()->db->createCommand($sql)->queryAll();
 		// $this->layout = '//layouts/main';
@@ -37,8 +38,11 @@ class HomeController extends Controller
 		// Consulta para traer texto de about us
 		$criterioAbout = new CDbCriteria();
 		$criterioAbout->condition = 'language = \'' . Yii::app()->language . '\' and category = 17';
-		$textoAbout = Texts::model()->findAll($criterioAbout);		
-		$this->render('index', array ('imagenesCasos' => $imagenesCasos,'imagenesDescargas' => $imagenesDescargas,'casos' => $casos,"descargas" => $descargas,'destacados' => $destacados,'imagenesSlider' => $imagenesSlider,'featured_product' => $featured_product,'textoAbout' => $textoAbout,'menus' => $menus ));
+		$textoAbout = Texts::model()->findAll($criterioAbout);
+		//Cosulta Casos de estudio
+		$sql1 = "SELECT * FROM casestudies CaseStudies WHERE CaseStudies.active = 1 and language='" . Yii::app()->language . "' ORDER BY CaseStudies.order ASC ";
+		$caseStudies= Yii::app()->db->createCommand($sql1)->queryAll();
+		$this->render('index', array ('imagenesCasos' => $imagenesCasos,'imagenesDescargas' => $imagenesDescargas,'casos' => $casos,"descargas" => $descargas,'destacados' => $destacados,'imagenesSlider' => $imagenesSlider,'featured_product' => $featured_product,'textoAbout' => $textoAbout,'menus' => $menus, 'caseStudies' => $caseStudies ));
 	}
 
 	public function actionIndex_prueba()

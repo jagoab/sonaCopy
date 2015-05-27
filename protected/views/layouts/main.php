@@ -1,4 +1,4 @@
-﻿﻿<?php
+<?php
 $sql = "SELECT * FROM mainmenu Mainmenu WHERE Mainmenu.active = 1 AND Mainmenu.language =  '" . Yii::app()->language . "' ORDER BY Mainmenu.weight ASC";
 $MenuPadres = Yii::app()->db->createCommand($sql)->queryAll();
 $menus = array ();
@@ -34,36 +34,27 @@ $total = $i;
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>SONARAY</title>
+<meta charset="UTF-8">
+<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 <link rel="shortcut icon" href="images/favicon.ico" />
 <link rel="icon" type="image/png" href="images/favicon.ico" />
-<link rel="icon" type="image/vnd.microsoft.icon"
-	href="images/favicon.ico" />
-<link rel="stylesheet" type="text/css"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
-<META NAME="AUTHOR" CONTENT="Guillermo Enrique,Daniel Ruiz">
-<META NAME="REPLY-TO"
-	CONTENT="gsanchez1687@gmail.com, Daruizg@gmail.com">
+<link rel="icon" type="image/png" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
+<meta NAME="AUTHOR" CONTENT="Guillermo Enrique,Daniel Ruiz">
+<meta NAME="REPLY-TO" CONTENT="gsanchez1687@gmail.com, Daruizg@gmail.com">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta
-	content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-	name="viewport">
+<meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 <meta name="language" content="en" />
 <!--[if lt IE 8]>
-                        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
 <![endif]-->
-<link rel="stylesheet" type="text/css"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 <!--<link rel="stylesheet" type="text/css" href="<?php //echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />-->
-<link rel="stylesheet" type="text/css"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
-<script type="text/javascript"
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.8.2.min.js"></script>
-<script type="text/javascript"
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/dropdownHover.js"></script>
-<script type="text/javascript"
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3-mediaquery.js"></script>
-<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/dropdownHover.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3-mediaquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 function cambiar (flag,img) {
 	if (document.images) {
@@ -81,9 +72,48 @@ function preloadcambiar (img,adresse) {
 	}
 }
 </script>
-</noscript>
-<div
-	style="clear: both; float: left; position: relative; width: 100%; height: 66px">
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
+<script>
+var num = 0; //number of pixels before modifying styles
+$(window).bind('scroll', function () {
+	if ($(window).scrollTop() > num) {
+		$('.menu').addClass('fixed');
+	} else {
+		$('.menu').removeClass('fixed');
+	}
+});
+</script>
+<style type="text/css">
+.iconosfijos{position: fixed; right:150px; bottom:94%; z-index:444; width:30px}    
+<!--
+a:link {
+	text-decoration: none;
+	color: #00CCFF;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #00CCFF;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.Estilo6 {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0099CC;
+}
+-->
+</style>
+</head>
+<body>
+<div style="clear: both; float: left; position: relative; width: 100%; height: 66px">
 	<div class="menu" style="background: #CCCCCC;">
 		<table width="100%" height="100%" border="0">
 			<tr>
@@ -164,62 +194,47 @@ function preloadcambiar (img,adresse) {
 	</div>
 </div>
 <?php  echo $content; ?>
-<script type="text/javascript"
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
-<script>
-$('.carousel').carousel({
- interval: 4500
-})
-$('.carousel').mouseover(function() {
-$(this).carousel('pause');
- }).mouseleave(function() {
-// $(this).carousel('cycle')
-});
-$('.dropdown-toggle').dropdown();
-$(function() {
-$("#impressum").click(function() {
-$("#Impressumdialog").dialog("open");
-})
-})
-</script>
-<table width="200" border="0">
+<div style="clear:both;float:left;margin-top: 1%;width: 100%">
+<table width="100%" border='1' >
 	<tr>
-		<td height="76"></td>
-	</tr>
-</table>
-<table width="100%" border='0'>
-	<tr>
-		<td bgcolor="#0e1b77"><br /> <br /> <br /> <br /> <span
-			style="font-family: Impact; font-size: 36px; color: #FFFFFF;">Newsletter</span><br />
-			<br /> <a onMouseOver="cambiar(1,'IMG2');"
-			onMouseOut="cambiar(0,'IMG2');" target="_blank"
-			href="http://www.facebook.com/"> <img border="0"
-				src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/face.png"
-				onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/face_2.png');"
-				name="IMG2" /></a> <a onMouseOver="cambiar(1,'IMG1');"
-			onMouseOut="cambiar(0,'IMG1');" target="_blank"
-			href="http://twitter.com/"> <img border="0"
-				src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/tw.png"
-				onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/tw_2.png');"
-				name="IMG1" /></a> <a onMouseOver="cambiar(1,'IMG3');"
-			onMouseOut="cambiar(0,'IMG3');" target="_blank"
-			href="http://www.youtube.com/"> <img border="0"
+		<td bgcolor="#0e1b77">
+                    <center>
+                    <br /> <br /> <br /> <br /> 
+		<a href="<?php echo Yii::app()->request->baseUrl; ?>/Registration/index" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/yt_2.png');">
+			<span style="font-family: Impact; font-size: 36px; color: #FFFFFF;">Newsletter</span>
+		</a>
+		<br />
+		<br /> 
+		<a onMouseOver="cambiar(1,'IMG2');" onMouseOut="cambiar(0,'IMG2');" target="_blank" href="https://www.facebook.com/SonarayLED"> 
+			<img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/face.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/face_2.png');" name="IMG2" /></a> 
+		<a onMouseOver="cambiar(1,'IMG1');" onMouseOut="cambiar(0,'IMG1');" target="_blank" href="https://twitter.com/sonarayledusa"> 
+		<img border="0" src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/tw.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/tw_2.png');" name="IMG1" /></a> 
+		<a onMouseOver="cambiar(1,'IMG3');" onMouseOut="cambiar(0,'IMG3');" target="_blank" href="https://www.youtube.com"> <img border="0"
 				src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/yt.png"
 				onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/yt_2.png');"
-				name="IMG3" /></a> <a onMouseOver="cambiar(1,'IMG4');"
-			onMouseOut="cambiar(0,'IMG4');" target="_blank"
-			href="http://instagram.com/"> <img border="0"
-				src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/in.png"
-				onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/in_2.png');"
-				name="IMG4" /></a><br /> <br /> <input name="" type="text"
-			placeholder="Email" size="40" height="6px" /><br /> <br /> <input
-			type="submit" name="Submit" value="sign up" /> <br /> <br /> <br />
-			<div align="center" style="color: #ffffff;">Sonarayled © 2014 |
-				Privacy Policy</div> &nbsp;</td>
+				name="IMG3" /></a> <br /> <br /> <span
+			style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #CCCCCC;">&copy;
+				2012-2015 DASCOM Americas SBI LLC Todos los derechos reservados.
+				Powered by</span>&nbsp;<a href="http://www.thefactoryhka.com/"
+			target="_blank"><img
+				src="http://www.dascomla.com/sonaray/images/thfka.png" width="14"
+				height="11" />&nbsp;<span class="Estilo6">ThefactoryHKA C.A.</span></a>
+			<br /> <br /> <br /> <br /> <br /> &nbsp;</td>
+            </center>
 	</tr>
 </table>
-
-
+    <div class="iconosfijos"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/iconosfijos.png" border="0" usemap="#Map">
+<map name="Map">
+<area shape="rect" coords="1,1,34,33" alt="Unete"  href="<?php echo Yii::app()->request->baseUrl; ?>">
+<area shape="rect" coords="-3,34,28,61" href="javascript:agregar()">
+<area shape="rect" coords="-3,66,29,105" href="contacto.php">
+</map>
+</div>
+  </div>
+</div>
+<map name="bandera">
+  <area alt="english" shape="rect" coords="891,107,918,133" href="/english" target="_blank">
+</map>
+</div>
 </body>
 </html>
-

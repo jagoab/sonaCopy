@@ -1,11 +1,4 @@
-<script
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/carousel-3d/carousel3d.js"></script>
-<script
-	src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/css/newcss.css" />
-<link rel="stylesheet" type="text/css"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/css/carousel3d/carousel3d.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/newcss.css" />
 <style>
 /*html, body, .banner, .container {
 height:100%;
@@ -168,7 +161,6 @@ $(window).bind("load", ScaleSlider);
 $(window).bind("resize", ScaleSlider);
 $(window).bind("orientationchange", ScaleSlider);
 //responsive code end
-init();
 });
 </script>
 <!-- You can move inline styles to css file or css block. -->
@@ -187,7 +179,7 @@ $i = 0;
 $cantidad = count($imagenesSlider);
 ?>
 <div u="slides"
-		style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">  Loading ...
+		style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">  
 	<?php
 	foreach ($imagenesSlider as $banner)
 	{
@@ -221,17 +213,14 @@ $cantidad = count($imagenesSlider);
 </div>
 <!-- Jssor Slider End -->
 <div style="clear: both; float: left; padding-left: 0% !important; margin-top: 5%; font-family: helvetica_neueregular !important; width: 100%">
-	<div class="container"
-		style="clear: both:float:left; color: #616264 !important;">
+	<div class="container" style="clear: both:float:left; color: #616264 !important;">
 		<div class="row" style="width: 100%">
 			<div class="col-md-6" style="width: 100%">
 				<div class="block" data-move-x="-600px">
-					<h1>Lighting everyone's dreams.</h1>
+					<h1><?php Yii::app()->language != 'es' ? print 'Lighting everyone´s dreams.' : print 'Iluminando los sueños de todos' ;?></h1>
 				</div>
 				<div class="block" data-move-x="-600px">
-					<h2>In Sonaray we want you to be well, live well and enjoy life. By
-						understanding their aspirations and needs you become what inspires
-						us.</h2>
+					<h2><?php Yii::app()->language != 'es' ? print 'In Sonaray we want you to be well, live well and enjoy life. By understanding their aspirations and needs you become what inspires us.' : print 'En Sonaray queremos que estés bien, vivir bien y disfrutar de la vida. Al entender sus aspiraciones y necesidades te conviertes en lo que nos inspira.' ;?></h2>
 				</div>
 			</div>
 		</div>
@@ -241,7 +230,7 @@ $cantidad = count($imagenesSlider);
 				<div class="block" data-move-x="-600px" style="height: 315px">
 					<strong>
 						<p style="font-size: 28px; color: #003399;" align='left'>
-						<?php echo $menus[29]['name'] ;?>
+						<?php echo ucfirst(strtolower($menus[26]['name'])) ;?>
 					</p>
 					</strong>
 					<p style="font-size: 28x;" align='left'>________________</p>
@@ -258,6 +247,7 @@ $cantidad = count($imagenesSlider);
 				</div>
 			</div>
 		</div>
+                
 		<div class="row" style="margin-top: 10%">
 			<div class="col-md-6">
 				<div class="block" data-move-x="-800px"
@@ -279,8 +269,11 @@ $cantidad = count($imagenesSlider);
 				</div>
 			</div>
 		</div>
+                <br/><br/>
+                <a href="<?php echo Yii::app()->request->baseUrl; ?>/<?php echo Yii::app()->language;?>/products/index">
+                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/destacado.png" class="img-responsive" /></a>
 		<h2 style="color: #003399; margin-top: 10%" class="block">
-			<strong><?php echo $menus[1]['name'] ;?></strong>
+			<strong><?php Yii::app()->language != 'es' ? print 'Featured product' : print 'Producto destacado ' ;?></strong>
 		</h2>
 		<div class="row">
 		<?php foreach ($featured_product as $productoDestacado)
@@ -302,134 +295,28 @@ $cantidad = count($imagenesSlider);
 			</div>
 		<?php }?>
 		</div>
-		<div class="row" style="margin-top: 10%">
-			<h2 style="color: #003399;" class="block">
-				<strong><?php echo $menus[14]['name'] ;?></strong>
-			</h2>
-			<br />
-			<div class="col-md-3">
-				<div class="block" data-move-x="-500px" data-rotate="90deg">
-					<p align="justify" style="font-size: 14px; color: #666666;">DASCOM&rsquo;s
-						LED Lighting business is at the forefront of lighting the world of
-						tomorrow. With our Sonaray&trade; brand of LED lighting solutions,
-						our mission is to provide the absolute best in energy efficient
-						lighting. With a broad array of research, development, test and
-						production capabilities and facilities, our experienced team is
-						dedicated to producing only the highest quality LED lights.</p>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="block" data-move-y="200px" data-move-x="-200px"
-					data-rotate="45deg">
-					<p align="justify" style="font-size: 14px; color: #666666;">DASCOM&rsquo;s
-						LED Lighting business is at the forefront of lighting the world of
-						tomorrow. With our Sonaray&trade; brand of LED lighting solutions,
-						our mission is to provide the absolute best in energy efficient
-						lighting. With a broad array of research, development, test and
-						production capabilities and facilities, our experienced team is
-						dedicated to producing only the highest quality LED lights.</p>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="block" data-move-y="200px" data-move-x="200px"
-					data-rotate="-45deg">
-					<p align="justify" style="font-size: 14px; color: #666666;">DASCOM&rsquo;s
-						LED Lighting business is at the forefront of lighting the world of
-						tomorrow. With our Sonaray&trade; brand of LED lighting solutions,
-						our mission is to provide the absolute best in energy efficient
-						lighting. With a broad array of research, development, test and
-						production capabilities and facilities, our experienced team is
-						dedicated to producing only the highest quality LED lights.</p>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div class="block" data-move-x="500px" data-rotate="-90deg">
-					<p align="justify" style="font-size: 14px; color: #666666;">DASCOM&rsquo;s
-						LED Lighting business is at the forefront of lighting the world of
-						tomorrow. With our Sonaray&trade; brand of LED lighting solutions,
-						our mission is to provide the absolute best in energy efficient
-						lighting. With a broad array of research, development, test and
-						production capabilities and facilities, our experienced team is
-						dedicated to producing only the highest quality LED lights.</p>
-				</div>
-			</div>
-		</div>
-		<h2 style="color: #003399;" class="block">
-			<strong><?php echo $menus[25]['name'] ;?></strong>
+		
+		<h2 style="color: #003399;margin-top: 10%" class="block">
+			<strong><?php Yii::app()->language != 'es' ? print 'Case Studies' : print 'Caso de estudios' ;?></strong>
 		</h2>
 		<br />
 		<div class="row">
+		<?php foreach($caseStudies as $case)
+		{
+		?>
 			<div class="col-md-4">
 				<div class="block" data-rotate-x="90deg" data-move-z="-500px"
 					data-move-y="200px">
 					<center>
-						<img
-							src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/portfolio_1.jpg"
-							class="img-responsive" />
+						<a target="_blank" download="<?php $case['subPath']?>" href="<?php echo Yii::app()->request->baseUrl . $case['subPath']; ?>"><img src="<?php echo Yii::app()->request->baseUrl . $case['path']; ?>" class="img-responsive" /></a>
 					</center>
-					<p align="justify" style="font-size: 14px; color: #666666;">DASCOM&rsquo;s
-						LED Lighting business is at the forefront of lighting the world of
-						tomorrow. With our Sonaray&trade; brand of LED lighting solutions,
-						our mission is to provide the absolute best in energy efficient
-						lighting. With a broad array of research, development, test and
-						production capabilities and facilities, our experienced team is
-						dedicated to producing only the highest quality LED lights.</p>
+					<p align="justify" style="font-size: 14px; color: #666666;"></p>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="block" data-rotate-x="90deg" data-move-z="-500px"
-					data-move-y="200px">
-					<center>
-						<img
-							src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/portfolio_2.jpg"
-							class="img-responsive" />
-					</center>
-					<p align="justify" style="font-size: 14px; color: #666666;">
-						DASCOM&rsquo;s LED Lighting business is at the forefront of
-						lighting the world of tomorrow. With our Sonaray&trade; brand of
-						LED lighting solutions, our mission is to provide the absolute
-						best in energy efficient lighting. With a broad array of research,
-						development, test and production capabilities and facilities, our
-						experienced team is dedicated to producing only the highest
-						quality LED lights.</p>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="block" data-rotate-x="90deg" data-move-z="-500px"
-					data-move-y="200px">
-					<center>
-						<img
-							src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/portfolio_3.jpg"
-							class="img-responsive" />
-					</center>
-					<p align="justify" style="font-size: 14px; color: #666666;">DASCOM&rsquo;s
-						LED Lighting business is at the forefront of lighting the world of
-						tomorrow. With our Sonaray&trade; brand of LED lighting solutions,
-						our mission is to provide the absolute best in energy efficient
-						lighting. With a broad array of research, development, test and
-						production capabilities and facilities, our experienced team is
-						dedicated to producing only the highest quality LED lights.</p>
-				</div>
-			</div>
+		<?php }?>
 		</div>
 		<br /> <br /> <br /> <br /> <br />
 	</div>
 </div>
-
-<script type="text/javascript">
-var num = 0; //number of pixels before modifying styles
-$(window).bind('scroll', function () {
-	if ($(window).scrollTop() > num) {
-		$('.menu').addClass('fixed');
-	} else {
-		$('.menu').removeClass('fixed');
-	}
-});
-</script>
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.smoove.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.smoove.js"></script>
 <script>$('.block').smoove({offset:'5%'});</script>
-<script type="text/javascript"
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>

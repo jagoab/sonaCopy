@@ -28,8 +28,6 @@ class ProductsController extends Controller {
 
        public function actionAplication() {
         
-           
-          
         /*textos de las pestañas*/
         $sql1 = "SELECT * FROM aplication_type AplicationType WHERE AplicationType.visible = 1";
         $SqlAplicationTypes = Yii::app()->db->createCommand($sql1)->queryAll();
@@ -56,9 +54,9 @@ class ProductsController extends Controller {
         /*muestra las imagenes por cada aplicacion en las pestañas**/
         $sql4 = "SELECT * FROM application_images ApplicationImage WHERE ApplicationImage.active = 1  ";
         $SqlApplicationImages = Yii::app()->db->createCommand($sql4)->queryAll();
-           
+            
         $this->render('aplication',array('SqlAplicationTypes'=>$SqlAplicationTypes,'SqlAplicationTexts'=>$SqlAplicationTexts,'SqlProductosPorAplicaciones'=>$SqlProductosPorAplicaciones,'SqlApplicationImages'=>$SqlApplicationImages));
-        
+
        
     }
 
@@ -82,7 +80,7 @@ class ProductsController extends Controller {
         $i = 0;
         $text = array();
         $j = 1;
-        $pestanaActiva = 2;
+        $pestanaActiva = 1;
 
         foreach ($productType as $types) {
 
@@ -96,7 +94,7 @@ class ProductsController extends Controller {
             $i = 0;
             $text = array();
             $j = 1;
-            $pestanaActiva = 2;
+            $pestanaActiva = 1;
 
             $sqlimg = "SELECT distinct ptype.id type_id, pc.country_id, Product.name, ProductImage.path,ProductImage.id id_image, Product.id id_producto
                     FROM products Product
@@ -141,8 +139,6 @@ class ProductsController extends Controller {
 
 //METODO ENCARGADO DE LA INTERACCION AJAAX CON EL DETALLE DE PRODUCTOS SONARAY
     public function actionInfoProducto() {
-        
-        
         $imagenDetalle = array();
      
        // $_POST['idProducto']=(!isset($_POST['idProducto']))?14:$_POST['idProducto'];
