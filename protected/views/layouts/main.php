@@ -113,8 +113,9 @@ a:active {
 </style>
 </head>
 <body>
-<div style="clear: both; float: left; position: relative; width: 100%; height: 66px">
-	<div class="menu" style="background: #CCCCCC;">
+
+<div style="float: left; position: relative; width: 100%; height: 66px">
+	<div class="menu" style="float:left;width:100%; border-bottom: solid 1px #0004ff; opacity: 0.9;height: 66px">
 		<table width="100%" height="100%" border="0">
 			<tr>
 				<td valign="middle">
@@ -127,10 +128,8 @@ a:active {
 										class="icon-bar"></span> <span class="icon-bar"></span> <span
 										class="icon-bar"></span>
 								</button>
-								<a href="#" class="navbar-brand"
-									style="font-family: Arial, Helvetica, sans-serif; font-size: 1px;">
-									<img
-									src="<?php echo Yii::app()->request->baseUrl; ?>/images/sonaray_small.png" />
+								<a href="#" class="navbar-brand" style="font-family: Arial, Helvetica, sans-serif; font-size: 1px;">
+									<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sonaray_small.png" />
 								</a>
 							</div>
 							<div id="navbarCollapse" class="collapse navbar-collapse">
@@ -146,7 +145,7 @@ a:active {
 			{ // para saber si tiene hijos
 				?>
 	<?php if ($contador ==1) { ?>
-	<li style="font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
+	<li style="font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem", 'id' => 'padre')); ?></li>
 	<?php
 					$contador++ ;
 				}
@@ -156,11 +155,10 @@ a:active {
 	<li style="font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
 	<?php  } ?> 
 	<?php } else { ?>
-	<li class="dropdown" style="color: #000000; font-weight: bold;"><a
-										style="font-size: 15px;" href="#" class="dropdown-toggle"
-										data-toggle="dropdown" data-hover="dropdown"><?php echo $menu['name'] ?> <b
-											class="caret"></b> </a>
-										<ul class="dropdown-menu" role="menu">
+	<li class="dropdown" style="color: #000000; font-weight: bold;">
+	<a style="font-size: 15px;" href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><?php echo $menu['name'] ?> 
+	<b class="caret"></b> </a>
+	<ul class="dropdown-menu" role="menu">
 	<?php
 				foreach ($menu['menu'] as $menu2)
 				{
@@ -170,8 +168,7 @@ a:active {
 					{
 						?>
 	<!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
-											<li style="font-size: 15px;" class=""><a
-												href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
+						<li style="font-size: 15px;" class=""><a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
 	<?php
 					}
 					else
