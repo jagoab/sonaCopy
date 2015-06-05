@@ -55,6 +55,8 @@ $total = $i;
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/dropdownHover.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3-mediaquery.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 <script>
 function cambiar (flag,img) {
 	if (document.images) {
@@ -71,6 +73,29 @@ function preloadcambiar (img,adresse) {
 		img.permitirloaded = true;
 	}
 }
+jQuery(document).ready(function ($) {
+	var $window = $(window);
+	var scrollTime = 1.2;
+	var scrollDistance = 170;
+	var _CaptionTransitions = [];
+	 var $window = $(window);
+		var scrollTime = 0.5;
+		var scrollDistance = 170;
+		$window.on("mousewheel DOMMouseScroll", function(event){
+
+			event.preventDefault();	
+
+			var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+			var scrollTop = $window.scrollTop();
+			var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+			TweenMax.to($window, scrollTime, {
+				scrollTo : { y: finalScroll, autoKill:true },
+					ease: Power1.easeOut,
+					overwrite: 5
+				});
+	});
+});
 </script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
 <script>
@@ -145,18 +170,18 @@ a:active {
 			{ // para saber si tiene hijos
 				?>
 	<?php if ($contador ==1) { ?>
-	<li style="font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem", 'id' => 'padre')); ?></li>
+	<li style="font-weight: bold;"><a style="cursor:pointer" <?php $this->id == 'home' ? print '' : print 'href="' . Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu['url'] . '"'; ?> role = "menuitem" class = "padre"> <?php echo $menu['name'];?></a></li>
 	<?php
 					$contador++ ;
 				}
 				else
 				{
 					?> 
-	<li style="font-weight: bold;"><?php echo CHtml::link($menu['name'], array($menu['url']), array('role' => "menuitem")); ?></li>
+	<li style="font-weight: bold;"><a style="cursor:pointer" <?php $this->id == 'home' ? print '' : print 'href="' . Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu['url'] . '"'; ?> role = "menuitem" class = "padre"> <?php echo $menu['name'];?></a></li>
 	<?php  } ?> 
 	<?php } else { ?>
-	<li class="dropdown" style="color: #000000; font-weight: bold;">
-	<a style="font-size: 15px;" href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><?php echo $menu['name'] ?> 
+	<li class="dropdown" style="color: #000000; font-weight: bold;" >
+	<a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu['url']?>" style="font-size: 15px;cursor: pointer" class = "padre" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><?php echo $menu['name'] ?> 
 	<b class="caret"></b> </a>
 	<ul class="dropdown-menu" role="menu">
 	<?php
@@ -180,7 +205,8 @@ a:active {
 				} // foreach
 				?>
 	</ul></li>
-	 <?php }}} ?>
+	 <?php }
+}} ?>
 	 </ul>
 							</div>
 						</nav>
@@ -229,9 +255,6 @@ a:active {
 </div>
   </div>
 </div>
-<map name="bandera">
-  <area alt="english" shape="rect" coords="891,107,918,133" href="/english" target="_blank">
-</map>
 </div>
 </body>
 </html>

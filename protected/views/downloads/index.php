@@ -90,7 +90,8 @@
     }
     
     .menu {
-    background: #000000;
+    background: white !important;
+    opacity:0.8 !important;
     color: #000000;
     z-index:1;
     padding:.5em;

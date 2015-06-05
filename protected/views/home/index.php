@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/newcss.css" />
+
 <style>
 /*html, body, .banner, .container {
 height:100%;
@@ -22,8 +23,7 @@ margin-bottom: 20px;
 	position: absolute;
 	cursor: pointer;
 	display: block;
-	background: url(<?php echo Yii :: app()->request->baseUrl; ?>/ images
-	/home/a21.png) center center no-repeat;
+	background: url(<?php echo Yii :: app()->request->baseUrl; ?>/images/home/a21.png) center center no-repeat;
 	overflow: hidden;
 }
 
@@ -62,8 +62,7 @@ margin-bottom: 20px;
 .jssorb21 .dn           (mousedown)
 */
 .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
-	background: url(<?php echo Yii :: app()->request->baseUrl; ?>/ images
-	/home/b21.png) no-repeat;
+	background: url(<?php echo Yii :: app()->request->baseUrl; ?>/images/home/b21.png) no-repeat;
 	overflow: hidden;
 	cursor: pointer;
 }
@@ -110,7 +109,7 @@ jQuery(document).ready(function ($) {
 		$FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
 		$AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
 		$AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-		$PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+		$PauseOnHover: 4,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 		$ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
 		$SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
 		$SlideDuration: 800,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
@@ -161,83 +160,83 @@ $(window).bind("load", ScaleSlider);
 $(window).bind("resize", ScaleSlider);
 $(window).bind("orientationchange", ScaleSlider);
 //responsive code end
+$('.padre').click(function(){
+	var text = this.innerText.toLowerCase().replace(' ', '');
+	var pos;
+	if(text == 'home')
+		pos = $('#slider1_container').position();
+	else
+		pos = $('#' + text).position();
+	$('html, body').animate({scrollTop: pos.top - 65}, 1800);
+});
 });
 </script>
 <!-- You can move inline styles to css file or css block. -->
-<div id="slider1_container" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+<div id="slider1_container" style="clear:both;float:left; position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
 	<!-- Loading Screen -->
 	<div u="loading" style="position: absolute; top: 0px; left: 0px;">
-		<div
-			style="filter: alpha(opacity = 70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-		<div
-			style="position: absolute; display: block; background: url(http://www.dascomla.com/sonaray/images/285.GIF) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+		<div style="filter: alpha(opacity = 70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+		<div style="position: absolute; display: block; background: url(http://www.dascomla.com/sonaray/images/285.GIF) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
 	</div>
-	<!-- Slides Container -->
+<!-- Slides Container -->
 <?php
 $j = 1;
 $i = 0;
 $cantidad = count($imagenesSlider);
 $contuer = 1;
 ?>
-<div u="slides"
-		style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">  
-	<?php
-	foreach ($imagenesSlider as $banner)
-	{
+	<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">  
+		<?php
+		foreach ($imagenesSlider as $banner)
+		{
+			?>
+			<div>
+				<img style="top: 0px !important" u="image" src2="<?php echo Yii::app()->request->baseUrl.$banner->ruta;?>" />
+			</div>
+		<?php
+		}
 		?>
-	<div>
-			<img style="top: 0px !important" u="image"
-				src2="<?php echo Yii::app()->request->baseUrl.$banner->ruta;?>" />
-		</div>
-	<?php
-	}
-	?>
-</div>
-	<!-- Bullet Navigator Skin Begin -->
-	<!-- bullet navigator container -->
-	<div u="navigator" class="jssorb21"
-		style="position: absolute; bottom: 26px; left: 6px;">
+	</div>
+		<!-- Bullet Navigator Skin Begin -->
+		<!-- bullet navigator container -->
+	<div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
 		<!-- bullet navigator item prototype -->
-		<div u="prototype"
-			style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align: center; line-height: 19px; color: White; font-size: 12px;"></div>
+		<div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align: center; line-height: 19px; color: White; font-size: 12px;"></div>
 	</div>
 	<!-- Bullet Navigator Skin End -->
 	<!-- Arrow Navigator Skin Begin -->
 	<!-- Arrow Left -->
-	<span u="arrowleft" class="jssora21l"
-		style="width: 55px; height: 55px; top: 123px; left: 8px;"> </span>
+	<span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;"> </span>
 	<!-- Arrow Right -->
-	<span u="arrowright" class="jssora21r"
-		style="width: 55px; height: 55px; top: 123px; right: 8px"> </span>
+	<span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px"> </span>
 	<!-- Arrow Navigator Skin End -->
-	<a style="display: none" href="http://www.jssor.com">jQuery Carousel</a>
 </div>
 <!-- Jssor Slider End -->
 <div style="clear: both; float: left; padding-left: 0% !important; margin-top: 5%; font-family: helvetica_neueregular !important; width: 100%">
 	<div class="container" style="clear: both:float:left; color: #616264 !important;">
-		<div class="row" style="width: 100%">
+		<!-- BLOQUE ABOUT US -->
+		<div class="row" style="width: 100%; margin-bottom: 4%" id = "<?php echo str_replace(' ', '', strtolower($menus[26]['name']));?>">
 			<div class="col-md-6" style="width: 100%">
 				<div class="block" data-move-x="-600px">
-					<h1><?php Yii::app()->language != 'es' ? print 'Lighting everyone´s dreams.' : print 'Iluminando los sueños de todos' ;?></h1>
+					<h1><?php Yii::app()->language != 'es' ? print 'Lighting Everyone´s Dreams.' : print 'Iluminando los sueños de todos' ;?></h1>
 				</div>
-				<div class="block" data-move-x="-600px">
-					<h2><?php Yii::app()->language != 'es' ? print 'In Sonaray we want you to be well, live well and enjoy life. By understanding their aspirations and needs you become what inspires us.' : print 'En Sonaray queremos que estés bien, vivir bien y disfrutar de la vida. Al entender sus aspiraciones y necesidades te conviertes en lo que nos inspira.' ;?></h2>
+				<div class="block" data-move-x="600px">
+					<h2><?php Yii::app()->language != 'es' ? print 'At SONARAY® our mission is to provide the absolute best in energy efficient lighting.' : print 'En Sonaray queremos que estés bien, vivir bien y disfrutar de la vida. Al entender sus aspiraciones y necesidades te conviertes en lo que nos inspira.' ;?></h2>
 				</div>
 			</div>
 		</div>
-		<br />
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-6" >
 				<div class="block" data-move-x="-600px" style="height: 315px">
 					<strong>
-						<p style="font-size: 28px; color: #003399;" align='left'>
-						<?php echo ucfirst(strtolower($menus[26]['name'])) ;?>
-					</p>
+						<h1 style="color: #003399; text-align: left;"><?php echo ucfirst(strtolower($menus[26]['name'])) ;?></h1>
 					</strong>
-					<p style="font-size: 28x;" align='left'>________________</p>
 					<p style="font-size: 14px; text-align: justify;">
-					<?php echo substr($textoAbout[0]->text, 0, 940);?>
-				</p>
+						<?php echo substr($textoAbout[0]->text, 0, 940);?>
+					</p>
+				<p style="font-size: 28x;" align='right'>
+						<a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/about/index'; ?>"><?php Yii::app()->language == 'es' ? print "VER MAS" : print "Read more";?></a>
+					</p>
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -248,44 +247,17 @@ $contuer = 1;
 				</div>
 			</div>
 		</div>
-                
-		<div class="row" style="margin-top: 10%">
-			<div class="col-md-6">
-				<div class="block" data-move-x="-800px"
-					style="width: 100%; margin-top: 4.5%">
-					<img style="width: 100%; height: 340px"
-						src="<?php echo Yii::app()->request->baseUrl;?>/images/home/img_2.jpg"
-						alt="a cute kitten">
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="block" data-move-x="800px">
-					<br />
-					<p style="font-size: 14px; text-align: justify;">
-				<?php echo substr($textoAbout[1]->text, 0, 940) . '<br/>' . substr($textoAbout[2]->text, 0, 940);?>
-			</p>
-					<p style="font-size: 28x;" align='right'>
-						<a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/about/index'; ?>"><?php Yii::app()->language == 'es' ? print "VER MAS" : print "Read more";?></a>
-					</p>
-				</div>
-			</div>
-		</div>
-                
-                
-                
-              
-                <br/><br/>
-		<h2 style="color: #003399; margin-top: 10%" class="block">
-			<strong><?php Yii::app()->language != 'es' ? print 'Featured product' : print 'Producto destacado ' ;?></strong>
-		</h2>
-		<div class="row">
+		<!-- ------------------------------------------------------ -->
+		<div class="row" style="margin-top: 5%;margin-bottom: 3%" id = "<?php echo str_replace(' ', '', strtolower($menus[1]['name']));?>">
+		<?php $cuenta = 1;?>
 		<?php foreach ($featured_product as $productoDestacado)
 		{
 		?>
-			<div class="col-md-3">
+			<div class="col-md-3" style="width: 33% !important">
 				<div style="width: 100%" class="block" data-rotate-y="180deg" data-move-z="-200px" data-move-x="-300px">
 					<div style="width: 100%; background-color: #003399;color:white"><?php echo $productoDestacado['productName'];?></div>
-					<div style="width: 100%;clear:both;float:left;text-align: left;">
+					<div style="width: 100%;clear:both;float:left;text-align: left;position:relative">
+					<div style="position:absolute;top: 4px; left: 3px; width: 25%"><img src="<?php echo Yii::app()->request->baseUrl?>/images/<?php $cuenta == 1 ? print 'new.png' : ($cuenta == 2 ? print 'bestSeller.png' : ($cuenta == 3 ? print 'outstanding.png' : ''));?>" style="width: 100%"/></div>
 						<img style="width:100%; border: solid 1px grey" src="<?php echo Yii::app()->request->baseUrl . $productoDestacado['path']; ?>" alt="a cute kitten">
 					</div>
 					<div style="clear:both;float:left;height: 75px">
@@ -296,17 +268,16 @@ $contuer = 1;
 					</div>
 				</div>
 			</div>
-		<?php }?>
+<?php $cuenta++; if($cuenta > 3) break; }?>
 		</div>
                 <h2 style="color: #003399; margin-top: 10%" class="block">
 		<strong><?php Yii::app()->language != 'es' ? print 'News' : print 'Noticias' ;?></strong>
 		</h2>
                 <div class="row">
-                <?php 
-                foreach($News as $news) {   ?>
-              <div class="col-md-3">
-				<div class="block" data-rotate-x="90deg" data-move-z="-500px"
-					data-move-y="200px">
+                <?php $cuenta = 1;
+                foreach($News as $news) { ?>
+              <div class="col-md-3" style="width: 33% !important">
+				<div class="block" data-rotate-x="90deg" data-move-z="-500px" data-move-y="200px">
 					<center>
                                                 <br/>
                                                  <p style="font-size: 18px; text-align: justify;">
@@ -324,9 +295,9 @@ $contuer = 1;
                                         </center>
 				</div>
 			</div>
-                <?php } ?>
+                <?php $cuenta++; if($cuenta > 3) break; } ?>
                 </div>
-		<h2 style="color: #003399;margin-top: 10%" class="block">
+		<h2 id = "<?php echo str_replace(' ', '', strtolower($menus[22]['name']));?>" style="color: #003399;margin-top: 10%" class="block">
 			<strong><?php Yii::app()->language != 'es' ? print 'Case Studies' : print 'Caso de estudios' ;?></strong>
 		</h2>
 		<div class="row">

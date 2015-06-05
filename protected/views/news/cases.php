@@ -67,9 +67,7 @@
                                                 <br />
                                                 <h2 align="left" class="head_title" style="color: #999999;">&nbsp<?php  echo ($news->name);; ?></h2>
                                                 <br />
-                                       </div>
-                                    <br />
-                                    <img src="http://dascomla.com/sonaray-ensamble/images/head.png" width="1081" height="254" /><br/><br/><br/> 
+                                       </div> 
                                  <div>
 					  
                                      <center>

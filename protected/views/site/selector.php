@@ -25,7 +25,7 @@ a:active {
 </style>
 
 <center>    
-<img src="<?php echo Yii::app()->request->baseURL; ?>/images/contry.png" border="0"  usemap="#map1" class="img-responsive">
+<img src="<?php echo Yii::app()->request->baseURL; ?>/images/contry.jpg" border="0"  usemap="#map1" class="img-responsive">
 <map name="map1">
   <area href="http://www.sonarayled.cn/" shape=circle coords="702,242,24" />
   <area title="ES-DE" href="<?php echo Yii::app()->request->baseUrl."/en/site/flagUrl?flag=al&lang=du"  ?>" shape=circle coords="428,158,25" />
@@ -34,10 +34,10 @@ a:active {
   <area href="<?php echo Yii::app()->request->baseUrl."/es/site/flagUrl?flag=co&lang=es"  ?>" title="ES-CO" shape=circle coords="209,312,21" />
   <area href="<?php echo Yii::app()->request->baseUrl."/es/site/flagUrl?flag=pe&lang=es"  ?>"  title="ES-PE" shape=circle coords="218,351,22" />
   <area href="<?php echo Yii::app()->request->baseUrl."/po/site/flagUrl?flag=br&lang=po"  ?>" title="ES-BR"  shape=circle coords="272,339,21" />
-  <area href="<?php echo Yii::app()->request->baseUrl."/es/site/flagUrl?flag=ve&lang=es"  ?>" shape=circle coords="241,279,21" title="ES-VE" />
+  <area href="<?php echo Yii::app()->request->baseUrl."/es/site/flagUrl?flag=ve&lang=es"  ?>" title="ES-VE" shape=circle coords="241,279,21" />
   <area href="/circulo.html" shape=circle coords="145,247,25" />
-  <area href="<?php echo Yii::app()->request->baseUrl."/en/site/flagUrl?flag=us&lang=en" ?>" shape=circle coords="164,193,25" title="EN-US" />
-  <area href="<?php echo Yii::app()->request->baseUrl."/es/site/flagUrl?flag=cl&lang=es"  ?>" shape=circle coords="223,412,25"  title="ES-CL" />
+  <area href="<?php echo Yii::app()->request->baseUrl."/en/site/flagUrl?flag=us&lang=en" ?>" title="EN-US" shape=circle coords="198,207,25" />
+  <area href="<?php echo Yii::app()->request->baseUrl."/es/site/flagUrl?flag=cl&lang=es"  ?>" title="ES-CL" shape=circle coords="223,412,25" />
   <area href="http://www.sonarayled.cn/" shape=circle coords="681,306,25" />
    <area title="ES-AU" href="<?php echo Yii::app()->request->baseUrl."/ch/site/flagUrl?flag=au&lang=en"  ?>"  shape=circle coords="739,369,25" />
     <area href="http://www.sonarayled.cn/" shape=circle coords="661,205,25" />

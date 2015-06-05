@@ -90,7 +90,8 @@
     }
     
     .menu {
-    background: #000000;
+    background: white;
+    opacity; 0.8;
     color: #000000;
     z-index:1;
     padding:.5em;
@@ -335,26 +336,18 @@ function cambio(res,id)
 
 }
 $(function () {
-$('#pestana0').trigger('click');    
-
-
- $('.img_producto').click(function() {
+$('#pestana0').trigger('click');
+$('.img_producto').click(function() {
 if($(this).attr('id_2')!=idclick){
     idclick=$(this).attr('id_2');
             cargaAjax($(this).attr('id_2'), $(this).attr('idx'))
 }
         })
-        
         <?php if ($idclick!=null) {?>
-       
-       
-             cargaAjax(<?php echo $idclick; ?>,<?php echo $idclick; ?>)  
-       <?php  }?>
-
-})
+             cargaAjax(<?php echo $idclick; ?>,<?php echo $idclick; ?>)
+       <?php  }?>});
 </script>
-
-            <style>
+<style>
 .container {
 	padding-right: 0px !important;
 	padding-left: 0px !important;
@@ -474,7 +467,7 @@ if (@ (strtolower(Yii::app()->session['flag']) == 'us' && $pt1['id']!=8 && $pt1[
 
         <div class="contenedor-superior">
             <div class="imagenesMedianas"></div>
-            <div class="textoTitulo"></div>						
+            <div class="textoTitulo"></div>
         </div>				
 
         <div style="float:left;width: 50%;margin-left: 2%">
@@ -536,10 +529,7 @@ $(document).ready(function(){
 //      autoPlaySpeed:2
     });
     }
-                            
 );
-
- 
 </script>
 
 
