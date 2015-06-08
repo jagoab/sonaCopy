@@ -160,15 +160,17 @@ $(window).bind("load", ScaleSlider);
 $(window).bind("resize", ScaleSlider);
 $(window).bind("orientationchange", ScaleSlider);
 //responsive code end
-$('.padre').click(function(){
-	var text = this.innerText.toLowerCase().replace(' ', '');
+/*$('.padre').click(function(e){
+	var text = this.textContent.toLowerCase().replace(' ', '');
 	var pos;
 	if(text == 'home')
 		pos = $('#slider1_container').position();
 	else
 		pos = $('#' + text).position();
 	$('html, body').animate({scrollTop: pos.top - 65}, 1800);
-});
+});*/
+
+$("#divFlotante").fadeIn();
 });
 </script>
 <!-- You can move inline styles to css file or css block. -->
@@ -270,9 +272,7 @@ $contuer = 1;
 			</div>
 <?php $cuenta++; if($cuenta > 3) break; }?>
 		</div>
-                <h2 style="color: #003399; margin-top: 10%" class="block">
-		<strong><?php Yii::app()->language != 'es' ? print 'News' : print 'Noticias' ;?></strong>
-		</h2>
+                <h1 style="color: #003399; margin-top: 10%" class="block"><?php Yii::app()->language != 'es' ? print 'News' : print 'Noticias' ;?></h1>
                 <div class="row">
                 <?php $cuenta = 1;
                 foreach($News as $news) { ?>
@@ -297,15 +297,15 @@ $contuer = 1;
 			</div>
                 <?php $cuenta++; if($cuenta > 3) break; } ?>
                 </div>
-		<h2 id = "<?php echo str_replace(' ', '', strtolower($menus[22]['name']));?>" style="color: #003399;margin-top: 10%" class="block">
-			<strong><?php Yii::app()->language != 'es' ? print 'Case Studies' : print 'Caso de estudios' ;?></strong>
-		</h2>
+		<h1 id = "<?php echo str_replace(' ', '', strtolower($menus[22]['name']));?>" style="color: #003399;margin-top: 4%" class="block">
+			<?php Yii::app()->language != 'es' ? print 'Case Studies' : print 'Caso de estudios' ;?>
+		</h1>
 		<div class="row">
 		<?php foreach($caseStudies as $case)
 		{
 		?>
 		<?php if ($contuer < 4) {?>
-                       <div class="col-md-4">
+		<div class="col-md-4">
 				<div class="block" data-rotate-x="90deg" data-move-z="-500px"
 					data-move-y="200px">
 					<center>
@@ -333,7 +333,9 @@ $contuer = 1;
                 <?php $contuer++; }?>
 		<?php }?>
 		</div>
-		<br /> <br /> <br /> <br /> <br />
+	</div>
+	<div class="row" style="height: 70px; cursor: pointer; text-align: center; opacity: 0.9; background-image: url('<?php echo Yii::app()->request->baseUrl;?>/images/fondoDegradado.png');">
+		<a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language;?>/contact/index"><div style="clear:both; float: left; color: white; font-size: 28px;padding-left: 10%;padding-top: 1%">Do you need more information?.&nbsp;&nbsp;&nbsp;<img src="<?php echo Yii::app()->request->baseUrl?>/images/contactos.png" style="width: 20%;"/></div></a>
 	</div>
 </div>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.smoove.js"></script>

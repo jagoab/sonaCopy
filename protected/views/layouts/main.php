@@ -51,10 +51,10 @@ $total = $i;
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 <!--<link rel="stylesheet" type="text/css" href="<?php //echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />-->
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/dropdownHover.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.11.4/jquery-ui.min.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3-mediaquery.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 <script>
@@ -73,7 +73,8 @@ function preloadcambiar (img,adresse) {
 		img.permitirloaded = true;
 	}
 }
-jQuery(document).ready(function ($) {
+
+$(document).ready(function ($) {
 	var $window = $(window);
 	var scrollTime = 1.2;
 	var scrollDistance = 170;
@@ -84,7 +85,6 @@ jQuery(document).ready(function ($) {
 		$window.on("mousewheel DOMMouseScroll", function(event){
 
 			event.preventDefault();	
-
 			var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
 			var scrollTop = $window.scrollTop();
 			var finalScroll = scrollTop - parseInt(delta*scrollDistance);
@@ -98,16 +98,6 @@ jQuery(document).ready(function ($) {
 });
 </script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
-<script>
-var num = 0; //number of pixels before modifying styles
-$(window).bind('scroll', function () {
-	if ($(window).scrollTop() > num) {
-		$('.menu').addClass('fixed');
-	} else {
-		$('.menu').removeClass('fixed');
-	}
-});
-</script>
 <style type="text/css">
 .iconosfijos{position: fixed; right:150px; bottom:94%; z-index:444; width:30px}    
 <!--
@@ -134,13 +124,17 @@ a:active {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #0099CC;
 }
+
+#divFlotante{
+    width: 100% !important;
+}
 -->
 </style>
 </head>
 <body>
 
 <div style="float: left; position: relative; width: 100%; height: 66px">
-	<div class="menu" style="float:left;width:100%; border-bottom: solid 1px #0004ff; opacity: 0.9;height: 66px">
+	<div class="menu fixed" style="float:left;width:100%; border-bottom: solid 1px #0004ff; opacity: 0.9;height: 66px">
 		<table width="100%" height="100%" border="0">
 			<tr>
 				<td valign="middle">
@@ -220,7 +214,7 @@ a:active {
 <div style="clear:both;float:left;margin-top: 1%;width: 100%">
 <table width="100%" border='1' >
 	<tr>
-		<td bgcolor="#0e1b77">
+		<td style="background-color: #0e1b77;opacity: 0.8">
                     <center>
                     <br /> <br /> <br /> <br /> 
 		<a href="<?php echo Yii::app()->request->baseUrl; ?>/Registration/index" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/yt_2.png');">
@@ -253,7 +247,7 @@ a:active {
 <area shape="rect" coords="-3,66,29,105" href="contacto.php">
 </map>
 </div>
-  </div>
+</div>
 </div>
 </div>
 </body>
