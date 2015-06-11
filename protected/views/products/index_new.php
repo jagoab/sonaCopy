@@ -75,7 +75,7 @@ activarCarosel = function(idContent, idCarousel, valorLista, pestana, idType) {
 		$('.lista span').css({'width': ''});
 		return;
 	};
-	
+		
 function cargaAjax(idProduct,idImagen) {
 var idioma = <?php echo "'" . Yii::app()->language . "'"; ?>;
 var idProducto = idProduct;
@@ -100,12 +100,10 @@ $("#contieneDetallesMenu").empty();
 			var respuesta = eval('(' + response + ')');
 			for(var i=0;i<respuesta.imagenMediana.length;i++)
 			{
-				if(i==0){
 					//rutaImagenZoom = respuesta.rutaBase+'/images/productos/categoria/'+respuesta.imagenZoom[i].path;
 					rutaImagenMediana = respuesta.rutaBase+respuesta.imagenMediana[i].path;
 					html = '<div><img id="'+i+'" src = "'+rutaImagenMediana+'" /></div>';
 					$(".imagenesMedianas").append(html);
-				}
 			};
 			if(respuesta.descripcion[0] != null)
 				$("#resumenProducto").append(respuesta.descripcion[0].text);
@@ -114,9 +112,10 @@ $("#contieneDetallesMenu").empty();
 				//rutaImagenZoom = respuesta.rutaBase+'/images/productos/categoria/'+respuesta.imagenZoom[i].path;
 				rutaImagenMediana = respuesta.rutaBase+respuesta.imagenMediana[i].path;
 				rutaImagenPequena = respuesta.rutaBase+respuesta.imagenPequena[i].path;						
-				html = '<div style="clear:both;float:left;height:auto;margin:0;padding:0;margin-top:7.1%"><img style="float:left;padding:0;margin:0;border:0" src = "'+rutaImagenPequena+'" ></div>';
-				$("#resumenProducto").append(html);
+				html = '<div style="clear:both;float:left;height:auto;margin:0;padding:0;margin-top:7.1%"><a href="' + rutaImagenMediana + '"><img style="float:left;padding:0;margin:0;border:0" src = "'+rutaImagenPequena+'" /></a></div>';
+				$(".imagenesPequenas").append(html);
 			};
+			
 			$(".tituloProducto").append(respuesta.nombreProducto.name);
 			if(respuesta.pestanasDetalles.length == 0){ $("#barraTab").hide();}
 			else { $("#barraTab").show(); }
@@ -136,7 +135,7 @@ $("#contieneDetallesMenu").empty();
 					{
 						if(respuesta.imagenesDetalles[k].category == respuesta.pestanasDetalles[i].category)
 						{
-							html += "<div style=\""+(respuesta.imagenesDetalles[k].category == 5?'clear:both;':'')+"float:left;width:50%;margin-top:0%\"><img src=\""+respuesta.rutaBase+respuesta.imagenesDetalles[k].path+"\"></div>";
+							html += "<div style=\""+(respuesta.imagenesDetalles[k].category == 5?'clear:both;':'')+"float:left;width:50%;margin-top:0%\"><img style='width:100%' src=\""+respuesta.rutaBase+respuesta.imagenesDetalles[k].path+"\"></div>";
 						}
 					}
 					html += "</div>";
@@ -164,7 +163,7 @@ $("#contieneDetallesMenu").empty();
 						html = "<div class=\"tab\" id=\""+respuesta.pestanasDetalles[i].name+"\" style=\"clear:both;float:left;border: 2px solid #b4b4b4;padding-bottom:2%;width: 100%;padding-top:2%;padding-left:2%;height: auto"+(i==0?'':';display:none;')+"\">";
 						for(var j=0;j<respuesta.pathVideos.length;j++)
 						{
-							html += "<div style=\""+(j==0?'clear:both':'')+";float:left;margin-top:1%;margin-left:2%\"><a href=\""+respuesta.pathVideos[j].path+"\"><img src=\""+respuesta.rutaBase+respuesta.pathVideos[j].pathTypeFile+"\"><div style=\"float:left;padding-left:9%\">"+respuesta.pathVideos[j].name+"</div></a></div>";
+							html += "<div style=\""+(j==0?'clear:both':'')+";float:left;margin-top:1%;margin-left:2%\"><a href=\""+respuesta.pathVideos[j].path+"\"><img style='width:100%' src=\""+respuesta.rutaBase+respuesta.pathVideos[j].pathTypeFile+"\"><div style=\"float:left;padding-left:9%\">"+respuesta.pathVideos[j].name+"</div></a></div>";
 						}
 						html += "</div>";
 					}
@@ -310,34 +309,35 @@ $('.img_producto').click(function() {
 			<a class="next" style="float: right" id="foo2_next" href="#"><span>next</span></a>
 		</div>
 	</div>
-	<div id="contenedorDetalle">
+<div id="contenedorDetalle">
 		<div class="tituloProducto"></div>
 		<div class="border-superior">
-			<div class="contenedor-superior">
+			<div class="contenedor-superior" style="position:relative">
 				<div class="imagenesMedianas"></div>
-				<div class="textoTitulo"></div>
+				<div class="imagenesPequenas" style="clear:both;float:left;"></div>
+				<div style="width: 50%;position:absolute;left:20px;z-index:100"><h2 class="helvetica_neueregular"><strong id="resumenProducto" style="color:white !important;"></strong></h2></div>
+				<div style="width: 90%;height: 425px;position:absolute;background-color: black; opacity:0.4">&nbsp;</div>
 			</div>
-			<div style="float: left; width: 50%; margin-left: 2%">
-				<h2 class="helvetica_neueregular" id="resumenProducto"</h2>
+			<div style="float:left; width: 64%">
+				<div id="barraTab" style="float:left">
+					<nav class="navbar navbar-default" role="navigation"
+						style="background-color: #FFFFFF;">
+						<div class="navbar-header">
+							<!-- <button  type="button" class="navbar-toggle" data-toggle="collapse" data-target=".botonDetalle" >
+							<span class="fuentes"><?php //echo Yii::t('forms','Product details'); ?></span>
+							</button>-->
+						</div>
+						<!--collapse navbar-collapse navbar-ex3-collapse botonDetalle-->
+						<!-- style=" height: auto; background-color: #e6e6e6; float: left; padding: 0"-->
+						<div>
+							<ul id="menuDetalle" class="nav navbar-nav"></ul>
+						</div>
+					</nav>
+				</div>
+				<div class="helvetica_neueregular" id="contieneDetallesMenu"></div>
 			</div>
-			<div id="barraTab">
-				<nav class="navbar navbar-default" role="navigation"
-					style="background-color: #FFFFFF;">
-					<div class="navbar-header">
-						<!-- <button  type="button" class="navbar-toggle" data-toggle="collapse" data-target=".botonDetalle" >
-						<span class="fuentes"><?php //echo Yii::t('forms','Product details'); ?></span>
-						</button>-->
-					</div>
-					<!--collapse navbar-collapse navbar-ex3-collapse botonDetalle-->
-					<!-- style=" height: auto; background-color: #e6e6e6; float: left; padding: 0"-->
-					<div>
-						<ul id="menuDetalle" class="nav navbar-nav"></ul>
-					</div>
-				</nav>
-			</div>
-			<div class="helvetica_neueregular" id="contieneDetallesMenu"></div>
 		</div>
-	</div>
+</div>
 </div>
 <script type="text/javascript">
 $(document).ready(function(){

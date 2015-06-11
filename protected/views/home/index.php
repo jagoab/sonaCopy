@@ -334,9 +334,6 @@ $contuer = 1;
 		<?php }?>
 		</div>
 	</div>
-	<div class="row" style="height: 70px; cursor: pointer; text-align: center; opacity: 0.9; background-image: url('<?php echo Yii::app()->request->baseUrl;?>/images/fondoDegradado.png');">
-		<a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language;?>/contact/index"><div style="clear:both; float: left; color: white; font-size: 28px;padding-left: 10%;padding-top: 1%">Do you need more information?.&nbsp;&nbsp;&nbsp;<img src="<?php echo Yii::app()->request->baseUrl?>/images/contactos.png" style="width: 20%;"/></div></a>
-	</div>
 </div>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.smoove.js"></script>
 <script>$('.block').smoove({offset:'5%'});</script>
