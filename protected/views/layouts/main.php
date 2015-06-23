@@ -160,6 +160,22 @@ a:active {
 	box-shadow: 3px 4px 21px 2px rgba(0,0,0,0.75);
 }
 
+.fixed {
+	position: fixed !important;
+	top: 0 !important;
+	z-index: 10;
+}
+
+.menu {
+	color: #000000;
+	z-index: 1;
+	position: absolute; 
+	width: 100%;
+	background-color: white;
+	top:0px;
+	padding-top: 5px
+}
+
 URL del artículo: http://www.ejemplode.com/18-css/502-ejemplo_de_fondo_fijo_en_css.html
 Leer completo: ejemplos de Fondo fijo en CSS
 -->
