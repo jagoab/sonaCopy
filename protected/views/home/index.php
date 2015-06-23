@@ -83,14 +83,11 @@ margin-bottom: 20px;
 	background-position: -95px -5px;
 }
 </style>
-<script type="text/javascript"
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.9.1.min.js"></script>
 <!-- use jssor.slider.mini.js (40KB) instead for release -->
 <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
-<script type="text/javascript"
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/jssor.js"></script>
-<script type="text/javascript"
-	src="<?php echo Yii::app()->request->baseUrl; ?>/js/jssor.slider.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jssor.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jssor.slider.js"></script>
 <script>
 jQuery(document).ready(function ($) {
 		var _CaptionTransitions = [];

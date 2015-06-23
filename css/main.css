@@ -319,8 +319,7 @@ div.search-form {
 
 .imagenesMedianas {
 	clear: both;
-	width: 50%;
-	height: 403px;
+	width: 75%;
 	float: left;
 	margin-left: 4%;
 	margin-bottom: 1%
@@ -335,7 +334,7 @@ div.search-form {
 	width: auto;
 	height: auto;
 	float: left;
-	margin-top: 5%;
+	margin-top: 0%;
 	margin-left: 1%
 }
 

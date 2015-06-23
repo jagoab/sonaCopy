@@ -54,7 +54,6 @@ $total = $i;
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.11.4/jquery-ui.min.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3-mediaquery.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 <script>
@@ -97,7 +96,6 @@ $(document).ready(function ($) {
 	});
 });
 </script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
 <style type="text/css">
 .iconosfijos{position: fixed; right:150px; bottom:94%; z-index:444; width:30px}    
 <!--
@@ -128,13 +126,6 @@ a:active {
 #divFlotante{
     width: 100% !important;
 }
-html {
-        background: url('<?php echo Yii::app()->request->baseUrl; ?>/images/backgroundDegradado.png') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-}
 
 .footerInformation ul > li{
  float: left;
@@ -160,13 +151,13 @@ html {
 }
 
 .bordes{
-border-radius: 9px 9px 9px 9px;
--moz-border-radius: 9px 9px 9px 9px;
--webkit-border-radius: 9px 9px 9px 9px;
-border: 0px solid #000000;
--webkit-box-shadow: 3px 4px 21px 2px rgba(0,0,0,0.75);
--moz-box-shadow: 3px 4px 21px 2px rgba(0,0,0,0.75);
-box-shadow: 3px 4px 21px 2px rgba(0,0,0,0.75);
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border: 0px solid #000000;
+	-webkit-box-shadow: 3px 4px 21px 2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 4px 21px 2px rgba(0,0,0,0.75);
+	box-shadow: 3px 4px 21px 2px rgba(0,0,0,0.75);
 }
 
 URL del artículo: http://www.ejemplode.com/18-css/502-ejemplo_de_fondo_fijo_en_css.html
@@ -254,22 +245,27 @@ Leer completo: ejemplos de Fondo fijo en CSS
 </div>
 <?php  echo $content; ?>
 <div style="clear:both;float:left;margin-top: 1%;width: 100%;padding-top: 2%;background-color: #0e1b77;padding-left: 5%; height: 245px;position:relative">
-	<div style="clear:both;float:left; color:white; font-family: helvetica_neueregular;padding-top: 2%">
-		<strong>Sonaray in Social Networks.</strong>
+	<div style="clear:both;float:left; width: 26%;margin-top: 3%">
+		<div style="clear:both;float:left; color:white; font-family: helvetica_neueregular;padding-top: 2%">
+			<strong>Sonaray in Social Networks.</strong>
+		</div>
+		<div style="clear:both;float:left;margin-top: 1%; width: 40%;text-align: left !important">
+			<a onMouseOver="cambiar(1,'IMG2');" onMouseOut="cambiar(0,'IMG2');" target="_blank" href="https://www.facebook.com/SonarayLED" style="margin: 1%"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/face.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/face_2.png');" name="IMG2" style="width: "/></a>
+			<a onMouseOver="cambiar(1,'IMG1');" onMouseOut="cambiar(0,'IMG1');" target="_blank" href="https://twitter.com/sonarayledusa" style="margin: 1%"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/tw.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/tw_2.png');" name="IMG1" /></a>
+			<a onMouseOver="cambiar(1,'IMG3');" onMouseOut="cambiar(0,'IMG3');" target="_blank" href="https://www.youtube.com" style="margin: 1%"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/yt.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/yt_2.png');" name="IMG3" /></a>
+		</div>
 	</div>
-	<div style="clear:both;float:left;margin-top: 1%; width: 40%;text-align: left !important">
-		<a onMouseOver="cambiar(1,'IMG2');" onMouseOut="cambiar(0,'IMG2');" target="_blank" href="https://www.facebook.com/SonarayLED" style="margin: 1%"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/face.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/face_2.png');" name="IMG2" style="width: "/></a>
-		<a onMouseOver="cambiar(1,'IMG1');" onMouseOut="cambiar(0,'IMG1');" target="_blank" href="https://twitter.com/sonarayledusa" style="margin: 1%"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/tw.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/tw_2.png');" name="IMG1" /></a>
-		<a onMouseOver="cambiar(1,'IMG3');" onMouseOut="cambiar(0,'IMG3');" target="_blank" href="https://www.youtube.com" style="margin: 1%"> <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/yt.png" onload="preloadcambiar(this,'<?php echo Yii::app()->request->baseUrl; ?>/images/home/social/yt_2.png');" name="IMG3" /></a>
-	</div>
-	<div class="bordes" style="width:26%;height:111px; position:absolute;left:70%;top: 33%;background-color: grey; opacity:0.5">&nbsp;</div>
-	<div style="text-align:left; width:8%; position:absolute;left:70%;top: 20%; color:white; border-bottom: 1px solid grey">CONTACT US.</div>
-	<div style="width:36%;height:210px; float:left; color:white; font-family: helvetica_neueregular;position:absolute;top:21px; left:30%;z-index:100;"><img style="width: 100%" src="<?php echo Yii::app()->request->baseUrl; ?>/images/mapamundi.png" usemap="#MapMundi"/></div>
-	<a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language; ?>/contact/index"><div style="position:absolute;left:71%;top: 34%; color:white;text-align: left;">DASCOM AMERICAS<br/>34 Lakeview Court Verona, VA 24482<br/>USA Office 540-931-9002 / FAX 540-242-7221<br/>1819 SE 17 St., Unit CU2,Ft. Lauderdale, FL 33316<br/>Tel: +1 954 644 8710 / Fax:+1 954 767 225</div></a>
-	<map name="MapMUndi">
+	<div style="width:36%;height:210px; float:left; color:white; font-family: helvetica_neueregular;">
+		<img style="width: 100%" src="<?php echo Yii::app()->request->baseUrl; ?>/images/mapamundi.png" usemap="#MapMundi"/>
+		<map name="MapMUndi">
 		<area href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language;?>/contact/index" title="contact" shape=circle coords="78,50,25" />
-	</map>
-<div class="iconosfijos">
+		</map>
+	</div>
+	<div style="width:26%;float:left; color:white; font-family: helvetica_neueregular;margin-top: 3%;margin-left: 9%">
+		<div style="float:left;text-align:left;color:white; border-bottom: 1px solid grey">CONTACT US.</div>
+		<a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language; ?>/contact/index"><div class="bordes" style="clear:both;float:left; color:white;text-align: left;background-color: rgba(89, 84, 126, 0.82);margin-top: 1%;padding: 2%">DASCOM AMERICAS<br/>34 Lakeview Court Verona, VA 24482<br/>USA Office 540-931-9002 / FAX 540-242-7221<br/>1819 SE 17 St., Unit CU2,Ft. Lauderdale, FL 33316<br/>Tel: +1 954 644 8710 / Fax:+1 954 767 225</div></a>
+	</div>
+	<div class="iconosfijos">
 <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/iconosfijos.png" border="0" usemap="#Map">
 <map name="Map">
 	<area shape="rect" coords="1,1,34,33" alt="Unete"  href="<?php echo Yii::app()->request->baseUrl; ?>">
@@ -290,7 +286,6 @@ Leer completo: ejemplos de Fondo fijo en CSS
 <div style="clear:both;float:left;margin: 0; width: 100%; background-color: #0e1b77">
 <span style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #CCCCCC;opacity: 0.8">&copy; 2012-2015 DASCOM Americas SBI LLC Todos los derechos reservados. Powered by</span>&nbsp;<a href="http://www.thefactoryhka.com/" target="_blank"><img src="http://www.dascomla.com/sonaray/images/thfka.png" width="14" height="11" />&nbsp;<span class="Estilo6">ThefactoryHKA C.A.</span></a>
 </div>
-</div>
-</div>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
 </body>
 </html>

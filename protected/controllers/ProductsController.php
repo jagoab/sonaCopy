@@ -12,7 +12,7 @@ class ProductsController extends Controller
 	public function accessRules()
 	{
 		return array (array ('allow', // allow all users to perform 'index' and 'view' actions
-'actions' => array ('index','InfoProducto','aplication', 'index_new' ),'users' => array ('*' ) ),array ('allow', // allow authenticated user to perform 'create' and 'update' actions
+'actions' => array ('index','InfoProducto','aplication', 'index_new', 'versiongruposonaray' ),'users' => array ('*' ) ),array ('allow', // allow authenticated user to perform 'create' and 'update' actions
 'actions' => array ('create','update' ),'users' => array ('@' ) ),array ('allow', // allow admin user to perform 'admin' and 'delete' actions
 'actions' => array ('admin','delete' ),'users' => array ('admin' ) ),array ('deny', // deny all users
 'users' => array ('*' ) ) );
@@ -212,6 +212,87 @@ class ProductsController extends Controller
 		*/
 		}
 	
+		public function actionVersionGrupoSonaray()
+		{
+			$idclick = null;
+			if (isset($_GET['idclick'])) $idclick = $_GET['idclick'];
+			/* id click es para cuando sea llamado el producto destacado */
+			if (Yii::app()->language == 'ch')
+			{
+		
+				$idioma = 'en';
+			}
+			else
+			{
+				$idioma = Yii::app()->language;
+			}
+			// BLOQUE PARA LA CARGA DE EL TEXTO DE CATEGORIAS SEGUN SU VISIBILIDAD
+			$criterio = new CDbCriteria();
+			$criterio->order = "score asc";
+			$criterio->condition = "visible = 1";
+		
+			$productType = ProductsTypes::model()->findAll($criterio);
+			$i = 0;
+			$text = array ();
+			$j = 1;
+			$pestanaActiva = 1;
+		
+			foreach ($productType as $types)
+			{
+		
+				// BLOQUE PARA LA CARGA DE EL TEXTO DE CATEGORIAS SEGUN SU VISIBILIDAD
+				$criterio = new CDbCriteria();
+				$criterio->order = "score asc";
+				$criterio->condition = "t.visible = 1 and productsTypesTexts.name='descripcion' and productsTypesTexts.language = '" . $idioma . "'";
+		
+				$productType = ProductsTypes::model()->with('productsTypesTexts')->findAll($criterio);
+				// var_dump($productType);
+				$i = 0;
+				$text = array ();
+				$j = 1;
+				$pestanaActiva = 1;
+		
+				$sqlimg = "SELECT distinct ptype.id type_id, pc.country_id, Product.name, ProductImage.path,ProductImage.id id_image, Product.id id_producto
+                    FROM products Product
+                    INNER JOIN products_images ProductImage ON(Product.id = ProductImage.product)
+                    INNER JOIN products_products_type  pptype on (Product.id=pptype.product)
+                    INNER JOIN products_types  ptype on (pptype.product_type=ptype.id)
+                    left JOIN products_countries pc on (Product.id=pc.product_id)
+                    WHERE  ProductImage.language = 'en'  and active=1 AND ProductImage.category =0 and
+                    (pc.country_id='" . Yii::app()->session['flag'] . "' or pc.country_id is null ) order by Product.score asc ";
+		
+				$Sqlimages = Yii::app()->db->createCommand($sqlimg)->queryAll();
+			}
+			$this->render('versiongruposonaray', array ('pt' => $productType,'imgs' => $Sqlimages,'idclick' => $idclick ));
+		
+			// Uncomment the following methods and override them if needed
+			/*
+			* public function filters()
+			* {
+			* // return the filter configuration for this controller, e.g.:
+			* return array(
+			* 'inlineFilterName',
+			* array(
+			* 'class'=>'path.to.FilterClass',
+			* 'propertyName'=>'propertyValue',
+			* ),
+			* );
+			* }
+			*
+			* public function actions()
+			* {
+			* // return external action classes, e.g.:
+			* return array(
+			* 'action1'=>'path.to.ActionClass',
+			* 'action2'=>array(
+			* 'class'=>'path.to.AnotherActionClass',
+			* 'propertyName'=>'propertyValue',
+			* ),
+			* );
+			* }
+			*/
+			}
+		
 	// METODO ENCARGADO DE LA INTERACCION AJAAX CON EL DETALLE DE PRODUCTOS SONARAY
 	public function actionInfoProducto()
 	{
@@ -250,7 +331,7 @@ class ProductsController extends Controller
 				
 				if ($valor->category == 8)
 				{
-					$condition = 'product = ' . $valor->product . ' and (file_type = 1 or file_type = 3)';
+					$condition = 'product = ' . $valor->product;
 					$productosDescargas = ProductFiles::model()->findAll(array ('condition' => $condition ));
 					$i = 0;
 					$a = 0;
@@ -258,36 +339,20 @@ class ProductsController extends Controller
 					{
 						foreach ($productosDescargas as $files)
 						{
-							
-							$sql = "SELECT t.*,p.description FROM files t
-									left join files_types p ON t.pathTypeFile = p.id
-									where t.id=" . $files->file . " and (t.language = '" . $_POST['idIdioma'] . "' || t.pathTypeFile=3 )";
+							$sql = "SELECT t.*, p.description, p.name as tipo FROM files t LEFT JOIN files_types p ON t.pathTypeFile = p.id WHERE t.id=" . $files->file . " AND (t.language = '" . $_POST['idIdioma'] . "' || t.pathTypeFile=3 )";
 							$connection = Yii::app()->db;
 							$command = $connection->createCommand($sql);
-							// $rowCount=$command->execute(); // execute the non-query SQL
-							$pathDescargas = $command->queryAll(); // execute a query SQL
-							
-							/*
-							 * $criterio1 = new CDbCriteria();
-							 * $criterio1->select = "t.*";
-							 * //$criterio1->join = "left join files_types p ON t.pathTypeFile = p.id";
-							 * $criterio1->condition = "t.id=".$files->file." and t.active = 1 and t.language = '".$_POST['idIdioma']."'";
-							 * $pathDescargas = FilesSonaray::model()->findAll($criterio1);
-							 */
-							// $condition = 'id='.$files->file.' and active = 1 and language = "'.Yii::app()->language.'"';
-							// $pathDescargas[$i] = FilesSonaray::model()->find(array('condition' => $condition));
-							// $prueba = $pathDescargas[$i]->description;
+							$pathDescargas = $command->queryAll(); //execute a query SQL
 							$i++ ;
-							
 							if (count($pathDescargas) > 0)
-							{
-								
+							{	
 								foreach ($pathDescargas as $descargas)
 								{
-									
-									$imagenDetalle['pathDescargas'][$a] = $descargas;
-									
-									$a++ ;
+									if(isset($imagenDetalle['pathDescargas'][$descargas['tipo']]))
+										array_push($imagenDetalle['pathDescargas'][$descargas['tipo']], $descargas);
+									else 
+										$imagenDetalle['pathDescargas'][$descargas['tipo']][0] = $descargas;
+									$a++;
 								}
 							}
 							else
@@ -303,7 +368,7 @@ class ProductsController extends Controller
 					}
 				}
 			}
-			
+
 			if ($valor->category == 9)
 			{
 				$condition = 'product = ' . $valor->product . ' and file_type = 2';
