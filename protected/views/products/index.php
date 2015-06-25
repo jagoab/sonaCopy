@@ -177,7 +177,7 @@ $("#contieneDetallesMenu").empty();
 $("#contieneDetallesMenu").append(html);
 }
 $("#contenedorDetalle").fadeIn();
-$('html,body').animate({ scrollTop: $("#contenedorDetalle").offset().top }, 1000);
+$('html,body').animate({ scrollTop: $("#contenedorDetalle").offset().top - 60 }, 1000);
 });
 	if(idioma == 'es')
 	{
@@ -226,10 +226,7 @@ $('.img_producto').click(function() {
 <?php if ($idclick!=null) {?> cargaAjax(<?php echo $idclick; ?>,<?php echo $idclick; ?>)<?php  }?>});
 </script>
 <style>
-.container {
-	padding-right: 0px !important;
-	padding-left: 0px !important;
-}
+
 </style>
 <div style="clear: both; float: left; width: 100%">
 	<div id="accordion1">

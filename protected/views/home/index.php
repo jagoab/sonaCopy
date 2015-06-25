@@ -157,16 +157,6 @@ $(window).bind("load", ScaleSlider);
 $(window).bind("resize", ScaleSlider);
 $(window).bind("orientationchange", ScaleSlider);
 //responsive code end
-/*$('.padre').click(function(e){
-	var text = this.textContent.toLowerCase().replace(' ', '');
-	var pos;
-	if(text == 'home')
-		pos = $('#slider1_container').position();
-	else
-		pos = $('#' + text).position();
-	$('html, body').animate({scrollTop: pos.top - 65}, 1800);
-});*/
-
 $("#divFlotante").fadeIn();
 });
 </script>

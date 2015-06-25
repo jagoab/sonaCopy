@@ -94,23 +94,49 @@ $(document).ready(function ($) {
 					overwrite: 5
 				});
 	});
+$('.dropdown-toggle').mouseover(function(e){
+	$(this).parent().attr("class" , "dropdown open");
+});
+
+$('.dropdown-menu').mouseover(function(e){
+	$(this).parent().attr("class" , "dropdown open");
+});
+
+$('.dropdown-toggle').mouseout(function(e){
+	$(this).parent().attr("class" , "dropdown");
+});
+
+$('.dropdown-menu').mouseout(function(e){
+	$(this).parent().attr("class" , "dropdown");
+});
+
+$('.padre').click(function(e){
+	window.location.href = this.href;
+});
+
 });
 </script>
 <style type="text/css">
-.iconosfijos{position: fixed; right:150px; bottom:94%; z-index:444; width:30px}    
+.iconosfijos{
+	position: absolute;
+	z-index:444;
+	width:30px;
+	top: 20%;
+	right: 4%
+}
 <!--
 a:link {
 	text-decoration: none;
-	color: #00CCFF;
+	color: black;
 }
 
 a:visited {
 	text-decoration: none;
-	color: #00CCFF;
+	color: black;
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a:active {
@@ -128,14 +154,14 @@ a:active {
 }
 
 .footerInformation ul > li{
- float: left;
- width: 90px;
- list-style: none;
- margin-bottom: 1%;
- border-right: 1px solid white;
- font-family: helvetica_neueregular;
- height: 17px;
- vertical-align: baseline;
+	float: left;
+	width: 90px;
+	list-style: none;
+	margin-bottom: 1%;
+	border-right: 1px solid white;
+	font-family: helvetica_neueregular;
+	height: 17px;
+	vertical-align: baseline;
 }
 
 .footerInformation ul{
@@ -176,14 +202,33 @@ a:active {
 	padding-top: 5px
 }
 
-URL del artículo: http://www.ejemplode.com/18-css/502-ejemplo_de_fondo_fijo_en_css.html
-Leer completo: ejemplos de Fondo fijo en CSS
+.btn{
+	padding: 15px !important;
+}
+
+.btn-default{
+	border: none !important;
+	background-color: inherit !important;
+}
+
+.btn-default>a{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+	line-height: 20px !important;
+	font-weight: bold !important;
+	color: #424242 !important;
+}
+@media (min-width: 1200px){
+.container{
+	width: 100% !important;
+	padding-left: 4% !important;
+}
+}
 -->
 </style>
 </head>
 <body>
 <div style="float: left; position: relative; width: 100%; height: 66px">
-	<div class="menu fixed" style="float:left;width:100%; border-bottom: solid 1px #0004ff; opacity: 0.9;height: 66px">
+	<div class="menu fixed" style="position:relative; float:left;width:100%; border-bottom: solid 1px #0004ff; opacity: 0.9;height: 66px">
 		<table width="100%" height="100%" border="0">
 			<tr>
 				<td valign="middle">
@@ -192,9 +237,10 @@ Leer completo: ejemplos de Fondo fijo en CSS
 							<div class="navbar-header">
 								<button type="button" data-target="#navbarCollapse"
 									data-toggle="collapse" class="navbar-toggle">
-									<span class="sr-only">Toggle navigation</span> <span
-										class="icon-bar"></span> <span class="icon-bar"></span> <span
-										class="icon-bar"></span>
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
 								</button>
 								<a href="#" class="navbar-brand" style="font-family: Arial, Helvetica, sans-serif; font-size: 1px;">
 									<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/sonaray_small.png" />
@@ -213,20 +259,26 @@ Leer completo: ejemplos de Fondo fijo en CSS
 			{ // para saber si tiene hijos
 				?>
 	<?php if ($contador ==1) { ?>
-	<li style="font-weight: bold;"><a style="cursor:pointer" <?php $this->id == 'home' ? print '' : print 'href="' . Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu['url'] . '"'; ?> role = "menuitem" class = "padre"> <?php echo $menu['name'];?></a></li>
+				<li style="font-weight: bold;">
+					<a style="cursor:pointer" <?php $this->id == 'home' ? print '' : print 'href="' . Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu['url'] . '"'; ?> role = "menuitem" class = "padre"> <?php echo $menu['name'];?></a>
+				</li>
 	<?php
 					$contador++ ;
 				}
 				else
 				{
 					?> 
-	<li style="font-weight: bold;"><a style="cursor:pointer" <?php $this->id == 'home' ? print '' : print 'href="' . Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu['url'] . '"'; ?> role = "menuitem" class = "padre"> <?php echo $menu['name'];?></a></li>
+				<li style="font-weight: bold;">
+					<a style="cursor:pointer" <?php $this->id == 'home' ? print '' : print 'href="' . Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu['url'] . '"'; ?> role = "menuitem" class = "padre"> <?php echo $menu['name'];?></a>
+				</li>
 	<?php  } ?> 
 	<?php } else { ?>
-	<li class="dropdown" style="color: #000000; font-weight: bold;" >
-	<a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu['url']?>" style="font-size: 15px;cursor: pointer" class = "padre" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><?php echo $menu['name'] ?> 
-	<b class="caret"></b> </a>
-	<ul class="dropdown-menu" role="menu">
+				<li class="dropdown" style="color: #000000; font-weight: bold;" >
+					<button type="button" class="btn btn-default">
+						<a role="menuitem" href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu['url']?>" style="font-size: 15px;cursor: pointer; color:#424242 !important" class = "padre" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $menu['name'] ?></a>
+					</button>
+					<button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+					<ul class="dropdown-menu" role="menu">
 	<?php
 				foreach ($menu['menu'] as $menu2)
 				{
@@ -236,16 +288,20 @@ Leer completo: ejemplos de Fondo fijo en CSS
 					{
 						?>
 	<!--<li><a href="<?php //echo $menu2['url'];   ?>"><?php //echo $menu2['name'];   ?></a></li>-->
-						<li style="font-size: 15px;" class=""><a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu2['url']; ?>"><?php echo $menu2['name'];?></a></li>
+						<li style="font-size: 15px;" class="">
+							<a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language . '/' . $menu2['url']; ?>"><?php echo $menu2['name'];?></a>
+						</li>
 	<?php
 					}
 					else
 					{
 						?>
-	<li class="dropdown"><a href="#"><?php echo $menu2['name']; ?></a></li>
+						<li class="dropdown">
+							<a href="#"><?php echo $menu2['name']; ?></a>
+						</li>
 	<?php
 					}
-				} // foreach
+				}
 				?>
 	</ul></li>
 	 <?php }
@@ -257,6 +313,14 @@ Leer completo: ejemplos de Fondo fijo en CSS
 				</td>
 			</tr>
 		</table>
+	<div class="iconosfijos">
+		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/flag/<?php echo Yii::app()->session['flag'];?>.png" border="0" usemap="#Map">
+		<map name="Map">
+			<area shape="rect" coords="1,1,34,33" alt="Unete"  href="<?php echo Yii::app()->request->baseUrl; ?>">
+			<area shape="rect" coords="-3,34,28,61" href="javascript:agregar()">
+			<area shape="rect" coords="-3,66,29,105" href="contacto.php">
+		</map>
+	</div>
 	</div>
 </div>
 <?php  echo $content; ?>
@@ -281,14 +345,6 @@ Leer completo: ejemplos de Fondo fijo en CSS
 		<div style="float:left;text-align:left;color:white; border-bottom: 1px solid grey">CONTACT US.</div>
 		<a href="<?php echo Yii::app()->request->baseUrl . '/' . Yii::app()->language; ?>/contact/index"><div class="bordes" style="clear:both;float:left; color:white;text-align: left;background-color: rgba(89, 84, 126, 0.82);margin-top: 1%;padding: 2%">DASCOM AMERICAS<br/>34 Lakeview Court Verona, VA 24482<br/>USA Office 540-931-9002 / FAX 540-242-7221<br/>1819 SE 17 St., Unit CU2,Ft. Lauderdale, FL 33316<br/>Tel: +1 954 644 8710 / Fax:+1 954 767 225</div></a>
 	</div>
-	<div class="iconosfijos">
-<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/iconosfijos.png" border="0" usemap="#Map">
-<map name="Map">
-	<area shape="rect" coords="1,1,34,33" alt="Unete"  href="<?php echo Yii::app()->request->baseUrl; ?>">
-	<area shape="rect" coords="-3,34,28,61" href="javascript:agregar()">
-	<area shape="rect" coords="-3,66,29,105" href="contacto.php">
-</map>
-</div>
 </div>
 <div class="footerInformation" style="clear:both;float:left;margin: 0; width: 100%; background-color: #0e1b77">
 		<ul>
