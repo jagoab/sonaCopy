@@ -23,6 +23,18 @@
 	padding: 0;
 }
 
+.ui-state-default{
+	color: rgb(140, 140, 140) !important;
+}
+
+.ui-icon{
+	background-image: none !important;
+}
+
+.ui-state-active{
+	border: 1px solid #A2A0E4 !important;
+}
+
 @media all and (max-width: 768px ) {
 	.navbar-wrapper {
 		position: relative;
@@ -41,9 +53,11 @@
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/estiloscarrusel.css" /> 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/awesomeIconFonts/font-awesome.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery.accordion.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.11.4/jquery-ui.css" />
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.accordion.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/carrousel/jquery.carouFredSel-6.2.1-packed.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jssor.slider.mini.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.11.4/jquery-ui.js"></script>
 <script type="text/javascript">
 idclick=023190283109283091283;
 activarCarosel = function(idContent, idCarousel, valorLista, pestana, idType) {
@@ -125,9 +139,9 @@ $("#contieneDetallesMenu").empty();
 				html = '';
 				if(respuesta.pestanasDetalles[i].category != 8 && respuesta.pestanasDetalles[i].category != 9)
 				{
-					html = '<div class="sombra" style="padding-left: 1%;background-color: rgba(227, 227, 236, 0.75); text-align:left; width:99%; clear:both; float:left; margin-top: 3%">';
+					html = '<div class="sombra" style="padding-left: 1%;background-color: rgba(227, 227, 236, 0.75); text-align:left; width:99%; clear:both; float:left; margin-top: 3%"><h3 style="font-size: 16px; margin-top: 10px; margin-bottom: 10px">';
 					html += (respuesta.pestanasDetalles[i].category == 5?respuesta.pestanasDetalles[i].text:respuesta.pestanasDetalles[i].name);
-					html += "</div>";
+					html += "</h3></div>";
 					$("#contieneDetallesMenu").append(html);
 					html = "<div class=\"tab\" id=\""+respuesta.pestanasDetalles[i].name+"\" style=\"display: block;margin: auto; text-align:left;font-size:12px;clear:both;float:left;padding-bottom:2%;width: 100%;padding-top:2%;padding-left:2%;height: auto"+(i==0?'':'')+"\">";
 					html += "<div style=\"clear:both;float:left;width:50%;\">"+respuesta.pestanasDetalles[i].text+"</div>";
@@ -144,25 +158,27 @@ $("#contieneDetallesMenu").empty();
 				{
 					if(respuesta.pestanasDetalles[i].category == 8)
 					{
-						var html2 = '<div class="sombra" style="padding-left: 1%;line-height: 30px;font-size: 12px; height: 31px; background-color: rgba(227, 227, 236, 0.75); text-align:left; width:100%; clear:both; float:left; margin-top: 3%">';
+						var html2 = '<div class="sombra" style="padding-left: 1%;line-height: 30px;font-size: 12px; height: 38px; background-color: rgba(227, 227, 236, 0.75); text-align:left; width:100%; clear:both; float:left; margin-top: 3%"><h2 style="font-size: 16px; margin-top: 10px; margin-bottom: 10px">';
 						html2 += (respuesta.pestanasDetalles[i].category == 5 ? respuesta.pestanasDetalles[i].text : respuesta.pestanasDetalles[i].name);
-						html2 += "</div>";
+						html2 += "</h2></div>";
 						if(respuesta.pathDescargas !== null && typeof respuesta.pathDescargas === 'object')
 						{
+							html2 += '<div id="accordion">';
 							$.each( respuesta.pathDescargas, function( key, value ) {
-								html2 += '<div class="sombra" style="padding-left: 1%;line-height: 30px;font-size: 12px; height: 31px; background-color: rgba(227, 227, 236, 0.75); text-align:left; width:100%; clear:both; float:left; margin-top: 3%">' + key + "</div>";
+								html2 += '<h3 class="sombra" style="padding-left: 1%;line-height: 30px;font-size: 12px; height: 31px; background-color: rgba(227, 227, 236, 0.75); text-align:left; width:100%; clear:both; float:left; margin-top: 1%; font-family: helvetica_neueregular" >' + key + "</h3>";
 								var tmp = value.length;
 								for(var k = 0; k < value.length; k++)
 								{
-									//html2 += '<div style="float:left;margin-top:1%;margin-left:2%"><a target="_blank" href=\"' + value[i].path + '"><img src="' + value[i].description + '"><div style="float:left;padding-left:1%">' + value[i].name + '</div></a></div>';
+									html2 += '<div><a target="_blank" href=\"<?php echo Yii::app()->request->baseUrl; ?>' + value[k].path + '"><img src="<?php echo Yii::app()->request->baseUrl; ?>' + value[k].description + '" style="width:16%"><div style="float:left;padding-left:1%">' + value[k].name + '</div></a></div>';
 								}
 							});
+							html2 += '</div>';
 						}
 						else
 						{
 							html2+='<div>No downloads For this product</div>'
 						}
-						$("#accordion").append(html2);
+						$("#downloadContent").append(html2);
 					}
 					if(respuesta.pestanasDetalles[i].category == 9)
 					{
@@ -178,11 +194,14 @@ $("#contieneDetallesMenu").append(html);
 }
 $("#contenedorDetalle").fadeIn();
 $('html,body').animate({ scrollTop: $("#contenedorDetalle").offset().top - 60 }, 1000);
+$( "#accordion" ).accordion({
+    event: "click hoverintent"
+  });
 });
-	if(idioma == 'es')
-	{
-		$('#barraTab').css('width','74.5%');
-	}
+if(idioma == 'es')
+{
+	$('#barraTab').css('width','74.5%');
+}
 }
 
 function cambio(res,id)
@@ -448,7 +467,7 @@ $i = 0;
 	</div>
         <!--#endregion Bullet Navigator Skin End -->
 						</div>
-					<div style="clear:both;float:left;margin-top: 4.5%; color: #8c8c8c" id="accordion" class="helvetica_neueregular"></div>
+					<div style="clear:both;float:left;margin-top: 4.5%; color: #8c8c8c" id="downloadContent" class="helvetica_neueregular"></div>
 					</div>
 					</div>
 				</div>
