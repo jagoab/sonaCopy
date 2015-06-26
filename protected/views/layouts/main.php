@@ -122,7 +122,7 @@ $('.padre').click(function(e){
 	z-index:444;
 	width:30px;
 	top: 20%;
-	right: 4%
+	right: 1%
 }
 <!--
 a:link {
@@ -219,8 +219,9 @@ a:active {
 }
 @media (min-width: 1200px){
 .container{
-	width: 100% !important;
-	padding-left: 4% !important;
+	width: 1240px !important;
+	text-align: center !important;
+	position: relative !important
 }
 }
 -->
@@ -229,10 +230,7 @@ a:active {
 <body>
 <div style="float: left; position: relative; width: 100%; height: 66px">
 	<div class="menu fixed" style="position:relative; float:left;width:100%; border-bottom: solid 1px #0004ff; opacity: 0.9;height: 66px">
-		<table width="100%" height="100%" border="0">
-			<tr>
-				<td valign="middle">
-					<div class="container">
+			<div class="container">
 						<nav role="navigation" class="navbar navbar-inverse">
 							<div class="navbar-header">
 								<button type="button" data-target="#navbarCollapse"
@@ -309,11 +307,7 @@ a:active {
 	 </ul>
 							</div>
 						</nav>
-					</div>
-				</td>
-			</tr>
-		</table>
-	<div class="iconosfijos">
+					<div class="iconosfijos">
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/flag/<?php echo Yii::app()->session['flag'];?>.png" border="0" usemap="#Map">
 		<map name="Map">
 			<area shape="rect" coords="1,1,34,33" alt="Unete"  href="<?php echo Yii::app()->request->baseUrl; ?>">
@@ -321,6 +315,7 @@ a:active {
 			<area shape="rect" coords="-3,66,29,105" href="contacto.php">
 		</map>
 	</div>
+					</div>
 	</div>
 </div>
 <?php  echo $content; ?>
